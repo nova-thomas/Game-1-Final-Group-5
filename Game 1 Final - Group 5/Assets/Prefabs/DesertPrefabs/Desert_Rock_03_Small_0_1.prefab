@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Rock_03_Small_0_1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a343fadbd2ffd6a478b0cabb0ecf719f, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

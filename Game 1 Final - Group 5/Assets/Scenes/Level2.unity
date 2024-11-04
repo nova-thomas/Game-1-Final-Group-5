@@ -335,6 +335,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Floating_Isle_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1904398658481981892, guid: 3e29fa335ab82a9409a67b6c3be65f5a, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1176,6 +1180,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floating_Island_4_Bioma2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7782820872625234566, guid: 8506be5d5ca450748b7f329afa4181a1, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1568,6 +1576,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &687900866 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7700809615590514054, guid: 3109c2c695cc9e8409d4c6c055ac9610, type: 3}
+  m_PrefabInstance: {fileID: 838711815}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687900858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f29c4477c36d8545a9be2334b64c8ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &698380205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1702,6 +1721,10 @@ PrefabInstance:
       value: Floating_Island_3_Bioma2
       objectReference: {fileID: 0}
     - target: {fileID: 8007301070243108016, guid: c4caaf31fa0abca4ba9c7694d1680d0e, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 9197465738750024201, guid: c4caaf31fa0abca4ba9c7694d1680d0e, type: 3}
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
@@ -1916,6 +1939,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 7782820872625234566, guid: 8506be5d5ca450748b7f329afa4181a1, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2008,6 +2035,34 @@ PrefabInstance:
     - target: {fileID: 8936095109967415999, guid: 3109c2c695cc9e8409d4c6c055ac9610, type: 3}
       propertyPath: m_ActionEvents.Array.data[13].m_ActionName
       value: Player/Jump[/Keyboard/space]
+      objectReference: {fileID: 0}
+    - target: {fileID: 8936095109967415999, guid: 3109c2c695cc9e8409d4c6c055ac9610, type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8936095109967415999, guid: 3109c2c695cc9e8409d4c6c055ac9610, type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8936095109967415999, guid: 3109c2c695cc9e8409d4c6c055ac9610, type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 687900866}
+    - target: {fileID: 8936095109967415999, guid: 3109c2c695cc9e8409d4c6c055ac9610, type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8936095109967415999, guid: 3109c2c695cc9e8409d4c6c055ac9610, type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Jump
+      objectReference: {fileID: 0}
+    - target: {fileID: 8936095109967415999, guid: 3109c2c695cc9e8409d4c6c055ac9610, type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Player, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8936095109967415999, guid: 3109c2c695cc9e8409d4c6c055ac9610, type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2143,6 +2198,10 @@ PrefabInstance:
       value: Floating_Island_3_Bioma2 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 8007301070243108016, guid: c4caaf31fa0abca4ba9c7694d1680d0e, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 9197465738750024201, guid: c4caaf31fa0abca4ba9c7694d1680d0e, type: 3}
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
@@ -2352,7 +2411,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!64 &1091006173
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2434,7 +2493,7 @@ Transform:
   m_GameObject: {fileID: 1091006172}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 10, y: 0, z: -3.6}
+  m_LocalPosition: {x: -3.8, y: 0, z: -16.3}
   m_LocalScale: {x: 9.9063015, y: 9.9063015, z: 9.9063015}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3495,6 +3554,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 9197465738750024201, guid: c4caaf31fa0abca4ba9c7694d1680d0e, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3841,6 +3904,10 @@ PrefabInstance:
       value: Floating_Island_3_Bioma2 (3)
       objectReference: {fileID: 0}
     - target: {fileID: 8007301070243108016, guid: c4caaf31fa0abca4ba9c7694d1680d0e, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 9197465738750024201, guid: c4caaf31fa0abca4ba9c7694d1680d0e, type: 3}
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}

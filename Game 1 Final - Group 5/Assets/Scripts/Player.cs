@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class Player : Actor
 {
     public int ammo = 6;
+    public int coins = 0;
     public bool canJump;
     public bool canShoot = true;
     public bool redKey;
@@ -15,13 +16,16 @@ public class Player : Actor
     private Vector2 lookInput;
     public float lookSpeed = 1f;
     public float jumpForce = 5f;
-    public GameObject bulletPrefab; // Assign this in Inspector
-    public Transform shooter;       // Assign the Shooter empty object in Inspector
+    public GameObject bulletPrefab; 
+    public Transform shooter;      
     public float bulletSpeed = 20f;
 
     private float xRotation = 0f;
     public Transform playerCamera;
     private Rigidbody rb;
+
+    private GameObject nearbyDoor;
+
 
     void Start()
     {
@@ -107,14 +111,12 @@ public class Player : Actor
     {
         if (bulletPrefab != null && shooter != null)
         {
-            // Instantiate the bullet and set its position and rotation to match the shooter's
             GameObject bullet = Instantiate(bulletPrefab, shooter.position, shooter.rotation);
 
-            // Apply force in the forward direction
             Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
             if (bulletRb != null)
             {
-                bulletRb.velocity = shooter.forward * bulletSpeed; // Move bullet forward from shooter
+                bulletRb.velocity = shooter.forward * bulletSpeed;
             }
             else
             {
@@ -136,8 +138,31 @@ public class Player : Actor
         canShoot = true;
     }
 
+    //checking if we're by a door 
+    void OnTriggerEnter(Collider other)
+    {
+        // Check if the player is near the blue door
+        if (other.CompareTag("Blue Door"))
+        {
+            nearbyDoor = other.gameObject;
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        //clear if the player leaves the vicinity of the door
+        if (other.CompareTag("Blue Door"))
+        {
+            nearbyDoor = null;
+        }
+    }
     public void Interact(InputAction.CallbackContext it)
     {
-        // Implement interaction logic
+        if (it.phase == InputActionPhase.Started && blueKey && nearbyDoor != null)
+        {
+            Destroy(nearbyDoor);
+            Debug.Log("Blue door opened!"); //remove
+            blueKey = false; 
+        }
     }
 }

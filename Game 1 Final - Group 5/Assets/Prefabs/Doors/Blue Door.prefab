@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5375217480132243488}
   m_Layer: 0
   m_Name: Blue Door
-  m_TagString: Untagged
+  m_TagString: Blue Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

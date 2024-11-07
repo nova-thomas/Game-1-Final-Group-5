@@ -6,35 +6,33 @@ using UnityEngine.InputSystem;
 public class Player : Actor
 {
     public int ammo = 6;
-    public int coins = 0;
     public bool canJump;
     public bool canShoot = true;
-    public bool redKey;
-    public bool greenKey;
-    public bool blueKey;
     private Vector2 moveInput;
     private Vector2 lookInput;
     public float lookSpeed = 1f;
     public float jumpForce = 5f;
-    public GameObject bulletPrefab; 
-    public Transform shooter;      
+    public GameObject bulletPrefab;
+    public Transform shooter;
     public float bulletSpeed = 20f;
+    private Inventory inventory; 
 
     private float xRotation = 0f;
     public Transform playerCamera;
     private Rigidbody rb;
 
     private GameObject nearbyDoor;
-
+    private string nearbyDoorTag;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        inventory = GetComponent<Inventory>();
         speed = 5;
         ammo = 6;
         canJump = true;
         canShoot = true;
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;  
     }
 
     void Update()
@@ -129,7 +127,6 @@ public class Player : Actor
         }
     }
 
-
     private IEnumerator Reload()
     {
         canShoot = false;
@@ -138,31 +135,88 @@ public class Player : Actor
         canShoot = true;
     }
 
-    //checking if we're by a door 
     void OnTriggerEnter(Collider other)
     {
-        // Check if the player is near the blue door
-        if (other.CompareTag("Blue Door"))
+        if (other.CompareTag("Blue Door") || other.CompareTag("Red Door") || other.CompareTag("Green Door"))
         {
             nearbyDoor = other.gameObject;
+            nearbyDoorTag = other.tag;
+            Debug.Log("Player is near a " + nearbyDoorTag + ".");
+        }
+        else if (other.CompareTag("Blue Key"))
+        {
+            inventory.AddKey("Blue");
+            Destroy(other.gameObject);
+        }
+        else if (other.CompareTag("Red Key"))
+        {
+            inventory.AddKey("Red");
+            Destroy(other.gameObject);
+        }
+        else if (other.CompareTag("Green Key"))
+        {
+            inventory.AddKey("Green");
+            Destroy(other.gameObject);
+        }
+        else if (other.CompareTag("Coin"))
+        {
+            int coinAmount = Random.Range(10, 21);
+            inventory.AddCoin(coinAmount);
+            Destroy(other.gameObject);
+        }
+        else if (other.CompareTag("Fire Power"))
+        {
+            inventory.AddFirePower();
+            Destroy(other.gameObject);
+        }
+        else if (other.CompareTag("Ice Power"))
+        {
+            inventory.AddIcePower();
+            Destroy(other.gameObject);
+        }
+        else if (other.CompareTag("Poison Power"))
+        {
+            inventory.AddPoisonPower();
+            Destroy(other.gameObject);
         }
     }
 
     void OnTriggerExit(Collider other)
     {
-        //clear if the player leaves the vicinity of the door
-        if (other.CompareTag("Blue Door"))
+        if (other.CompareTag("Blue Door") || other.CompareTag("Red Door") || other.CompareTag("Green Door"))
         {
             nearbyDoor = null;
+            nearbyDoorTag = null;
+            Debug.Log("Player has left the vicinity of the door.");
         }
     }
+
     public void Interact(InputAction.CallbackContext it)
     {
-        if (it.phase == InputActionPhase.Started && blueKey && nearbyDoor != null)
+        if (it.phase == InputActionPhase.Started && nearbyDoor != null)
         {
-            Destroy(nearbyDoor);
-            Debug.Log("Blue door opened!"); //remove
-            blueKey = false; 
+            if (nearbyDoorTag == "Blue Door" && inventory.HasKey("Blue"))
+            {
+                Destroy(nearbyDoor);
+                inventory.RemoveKey("Blue");
+                Debug.Log("Blue door opened and destroyed!");
+            }
+            else if (nearbyDoorTag == "Red Door" && inventory.HasKey("Red"))
+            {
+                Destroy(nearbyDoor);
+                inventory.RemoveKey("Red");
+                Debug.Log("Red door opened and destroyed!");
+            }
+            else if (nearbyDoorTag == "Green Door" && inventory.HasKey("Green"))
+            {
+                Destroy(nearbyDoor);
+                inventory.RemoveKey("Green");
+                Debug.Log("Green door opened and destroyed!");
+            }
+            else
+            {
+                Debug.Log("Cannot open door: Missing key or wrong door type.");
+            }
         }
     }
 }

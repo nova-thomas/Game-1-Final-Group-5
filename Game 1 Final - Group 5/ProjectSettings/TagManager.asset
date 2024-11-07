@@ -12,6 +12,13 @@ TagManager:
   - Ice Bullet
   - Fire Bullet
   - Poison Bullet
+  - Blue Key
+  - Red Key
+  - Green Key
+  - Coin
+  - Fire Power
+  - Ice Power
+  - Poison Power
   layers:
   - Default
   - TransparentFX

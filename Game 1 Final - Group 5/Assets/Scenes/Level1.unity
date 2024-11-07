@@ -730,6 +730,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VolcanPit_Diorama (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6661499000605066686, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 46652834735489521, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
@@ -1944,18 +1948,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3701114581347431821, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3701114581347431821, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3701114581347431821, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3701114581347431821, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -107
       objectReference: {fileID: 0}
@@ -1994,10 +1986,6 @@ PrefabInstance:
     - target: {fileID: 3701114581347431821, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3701114581347431821, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4041647198609026871, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
       propertyPath: m_Name
@@ -4252,6 +4240,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VolcanPit_Floating_Rock_01
       objectReference: {fileID: 0}
+    - target: {fileID: 4041647198609026871, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4324,6 +4316,10 @@ PrefabInstance:
     - target: {fileID: 6661499000605066686, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Diorama
+      objectReference: {fileID: 0}
+    - target: {fileID: 6661499000605066686, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -13,7 +13,7 @@ public class Dragon : Solo
     // Update is called once per frame
     void Update()
     {
-        
+        if (playerInSightRange && playerInAttackRange) AttackPlayer();
     }
 
     private void AttackPlayer()

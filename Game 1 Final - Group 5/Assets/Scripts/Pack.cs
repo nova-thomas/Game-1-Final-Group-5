@@ -4,14 +4,6 @@ using UnityEngine;
 
 public class Pack : EnemyAi
 {
-    /* Pack Type
-     * 0: Lizard
-     * 1: Plague
-     */
-    public int packType;
-    public int maxMembers;
-    public int currentMembers;
-
     // Start is called before the first frame update
     void Start()
     {

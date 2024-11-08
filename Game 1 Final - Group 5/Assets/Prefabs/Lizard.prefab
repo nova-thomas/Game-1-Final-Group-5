@@ -84,7 +84,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &2863176641908047814
 MonoBehaviour:
@@ -104,16 +104,19 @@ MonoBehaviour:
   player: {fileID: 0}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
+  damage: 0
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
   timeBetweenAttacks: 0
-  sightRange: 0
-  attackRange: 0
+  alreadyAttacked: 0
+  sightRange: 7
+  attackRange: 2
   playerInSightRange: 0
   playerInAttackRange: 0
-  packType: 0
   maxMembers: 0
   currentMembers: 0
 --- !u!195 &9153412629902954572

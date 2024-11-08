@@ -13,7 +13,7 @@ public class Golem : Solo
     // Update is called once per frame
     void Update()
     {
-        
+        if (playerInSightRange && playerInAttackRange) AttackPlayer();
     }
 
     private void AttackPlayer()

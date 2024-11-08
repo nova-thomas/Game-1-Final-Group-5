@@ -13,7 +13,7 @@ public class Plague : Pack
     // Update is called once per frame
     void Update()
     {
-        
+        if (playerInSightRange && playerInAttackRange) AttackPlayer();
     }
 
     private void AttackPlayer()

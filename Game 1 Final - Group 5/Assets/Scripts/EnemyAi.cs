@@ -32,12 +32,6 @@ public class EnemyAi : Actor
         agent = GetComponent<NavMeshAgent>();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -46,6 +40,7 @@ public class EnemyAi : Actor
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
         if (!playerInSightRange && !playerInAttackRange) Patrolling();
+        if (playerInSightRange && !playerInAttackRange) ChasePlayer();
     }
 
     private void Patrolling()

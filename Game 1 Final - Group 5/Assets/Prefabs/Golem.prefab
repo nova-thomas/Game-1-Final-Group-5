@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 810820649553319046}
   - component: {fileID: 3991399776539624427}
+  - component: {fileID: 5750529071418975668}
   m_Layer: 0
   m_Name: Golem
   m_TagString: Untagged
@@ -47,6 +48,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   health: 0
+  agent: {fileID: 0}
+  player: {fileID: 0}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 0
+  timeBetweenAttacks: 0
+  sightRange: 0
+  attackRange: 0
+  playerInSightRange: 0
+  playerInAttackRange: 0
+  soloType: 0
+--- !u!195 &5750529071418975668
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622149741597507604}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &7379685898106283283
 PrefabInstance:
   m_ObjectHideFlags: 0

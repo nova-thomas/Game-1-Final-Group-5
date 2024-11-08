@@ -15,4 +15,25 @@ public class Plague : Pack
     {
         
     }
+
+    private void AttackPlayer()
+    {
+        agent.SetDestination(transform.position);
+
+        transform.LookAt(player);
+
+        if (!alreadyAttacked)
+        {
+            // Attack code
+
+            //
+            alreadyAttacked = true;
+            Invoke(nameof(ResetAttack), timeBetweenAttacks);
+        }
+    }
+
+    public void EmitToxin()
+    {
+
+    }
 }

@@ -15,4 +15,30 @@ public class Golem : Solo
     {
         
     }
+
+    private void AttackPlayer()
+    {
+        agent.SetDestination(transform.position);
+
+        transform.LookAt(player);
+
+        if (!alreadyAttacked)
+        {
+            // Attack code
+
+            //
+            alreadyAttacked = true;
+            Invoke(nameof(ResetAttack), timeBetweenAttacks);
+        }
+    }
+
+    public void SwingAttack()
+    {
+
+    }
+
+    public void SlamAttack()
+    {
+
+    }
 }

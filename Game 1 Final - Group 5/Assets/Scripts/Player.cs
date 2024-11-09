@@ -13,6 +13,9 @@ public class Player : Actor
     public float lookSpeed = 1f;
     public float jumpForce = 5f;
     public GameObject bulletPrefab;
+    public GameObject iceBulletPrefab;
+    public GameObject fireBulletPrefab;   
+    public GameObject poisonBulletPrefab;
     public Transform shooter;
     public float bulletSpeed = 20f;
     private Inventory inventory; 
@@ -23,6 +26,12 @@ public class Player : Actor
 
     private GameObject nearbyDoor;
     private string nearbyDoorTag;
+
+
+    private bool isUsingIceBullet = false;
+    private bool isUsingFireBullet = false;
+    private bool isUsingPoisonBullet = false;
+
 
     void Start()
     {
@@ -107,23 +116,22 @@ public class Player : Actor
 
     private void Shoot()
     {
-        if (bulletPrefab != null && shooter != null)
-        {
-            GameObject bullet = Instantiate(bulletPrefab, shooter.position, shooter.rotation);
+        GameObject currentBulletPrefab;
 
+        if (isUsingIceBullet) currentBulletPrefab = iceBulletPrefab;
+        else if (isUsingFireBullet) currentBulletPrefab = fireBulletPrefab;
+        else if (isUsingPoisonBullet) currentBulletPrefab = poisonBulletPrefab;
+        else currentBulletPrefab = bulletPrefab;
+
+        if (currentBulletPrefab != null && shooter != null)
+        {
+            GameObject bullet = Instantiate(currentBulletPrefab, shooter.position, shooter.rotation);
             Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
+
             if (bulletRb != null)
             {
                 bulletRb.velocity = shooter.forward * bulletSpeed;
             }
-            else
-            {
-                Debug.LogWarning("Bullet prefab does not have a Rigidbody component!");
-            }
-        }
-        else
-        {
-            Debug.LogWarning("Bullet prefab or shooter is not assigned!");
         }
     }
 
@@ -133,6 +141,54 @@ public class Player : Actor
         yield return new WaitForSeconds(2); // Adjust reload time as needed
         ammo = 6;
         canShoot = true;
+    }
+
+    public void ActivateIceBullet(InputAction.CallbackContext ctx)
+    {
+        if (ctx.phase == InputActionPhase.Started && inventory.icePower > 0)
+        {
+            StartCoroutine(SwitchToIceBullet());
+        }
+    }
+
+    public void ActivateFireBullet(InputAction.CallbackContext ctx)
+    {
+        if (ctx.phase == InputActionPhase.Started && inventory.firePower > 0)
+        {
+            StartCoroutine(SwitchToFireBullet());
+        }
+    }
+
+    public void ActivatePoisonBullet(InputAction.CallbackContext ctx)
+    {
+        if (ctx.phase == InputActionPhase.Started && inventory.poisonPower > 0)
+        {
+            StartCoroutine(SwitchToPoisonBullet());
+        }
+    }
+
+    private IEnumerator SwitchToIceBullet()
+    {
+        isUsingIceBullet = true;
+        inventory.icePower--;
+        yield return new WaitForSeconds(5);
+        isUsingIceBullet = false;
+    }
+
+    private IEnumerator SwitchToFireBullet()
+    {
+        isUsingFireBullet = true;
+        inventory.firePower--;
+        yield return new WaitForSeconds(5);
+        isUsingFireBullet = false;
+    }
+
+    private IEnumerator SwitchToPoisonBullet()
+    {
+        isUsingPoisonBullet = true;
+        inventory.poisonPower--;
+        yield return new WaitForSeconds(5);
+        isUsingPoisonBullet = false;
     }
 
     void OnTriggerEnter(Collider other)

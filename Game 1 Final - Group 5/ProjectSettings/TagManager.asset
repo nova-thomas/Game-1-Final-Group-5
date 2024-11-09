@@ -19,6 +19,7 @@ TagManager:
   - Fire Power
   - Ice Power
   - Poison Power
+  - Shop
   layers:
   - Default
   - TransparentFX

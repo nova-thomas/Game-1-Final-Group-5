@@ -14,11 +14,11 @@ public class Player : Actor
     public float jumpForce = 5f;
     public GameObject bulletPrefab;
     public GameObject iceBulletPrefab;
-    public GameObject fireBulletPrefab;   
+    public GameObject fireBulletPrefab;
     public GameObject poisonBulletPrefab;
     public Transform shooter;
     public float bulletSpeed = 20f;
-    private Inventory inventory; 
+    private Inventory inventory;
 
     private float xRotation = 0f;
     public Transform playerCamera;
@@ -26,12 +26,11 @@ public class Player : Actor
 
     private GameObject nearbyDoor;
     private string nearbyDoorTag;
-
+    private Shop nearbyShop;
 
     private bool isUsingIceBullet = false;
     private bool isUsingFireBullet = false;
     private bool isUsingPoisonBullet = false;
-
 
     void Start()
     {
@@ -41,7 +40,7 @@ public class Player : Actor
         ammo = 6;
         canJump = true;
         canShoot = true;
-        Cursor.lockState = CursorLockMode.Locked;  
+        LockCursor();
     }
 
     void Update()
@@ -73,11 +72,15 @@ public class Player : Actor
 
     private void LookAround()
     {
-        transform.Rotate(Vector3.up * lookInput.x * Time.deltaTime);
-        xRotation -= lookInput.y * Time.deltaTime;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-        playerCamera.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        lookInput = Vector2.zero;
+        // Only rotate camera when the cursor is locked
+        if (Cursor.lockState == CursorLockMode.Locked)
+        {
+            transform.Rotate(Vector3.up * lookInput.x * Time.deltaTime);
+            xRotation -= lookInput.y * Time.deltaTime;
+            xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+            playerCamera.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+            lookInput = Vector2.zero;
+        }
     }
 
     public void Jump(InputAction.CallbackContext jm)
@@ -114,14 +117,16 @@ public class Player : Actor
         }
     }
 
+    public void ToggleShooting(bool state)
+    {
+        canShoot = state;
+    }
+
     private void Shoot()
     {
-        GameObject currentBulletPrefab;
-
-        if (isUsingIceBullet) currentBulletPrefab = iceBulletPrefab;
-        else if (isUsingFireBullet) currentBulletPrefab = fireBulletPrefab;
-        else if (isUsingPoisonBullet) currentBulletPrefab = poisonBulletPrefab;
-        else currentBulletPrefab = bulletPrefab;
+        GameObject currentBulletPrefab = isUsingIceBullet ? iceBulletPrefab :
+                                         isUsingFireBullet ? fireBulletPrefab :
+                                         isUsingPoisonBullet ? poisonBulletPrefab : bulletPrefab;
 
         if (currentBulletPrefab != null && shooter != null)
         {
@@ -216,10 +221,11 @@ public class Player : Actor
         }
         else if (other.CompareTag("Coin"))
         {
-            int coinAmount = Random.Range(10, 21);
+            int coinAmount = Random.Range(10, 21); // Generates a random amount between 10 and 20
             inventory.AddCoin(coinAmount);
             Destroy(other.gameObject);
         }
+
         else if (other.CompareTag("Fire Power"))
         {
             inventory.AddFirePower();
@@ -235,6 +241,10 @@ public class Player : Actor
             inventory.AddPoisonPower();
             Destroy(other.gameObject);
         }
+        else if (other.CompareTag("Shop"))
+        {
+            nearbyShop = other.GetComponent<Shop>();
+        }
     }
 
     void OnTriggerExit(Collider other)
@@ -245,13 +255,19 @@ public class Player : Actor
             nearbyDoorTag = null;
             Debug.Log("Player has left the vicinity of the door.");
         }
+        else if (other.CompareTag("Shop"))
+        {
+            nearbyShop = null;
+        }
     }
 
     public void Interact(InputAction.CallbackContext it)
     {
-        if (it.phase == InputActionPhase.Started && nearbyDoor != null)
+        if (it.phase == InputActionPhase.Started)
         {
-            if (nearbyDoorTag == "Blue Door" && inventory.HasKey("Blue"))
+            if (nearbyDoor != null)
+            {
+                if (nearbyDoorTag == "Blue Door" && inventory.HasKey("Blue"))
             {
                 Destroy(nearbyDoor);
                 inventory.RemoveKey("Blue");
@@ -273,6 +289,29 @@ public class Player : Actor
             {
                 Debug.Log("Cannot open door: Missing key or wrong door type.");
             }
+            }
+            else if (nearbyShop != null)
+            {
+                nearbyShop.Interact();
+                UnlockCursor();
+            }
         }
+    }
+
+    public void BackFromShop()
+    {
+        LockCursor();
+    }
+
+    private void LockCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    private void UnlockCursor()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }

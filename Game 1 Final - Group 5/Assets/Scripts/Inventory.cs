@@ -12,10 +12,16 @@ public class Inventory : MonoBehaviour
     public int icePower = 0;
     public int poisonPower = 0;
 
+    public Shop shop;
+
     public void AddCoin(int amount)
     {
         coins += amount;
         Debug.Log("Picked up " + amount + " coins. Total coins: " + coins);
+        if (shop != null && shop.isPlayerNear)
+        {
+            shop.UpdateCoinDisplay(coins);
+        }
     }
 
     public void AddKey(string keyColor)

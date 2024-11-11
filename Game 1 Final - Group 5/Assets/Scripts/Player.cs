@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 public class Player : Actor
 {
     public int ammo = 6;
+    public int ammoMax = 6;
+    public int healthMax = 20;
     public bool canJump;
     public bool canShoot = true;
     private Vector2 moveInput;
@@ -18,7 +20,7 @@ public class Player : Actor
     public GameObject poisonBulletPrefab;
     public Transform shooter;
     public float bulletSpeed = 20f;
-    private Inventory inventory;
+    public Inventory inventory;
 
     private float xRotation = 0f;
     public Transform playerCamera;
@@ -31,6 +33,8 @@ public class Player : Actor
     private bool isUsingIceBullet = false;
     private bool isUsingFireBullet = false;
     private bool isUsingPoisonBullet = false;
+
+    public Shop shop;
 
     void Start()
     {
@@ -104,6 +108,11 @@ public class Player : Actor
     {
         if (fr.phase == InputActionPhase.Started && canShoot && ammo > 0)
         {
+            if (shop.shopUI.activeSelf) 
+            {
+                return; 
+            }
+
             Debug.Log("Fire button pressed.");
             Shoot();
             ammo--;
@@ -144,7 +153,7 @@ public class Player : Actor
     {
         canShoot = false;
         yield return new WaitForSeconds(2); // Adjust reload time as needed
-        ammo = 6;
+        ammo = ammoMax;
         canShoot = true;
     }
 

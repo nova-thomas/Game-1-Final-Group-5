@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33018419469632608}
   - component: {fileID: 23458456864992360}
   - component: {fileID: 920026623306765040}
+  - component: {fileID: 6626450868799511324}
   m_Layer: 0
   m_Name: GoldCoins
   m_TagString: Coin
@@ -99,3 +100,24 @@ MonoBehaviour:
   rotationSpeed: 50
   floatAmplitude: 0.25
   floatFrequency: 1
+--- !u!65 &6626450868799511324
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950871307682000}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.16, y: 0.08, z: 0.1}
+  m_Center: {x: 0.0032892236, y: 0.010496559, z: 0.0014966959}

@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lizardPrefab: {fileID: 840146891612072277, guid: 2532ec6f4f515044fbb4a81597bb1193, type: 3}
   plaguePrefab: {fileID: 5825765131691740336, guid: 66de4726d0ded6a4a91a1a04f1e9b145, type: 3}
-  golemPrefab: {fileID: 1622149741597507604, guid: 4c39cb62b455be149906ce468b7742f1, type: 3}
+  golemPrefab: {fileID: 4141109629327528113, guid: 956cf7512f4b6d34a98200d1aed3a4f7, type: 3}
   dragonPrefab: {fileID: 4386270827649839149, guid: 30af7282a62518244ac9a457fd0d5c94, type: 3}
   maxMembers: 5
   enemyToSpawn: 0

@@ -20,6 +20,7 @@ TagManager:
   - Ice Power
   - Poison Power
   - Shop
+  - Chest
   layers:
   - Default
   - TransparentFX

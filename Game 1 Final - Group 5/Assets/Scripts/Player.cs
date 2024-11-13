@@ -21,6 +21,7 @@ public class Player : Actor
     public Transform shooter;
     public float bulletSpeed = 20f;
     public Inventory inventory;
+    public GameObject deathScreenUI;
 
     private float xRotation = 0f;
     public Transform playerCamera;
@@ -52,6 +53,10 @@ public class Player : Actor
         Vector3 moveDirection = transform.forward * moveInput.y + transform.right * moveInput.x;
         transform.position += moveDirection * speed * Time.deltaTime;
         LookAround();
+        if (health <= 0)
+        {
+            Die();
+        }
     }
 
     public void Move(InputAction.CallbackContext mv)
@@ -322,5 +327,15 @@ public class Player : Actor
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+    }
+
+    public void Die()
+    {
+        deathScreenUI.SetActive(true);
+    }
+
+    public void Respawn()
+    {
+        deathScreenUI.SetActive(false);
     }
 }

@@ -46,6 +46,7 @@ public class Player : Actor
         canJump = true;
         canShoot = true;
         LockCursor();
+        deathScreenUI = GameObject.Find("DeathCanvas");
     }
 
     void Update()

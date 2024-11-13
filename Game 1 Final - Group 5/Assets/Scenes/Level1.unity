@@ -5408,7 +5408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 617766574077805857, guid: 80ff68b9233a00e4c92a05815c0f5ab9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.025
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 617766574077805857, guid: 80ff68b9233a00e4c92a05815c0f5ab9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5416,15 +5416,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 617766574077805857, guid: 80ff68b9233a00e4c92a05815c0f5ab9, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 617766574077805857, guid: 80ff68b9233a00e4c92a05815c0f5ab9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 617766574077805857, guid: 80ff68b9233a00e4c92a05815c0f5ab9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 617766574077805857, guid: 80ff68b9233a00e4c92a05815c0f5ab9, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -5449,6 +5449,10 @@ PrefabInstance:
     - target: {fileID: 1888282449366969568, guid: 80ff68b9233a00e4c92a05815c0f5ab9, type: 3}
       propertyPath: m_Name
       value: DeathCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888282449366969568, guid: 80ff68b9233a00e4c92a05815c0f5ab9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

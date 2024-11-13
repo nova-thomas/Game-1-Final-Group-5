@@ -14,6 +14,10 @@ public class Dragon : Solo
     void Update()
     {
         if (playerInSightRange && playerInAttackRange) AttackPlayer();
+        if (health <= 0)
+        {
+            Win();
+        }
     }
 
     private void AttackPlayer()
@@ -33,6 +37,11 @@ public class Dragon : Solo
     }
 
     public void breathFire()
+    {
+
+    }
+
+    public void Win()
     {
 
     }

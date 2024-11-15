@@ -19,11 +19,15 @@ public class Shop : MonoBehaviour
     public TextMeshProUGUI damageCostText;
     public TextMeshProUGUI speedCostText;
 
+    public AudioSource audioSource;
+    public AudioClip upgradeSound;
+    public AudioClip buttonSound;
+
     public bool isPlayerNear = false;
     private int healthUpgradeLevel = 0;
     private int damageUpgradeLevel = 0;
     private int speedUpgradeLevel = 0;
-    private const int maxUpgradeLevel = 12;
+    private const int maxUpgradeLevel = 6;
     private const int upgradeCost = 5;
     private void Start()
     {
@@ -89,15 +93,25 @@ public class Shop : MonoBehaviour
         Debug.Log("Shop closed.");
     }
 
+    private void PlaySound(bool isUpgradeAllowed)
+    {
+        audioSource.clip = isUpgradeAllowed ? upgradeSound : buttonSound;
+        audioSource.Play();
+    }
+
     private void UpgradeHealth()
     {
-        if (healthUpgradeLevel < maxUpgradeLevel && player.inventory.coins >= 5)
+        bool canUpgrade = healthUpgradeLevel < maxUpgradeLevel && player.inventory.coins >= upgradeCost;
+
+        PlaySound(canUpgrade);
+
+        if (canUpgrade)
         {
-            player.inventory.coins -= 5;  
-            player.healthMax+= 3;  
+            player.inventory.coins -= upgradeCost;
+            player.healthMax += 3;
             healthUpgradeLevel++;
             healthProgressBar.value = healthUpgradeLevel;
-            coinCountText.text = "Coins: " + player.inventory.coins;
+            UpdateCoinCount();
             Debug.Log("Health upgraded to level " + healthUpgradeLevel);
         }
         else
@@ -108,13 +122,17 @@ public class Shop : MonoBehaviour
 
     private void UpgradeDamage()
     {
-        if (damageUpgradeLevel < maxUpgradeLevel && player.inventory.coins >= 5)
+        bool canUpgrade = damageUpgradeLevel < maxUpgradeLevel && player.inventory.coins >= upgradeCost;
+
+        PlaySound(canUpgrade);
+
+        if (canUpgrade)
         {
-            player.inventory.coins -= 5; 
-            player.ammoMax += 3; 
+            player.inventory.coins -= upgradeCost;
+            player.ammoMax += 3;
             damageUpgradeLevel++;
             damageProgressBar.value = damageUpgradeLevel;
-            coinCountText.text = "Coins: " + player.inventory.coins;
+            UpdateCoinCount();
             Debug.Log("Damage upgraded to level " + damageUpgradeLevel);
         }
         else
@@ -125,13 +143,17 @@ public class Shop : MonoBehaviour
 
     private void UpgradeSpeed()
     {
-        if (speedUpgradeLevel < maxUpgradeLevel && player.inventory.coins >= 5)
+        bool canUpgrade = speedUpgradeLevel < maxUpgradeLevel && player.inventory.coins >= upgradeCost;
+
+        PlaySound(canUpgrade);
+
+        if (canUpgrade)
         {
-            player.inventory.coins -= 5; 
-            player.speed += 2;  
+            player.inventory.coins -= upgradeCost;
+            player.speed += 2;
             speedUpgradeLevel++;
             speedProgressBar.value = speedUpgradeLevel;
-            coinCountText.text = "Coins: " + player.inventory.coins;
+            UpdateCoinCount();
             Debug.Log("Speed upgraded to level " + speedUpgradeLevel);
         }
         else

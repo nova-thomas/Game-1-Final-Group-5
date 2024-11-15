@@ -22,9 +22,18 @@ public class Player : Actor
     public float bulletSpeed = 20f;
     public Inventory inventory;
     public GameObject deathScreenUI;
+    public Transform playerCamera;
+    public Shop shop;
+
+    public AudioClip coinPickupSound;
+    public AudioClip doorOpenSound;
+    public AudioClip bulletFireSound;
+    public AudioClip reloadSound;
+    public AudioClip keyCollectSound;
+    public AudioClip bulletTypeSwitchSound;
 
     private float xRotation = 0f;
-    public Transform playerCamera;
+    
     private Rigidbody rb;
 
     private GameObject nearbyDoor;
@@ -35,12 +44,15 @@ public class Player : Actor
     private bool isUsingFireBullet = false;
     private bool isUsingPoisonBullet = false;
 
-    public Shop shop;
+    private AudioSource audioSource;
+
+   
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         inventory = GetComponent<Inventory>();
+        audioSource = GetComponent<AudioSource>();
         speed = 5;
         ammo = 6;
         canJump = true;
@@ -121,6 +133,10 @@ public class Player : Actor
 
             Debug.Log("Fire button pressed.");
             Shoot();
+            if (bulletFireSound != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(bulletFireSound);
+            }
             ammo--;
             Debug.Log("Ammo left: " + ammo);
 
@@ -158,9 +174,24 @@ public class Player : Actor
     private IEnumerator Reload()
     {
         canShoot = false;
-        yield return new WaitForSeconds(2); // Adjust reload time as needed
+        if (reloadSound != null && audioSource != null)
+        {
+            audioSource.pitch = reloadSound.length / 2f; // Adjust to make the clip play in 2 seconds
+            audioSource.PlayOneShot(reloadSound);
+        }
+        yield return new WaitForSeconds(2);
+        // Adjust reload time as needed
         ammo = ammoMax;
         canShoot = true;
+        audioSource.pitch = 1f;
+    }
+
+    private void PlayBulletTypeSwitchSound()
+    {
+        if (bulletTypeSwitchSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(bulletTypeSwitchSound);
+        }
     }
 
     public void ActivateIceBullet(InputAction.CallbackContext ctx)
@@ -191,24 +222,30 @@ public class Player : Actor
     {
         isUsingIceBullet = true;
         inventory.icePower--;
+        PlayBulletTypeSwitchSound();
         yield return new WaitForSeconds(5);
         isUsingIceBullet = false;
+        PlayBulletTypeSwitchSound();
     }
 
     private IEnumerator SwitchToFireBullet()
     {
         isUsingFireBullet = true;
         inventory.firePower--;
+        PlayBulletTypeSwitchSound();
         yield return new WaitForSeconds(5);
         isUsingFireBullet = false;
+        PlayBulletTypeSwitchSound();
     }
 
     private IEnumerator SwitchToPoisonBullet()
     {
         isUsingPoisonBullet = true;
         inventory.poisonPower--;
+        PlayBulletTypeSwitchSound();
         yield return new WaitForSeconds(5);
         isUsingPoisonBullet = false;
+        PlayBulletTypeSwitchSound();
     }
 
     void OnTriggerEnter(Collider other)
@@ -223,22 +260,32 @@ public class Player : Actor
         {
             inventory.AddKey("Blue");
             Destroy(other.gameObject);
+            PlayKeyCollectSound();
         }
         else if (other.CompareTag("Red Key"))
         {
             inventory.AddKey("Red");
             Destroy(other.gameObject);
+            PlayKeyCollectSound();
         }
         else if (other.CompareTag("Green Key"))
         {
             inventory.AddKey("Green");
             Destroy(other.gameObject);
+            PlayKeyCollectSound();
         }
         else if (other.CompareTag("Coin"))
         {
             int coinAmount = Random.Range(10, 21); // Generates a random amount between 10 and 20
             inventory.AddCoin(coinAmount);
+            if (coinPickupSound != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(coinPickupSound);
+
+            }
             Destroy(other.gameObject);
+
+
         }
 
         else if (other.CompareTag("Fire Power"))
@@ -282,34 +329,54 @@ public class Player : Actor
         {
             if (nearbyDoor != null)
             {
+                bool doorOpened = false;
+
                 if (nearbyDoorTag == "Blue Door" && inventory.HasKey("Blue"))
-            {
-                Destroy(nearbyDoor);
-                inventory.RemoveKey("Blue");
-                Debug.Log("Blue door opened and destroyed!");
-            }
-            else if (nearbyDoorTag == "Red Door" && inventory.HasKey("Red"))
-            {
-                Destroy(nearbyDoor);
-                inventory.RemoveKey("Red");
-                Debug.Log("Red door opened and destroyed!");
-            }
-            else if (nearbyDoorTag == "Green Door" && inventory.HasKey("Green"))
-            {
-                Destroy(nearbyDoor);
-                inventory.RemoveKey("Green");
-                Debug.Log("Green door opened and destroyed!");
-            }
-            else
-            {
-                Debug.Log("Cannot open door: Missing key or wrong door type.");
-            }
+                {
+                    Destroy(nearbyDoor);
+                    inventory.RemoveKey("Blue");
+                    doorOpened = true;
+                    Debug.Log("Blue door opened and destroyed!");
+                }
+                else if (nearbyDoorTag == "Red Door" && inventory.HasKey("Red"))
+                {
+                    Destroy(nearbyDoor);
+                    inventory.RemoveKey("Red");
+                    doorOpened = true;
+                    Debug.Log("Red door opened and destroyed!");
+                }
+                else if (nearbyDoorTag == "Green Door" && inventory.HasKey("Green"))
+                {
+                    Destroy(nearbyDoor);
+                    inventory.RemoveKey("Green");
+                    doorOpened = true;
+                    Debug.Log("Green door opened and destroyed!");
+                }
+                else
+                {
+                    Debug.Log("Cannot open door: Missing key or wrong door type.");
+                }
+
+                if (doorOpened && doorOpenSound != null && audioSource != null)
+                {
+                    audioSource.PlayOneShot(doorOpenSound);
+                }
             }
             else if (nearbyShop != null)
             {
                 nearbyShop.Interact();
                 UnlockCursor();
             }
+        }
+    }
+
+    private void PlayKeyCollectSound()
+    {
+        if (keyCollectSound != null && audioSource != null)
+        {
+            audioSource.pitch = keyCollectSound.length / 2f; 
+            audioSource.PlayOneShot(keyCollectSound);
+            audioSource.pitch = 1f; 
         }
     }
 

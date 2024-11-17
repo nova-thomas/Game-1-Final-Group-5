@@ -112,6 +112,7 @@ public class Shop : MonoBehaviour
             healthUpgradeLevel++;
             healthProgressBar.value = healthUpgradeLevel;
             UpdateCoinCount();
+            player.inventory.UpdateCoinUI();
             Debug.Log("Health upgraded to level " + healthUpgradeLevel);
         }
         else
@@ -133,6 +134,7 @@ public class Shop : MonoBehaviour
             damageUpgradeLevel++;
             damageProgressBar.value = damageUpgradeLevel;
             UpdateCoinCount();
+            player.inventory.UpdateCoinUI();
             Debug.Log("Damage upgraded to level " + damageUpgradeLevel);
         }
         else
@@ -154,6 +156,7 @@ public class Shop : MonoBehaviour
             speedUpgradeLevel++;
             speedProgressBar.value = speedUpgradeLevel;
             UpdateCoinCount();
+            player.inventory.UpdateCoinUI();
             Debug.Log("Speed upgraded to level " + speedUpgradeLevel);
         }
         else

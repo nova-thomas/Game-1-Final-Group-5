@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class Player : Actor
 {
@@ -46,7 +47,8 @@ public class Player : Actor
 
     private AudioSource audioSource;
 
-   
+    public TextMeshProUGUI healthText;
+    public TextMeshProUGUI ammoText;
 
     void Start()
     {
@@ -59,6 +61,7 @@ public class Player : Actor
         canShoot = true;
         LockCursor();
         deathScreenUI = GameObject.Find("DeathCanvas");
+        deathScreenUI.SetActive(false);
     }
 
     void Update()
@@ -66,6 +69,8 @@ public class Player : Actor
         Vector3 moveDirection = transform.forward * moveInput.y + transform.right * moveInput.x;
         transform.position += moveDirection * speed * Time.deltaTime;
         LookAround();
+        UpdateHealthUI();
+        UpdateAmmoUI();
         if (health <= 0)
         {
             Die();
@@ -138,6 +143,7 @@ public class Player : Actor
                 audioSource.PlayOneShot(bulletFireSound);
             }
             ammo--;
+            UpdateAmmoUI();
             Debug.Log("Ammo left: " + ammo);
 
             if (ammo <= 0)
@@ -182,6 +188,7 @@ public class Player : Actor
         yield return new WaitForSeconds(2);
         // Adjust reload time as needed
         ammo = ammoMax;
+        UpdateAmmoUI();
         canShoot = true;
         audioSource.pitch = 1f;
     }
@@ -406,4 +413,19 @@ public class Player : Actor
     {
         deathScreenUI.SetActive(false);
     }
+    private void UpdateHealthUI()
+    {
+        if (healthText != null)
+        {
+            healthText.text = $"Health: {health} / {healthMax}";
+        }
+    }
+    private void UpdateAmmoUI()
+    {
+        if (ammoText != null)
+        {
+            ammoText.text = $"Ammo: {ammo} / {ammoMax}";
+        }
+    }
+
 }

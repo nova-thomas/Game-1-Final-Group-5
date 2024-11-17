@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Inventory : MonoBehaviour
 {
@@ -13,10 +14,17 @@ public class Inventory : MonoBehaviour
     public int poisonPower = 0;
 
     public Shop shop;
+    public TextMeshProUGUI coinText;
+
+    private void Start()
+    {
+        UpdateCoinUI(); 
+    }
 
     public void AddCoin(int amount)
     {
         coins += amount;
+        UpdateCoinUI();
         Debug.Log("Picked up " + amount + " coins. Total coins: " + coins);
         if (shop != null && shop.isPlayerNear)
         {
@@ -86,5 +94,13 @@ public class Inventory : MonoBehaviour
     {
         poisonPower++;
         Debug.Log("Poison power-up collected! Total Poison Power: " + poisonPower);
+    }
+
+    public void UpdateCoinUI()
+    {
+        if (coinText != null)
+        {
+            coinText.text = coins.ToString(); 
+        }
     }
 }

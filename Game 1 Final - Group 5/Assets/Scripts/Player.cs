@@ -32,6 +32,7 @@ public class Player : Actor
     public AudioClip reloadSound;
     public AudioClip keyCollectSound;
     public AudioClip bulletTypeSwitchSound;
+    public AudioClip powerUpCollectSound;
 
     private float xRotation = 0f;
     
@@ -229,16 +230,19 @@ public class Player : Actor
     {
         isUsingIceBullet = true;
         inventory.icePower--;
+        inventory.UpdatePowerUpUI();
         PlayBulletTypeSwitchSound();
         yield return new WaitForSeconds(5);
         isUsingIceBullet = false;
         PlayBulletTypeSwitchSound();
+        
     }
 
     private IEnumerator SwitchToFireBullet()
     {
         isUsingFireBullet = true;
         inventory.firePower--;
+        inventory.UpdatePowerUpUI();
         PlayBulletTypeSwitchSound();
         yield return new WaitForSeconds(5);
         isUsingFireBullet = false;
@@ -249,6 +253,7 @@ public class Player : Actor
     {
         isUsingPoisonBullet = true;
         inventory.poisonPower--;
+        inventory.UpdatePowerUpUI();
         PlayBulletTypeSwitchSound();
         yield return new WaitForSeconds(5);
         isUsingPoisonBullet = false;
@@ -299,16 +304,20 @@ public class Player : Actor
         {
             inventory.AddFirePower();
             Destroy(other.gameObject);
+            PlayPowerUpCollectSound();
+
         }
         else if (other.CompareTag("Ice Power"))
         {
             inventory.AddIcePower();
             Destroy(other.gameObject);
+            PlayPowerUpCollectSound();
         }
         else if (other.CompareTag("Poison Power"))
         {
             inventory.AddPoisonPower();
             Destroy(other.gameObject);
+            PlayPowerUpCollectSound();
         }
         else if (other.CompareTag("Shop"))
         {
@@ -417,15 +426,22 @@ public class Player : Actor
     {
         if (healthText != null)
         {
-            healthText.text = $"Health: {health} / {healthMax}";
+            healthText.text = health.ToString() + "/" + healthMax.ToString();
         }
     }
     private void UpdateAmmoUI()
     {
         if (ammoText != null)
         {
-            ammoText.text = $"Ammo: {ammo} / {ammoMax}";
+            ammoText.text = ammo.ToString() + "/" + ammoMax.ToString();
         }
     }
 
+    private void PlayPowerUpCollectSound()
+    {
+        if (powerUpCollectSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(powerUpCollectSound);
+        }
+    }
 }

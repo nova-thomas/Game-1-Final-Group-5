@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Chest : MonoBehaviour
 {
-    public GameObject coins;    
-    public GameObject powerup;  
-    public GameObject key;      
-    public GameObject chestTop; 
+    public GameObject coins;
+    public GameObject powerup;
+    public GameObject key;
+    public GameObject chestTop;
+    public AudioClip chestOpenSound; // Sound for opening the chest
+    private AudioSource audioSource;
 
     private bool isPlayerInRange = false;
     private bool isChestOpened = false;
@@ -17,6 +19,12 @@ public class Chest : MonoBehaviour
         if (chestTop == null)
         {
             chestTop = transform.Find("ChestV2_Top").gameObject;
+        }
+
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
         }
     }
 
@@ -30,7 +38,13 @@ public class Chest : MonoBehaviour
 
     private IEnumerator OpenChest()
     {
+        if (chestOpenSound != null)
+        {
+            audioSource.PlayOneShot(chestOpenSound);
+        }
+
         isChestOpened = true;
+
         Quaternion startRotation = chestTop.transform.rotation;
         Quaternion endRotation = startRotation * Quaternion.Euler(-70, 0, 0);
         float duration = 0.6f;
@@ -78,7 +92,7 @@ public class Chest : MonoBehaviour
 
         if (rb != null)
         {
-            rb.AddForce(direction * 5f, ForceMode.Impulse); 
+            rb.AddForce(direction * 5f, ForceMode.Impulse);
         }
     }
 

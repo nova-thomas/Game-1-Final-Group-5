@@ -15,6 +15,9 @@ public class Inventory : MonoBehaviour
 
     public Shop shop;
     public TextMeshProUGUI coinText;
+    public TextMeshProUGUI firePowerText;
+    public TextMeshProUGUI icePowerText;
+    public TextMeshProUGUI poisonPowerText;
 
     private void Start()
     {
@@ -82,18 +85,21 @@ public class Inventory : MonoBehaviour
     {
         firePower++;
         Debug.Log("Fire power-up collected! Total Fire Power: " + firePower);
+        UpdatePowerUpUI();
     }
 
     public void AddIcePower()
     {
         icePower++;
         Debug.Log("Ice power-up collected! Total Ice Power: " + icePower);
+        UpdatePowerUpUI();
     }
 
     public void AddPoisonPower()
     {
         poisonPower++;
         Debug.Log("Poison power-up collected! Total Poison Power: " + poisonPower);
+        UpdatePowerUpUI();
     }
 
     public void UpdateCoinUI()
@@ -101,6 +107,22 @@ public class Inventory : MonoBehaviour
         if (coinText != null)
         {
             coinText.text = coins.ToString(); 
+        }
+    }
+
+    public void UpdatePowerUpUI()
+    {
+        if (firePowerText != null)
+        {
+            firePowerText.text = firePower.ToString();
+        }
+        if (icePowerText != null)
+        {
+            icePowerText.text = icePower.ToString();
+        }
+        if (poisonPowerText != null)
+        {
+            poisonPowerText.text = poisonPower.ToString();
         }
     }
 }

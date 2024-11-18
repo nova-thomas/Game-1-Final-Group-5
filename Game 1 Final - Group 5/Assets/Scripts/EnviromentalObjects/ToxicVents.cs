@@ -7,12 +7,14 @@ public class ToxicVents: EnviromentalObjects
 {
     public int damage;
     public GameObject[] Toxin;
+    public BoxCollider BoxCollider;
 
     // Start is called before the first frame update
     void Start()
     {
         elementType = 2;
         active = true;
+        BoxCollider = GetComponent<BoxCollider>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -20,10 +22,13 @@ public class ToxicVents: EnviromentalObjects
         if (collision.gameObject.tag == "Ice Bullet")
         {
             //Shut off
-            for (int i = 0; Toxin[i] != null; i++)
+            for (int i = 0; i < Toxin.Length; i++)
             {
                 Destroy(Toxin[i]);
             }
+            active = false;
+            BoxCollider.center = new Vector3(0, -.5f, 0);
+            BoxCollider.size = Vector3.zero;
         }
         else if (collision.gameObject.tag == "Player")
         {

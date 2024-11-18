@@ -102,18 +102,24 @@ public class EnemyAi : Actor
                 break;
             case "Fire Bullet":
                 if (enemyElementType == ElementType.Poison)
-                {
+                { // Weakness
                     TakeDamage(playerScript.damage * 1.3);
-                }
-                else
+                } else if (enemyElementType == ElementType.Fire) 
+                { // Resistance
+                    TakeDamage(playerScript.damage * 0.8);
+                } else 
                 {
                     TakeDamage(playerScript.damage);
                 }
                 break;
             case "Ice Bullet":
                 if (enemyElementType == ElementType.Fire)
-                {
+                { // Weakness
                     TakeDamage(playerScript.damage * 1.3);
+                }
+                else if (enemyElementType == ElementType.Ice)
+                { // Resistance
+                    TakeDamage(playerScript.damage * 0.8);
                 }
                 else
                 {
@@ -122,8 +128,12 @@ public class EnemyAi : Actor
                 break;
             case "Poison Bullet":
                 if (enemyElementType == ElementType.Ice)
-                {
+                { // Weakness
                     TakeDamage(playerScript.damage * 1.3);
+                }
+                else if (enemyElementType == ElementType.Poison)
+                { // Resistance
+                    TakeDamage(playerScript.damage * 0.8);
                 }
                 else
                 {

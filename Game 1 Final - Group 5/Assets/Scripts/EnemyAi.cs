@@ -91,10 +91,9 @@ public class EnemyAi : Actor
 
         Destroy(gameObject);
     }
-
-    new private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        string tag = collision.gameObject.tag;
+        string tag = other.gameObject.tag;
 
         switch (tag)
         {
@@ -105,7 +104,8 @@ public class EnemyAi : Actor
                 if (enemyElementType == ElementType.Poison)
                 {
                     TakeDamage(playerScript.damage * 1.3);
-                } else
+                }
+                else
                 {
                     TakeDamage(playerScript.damage);
                 }

@@ -9,7 +9,7 @@ public class IceWall : EnviromentalObjects
     // Start is called before the first frame update
     void Start()
     {
-        elementType = 0;
+        elementType = 2;
         active = true;
     }
 

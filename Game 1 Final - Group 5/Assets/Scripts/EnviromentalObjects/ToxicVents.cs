@@ -12,7 +12,7 @@ public class ToxicVents: EnviromentalObjects
     // Start is called before the first frame update
     void Start()
     {
-        elementType = 2;
+        elementType = 3;
         active = true;
         BoxCollider = GetComponent<BoxCollider>();
     }

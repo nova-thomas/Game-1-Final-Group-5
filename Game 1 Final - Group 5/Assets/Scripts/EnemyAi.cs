@@ -7,11 +7,23 @@ public class EnemyAi : Actor
 {
     public NavMeshAgent agent;
 
-    public Transform player;
+    public GameObject player;
+    private Player playerScript;
 
     public LayerMask whatIsGround, whatIsPlayer;
 
-    public int damage;
+    public enum ElementType
+    {
+        None,
+        Fire,
+        Ice,
+        Poison
+    }
+
+    [Header("Enemy Settings")]
+    public ElementType enemyElementType; // Dropdown for element type
+    public double enemyDamage;
+    
 
     //Patrolling
     public Vector3 walkPoint;
@@ -28,7 +40,8 @@ public class EnemyAi : Actor
 
     public void Awake()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerScript = player.GetComponent<Player>();
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -64,7 +77,7 @@ public class EnemyAi : Actor
 
     public void ChasePlayer()
     {
-        agent.SetDestination(player.position);
+        agent.SetDestination(player.transform.position);
     }
 
     public void ResetAttack()
@@ -74,6 +87,59 @@ public class EnemyAi : Actor
 
     public void Die()
     {
+        // Play death animation
 
+        Destroy(gameObject);
+    }
+
+    new private void OnCollisionEnter(Collision collision)
+    {
+        string tag = collision.gameObject.tag;
+
+        switch (tag)
+        {
+            case "Regular Bullet":
+                TakeDamage(playerScript.damage);
+                break;
+            case "Fire Bullet":
+                if (enemyElementType == ElementType.Poison)
+                {
+                    TakeDamage(playerScript.damage * 1.3);
+                } else
+                {
+                    TakeDamage(playerScript.damage);
+                }
+                break;
+            case "Ice Bullet":
+                if (enemyElementType == ElementType.Fire)
+                {
+                    TakeDamage(playerScript.damage * 1.3);
+                }
+                else
+                {
+                    TakeDamage(playerScript.damage);
+                }
+                break;
+            case "Poison Bullet":
+                if (enemyElementType == ElementType.Ice)
+                {
+                    TakeDamage(playerScript.damage * 1.3);
+                }
+                else
+                {
+                    TakeDamage(playerScript.damage);
+                }
+                break;
+        }
+    }
+
+    private void TakeDamage(double amount)
+    {
+        health -= (int)amount;
+
+        if (health <= 0)
+        {
+            Die();
+        }
     }
 }

@@ -5,7 +5,8 @@ using UnityEngine;
 public class Actor : MonoBehaviour
 {
     public float speed;
-    public float health; 
+    public float health;
+    public double damage;
     // Start is called before the first frame update
     void Start()
     {

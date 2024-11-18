@@ -58,6 +58,7 @@ public class Player : Actor
         audioSource = GetComponent<AudioSource>();
         speed = 5;
         ammo = 6;
+        damage = 1;
         canJump = true;
         canShoot = true;
         LockCursor();

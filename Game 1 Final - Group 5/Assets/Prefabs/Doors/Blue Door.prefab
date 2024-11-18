@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 96227337541139582}
   m_Layer: 0
   m_Name: Blue Door
-  m_TagString: Green Door
+  m_TagString: Blue Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 650ae2d395954474ca7560555f9d08f8, type: 2}
+  - {fileID: 2100000, guid: 0b3e548fd01261e409e0482f36f02352, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

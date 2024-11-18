@@ -32,18 +32,7 @@ public class EnemyAi : Actor
         agent = GetComponent<NavMeshAgent>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        // Check for sight and attack range
-        playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
-        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
-
-        if (!playerInSightRange && !playerInAttackRange) Patrolling();
-        if (playerInSightRange && !playerInAttackRange) ChasePlayer();
-    }
-
-    private void Patrolling()
+    public void Patrolling()
     {
         if (!walkPointSet) SearchWalkPoint();
 
@@ -60,7 +49,7 @@ public class EnemyAi : Actor
         }
     }
 
-    private void SearchWalkPoint()
+    public void SearchWalkPoint()
     {
         float randomZ = Random.Range(-walkPointRange, walkPointRange);
         float randomX = Random.Range(-walkPointRange, walkPointRange);
@@ -73,7 +62,7 @@ public class EnemyAi : Actor
         }
     }
 
-    private void ChasePlayer()
+    public void ChasePlayer()
     {
         agent.SetDestination(player.position);
     }

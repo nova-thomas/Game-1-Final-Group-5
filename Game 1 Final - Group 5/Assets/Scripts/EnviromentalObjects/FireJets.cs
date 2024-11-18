@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using UnityEngine;
 
-public class FireWall : EnviromentalObjects
+public class FireJets: EnviromentalObjects
 {
     public int damage;
+    public GameObject[] flame;
 
     // Start is called before the first frame update
     void Start()
@@ -15,10 +17,13 @@ public class FireWall : EnviromentalObjects
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Fire Bullet")
+        if (collision.gameObject.tag == "Poison Bullet")
         {
             //Shut off
-            active = false;
+            for (int i = 0; flame[i] != null; i++)
+            {
+                Destroy(flame[i]);
+            }
         }
         else if (collision.gameObject.tag == "Player")
         {

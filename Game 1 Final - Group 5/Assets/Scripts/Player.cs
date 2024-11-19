@@ -24,6 +24,7 @@ public class Player : Actor
     public float bulletSpeed = 20f;
     public Inventory inventory;
     public GameObject deathScreenUI;
+    public GameObject pauseScreenUI;
     public Transform playerCamera;
     public Shop shop;
 
@@ -65,6 +66,10 @@ public class Player : Actor
         LockCursor();
         deathScreenUI = GameObject.Find("DeathCanvas");
         deathScreenUI.SetActive(false);
+
+        pauseScreenUI = GameObject.Find("PauseCanvas");
+        pauseScreenUI.SetActive(false);
+
     }
 
     void Update()
@@ -464,5 +469,39 @@ public class Player : Actor
         {
             audioSource.PlayOneShot(powerUpCollectSound);
         }
+    }
+
+    public void Pause(InputAction.CallbackContext ctx)
+    {
+        if (ctx.phase == InputActionPhase.Started)
+        {
+            if (pauseScreenUI.activeSelf)
+            {
+                ResumeGame();
+            }
+            else
+            {
+                PauseGame();
+            }
+        }
+    }
+
+    private void PauseGame()
+    {
+        pauseScreenUI.SetActive(true);
+        UnlockCursor();
+        canShoot = false;
+        canJump = false;
+        moveInput = Vector2.zero; 
+        Time.timeScale = 0; //freeze
+    }
+
+    private void ResumeGame()
+    {
+        pauseScreenUI.SetActive(false);
+        LockCursor();
+        canShoot = true;
+        canJump = true;
+        Time.timeScale = 1; //unfreeze
     }
 }

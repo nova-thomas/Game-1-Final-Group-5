@@ -203,6 +203,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Green Door
       objectReference: {fileID: 0}
+    - target: {fileID: 219394540468154153, guid: 933e67f4fab6c204aa982a09ca02ea7b, type: 3}
+      propertyPath: m_TagString
+      value: Green Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 465038756706097747, guid: 933e67f4fab6c204aa982a09ca02ea7b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 650ae2d395954474ca7560555f9d08f8, type: 2}
     - target: {fileID: 1989800680313142103, guid: 933e67f4fab6c204aa982a09ca02ea7b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.1451416
@@ -3070,6 +3078,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue Door
       objectReference: {fileID: 0}
+    - target: {fileID: 219394540468154153, guid: 933e67f4fab6c204aa982a09ca02ea7b, type: 3}
+      propertyPath: m_TagString
+      value: Blue Door
+      objectReference: {fileID: 0}
     - target: {fileID: 1989800680313142103, guid: 933e67f4fab6c204aa982a09ca02ea7b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.8
@@ -5270,6 +5282,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red Door
       objectReference: {fileID: 0}
+    - target: {fileID: 219394540468154153, guid: 933e67f4fab6c204aa982a09ca02ea7b, type: 3}
+      propertyPath: m_TagString
+      value: Red Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 465038756706097747, guid: 933e67f4fab6c204aa982a09ca02ea7b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ccba7e6fd335635409f3f908b4502aa1, type: 2}
     - target: {fileID: 1989800680313142103, guid: 933e67f4fab6c204aa982a09ca02ea7b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.34

@@ -11,6 +11,7 @@ public class Player : Actor
     public int healthMax = 20;
     public bool canJump;
     public bool canShoot = true;
+    private bool isSprinting = false;
     private Vector2 moveInput;
     private Vector2 lookInput;
     public float lookSpeed = 1f;
@@ -69,7 +70,8 @@ public class Player : Actor
     void Update()
     {
         Vector3 moveDirection = transform.forward * moveInput.y + transform.right * moveInput.x;
-        transform.position += moveDirection * speed * Time.deltaTime;
+        float currentSpeed = isSprinting ? speed * 1.25f : speed;
+        transform.position += moveDirection * currentSpeed * Time.deltaTime;
         LookAround();
         UpdateHealthUI();
         UpdateAmmoUI();
@@ -194,7 +196,25 @@ public class Player : Actor
         canShoot = true;
         audioSource.pitch = 1f;
     }
+    public void ReloadManual(InputAction.CallbackContext ctx)
+    {
+        if (ctx.phase == InputActionPhase.Started && ammo < ammoMax)
+        {
+            StartCoroutine(Reload());
+        }
+    }
 
+    public void Sprint(InputAction.CallbackContext ctx)
+    {
+        if (ctx.phase == InputActionPhase.Performed)
+        {
+            isSprinting = true;  
+        }
+        else if (ctx.phase == InputActionPhase.Canceled)
+        {
+            isSprinting = false;  
+        }
+    }
     private void PlayBulletTypeSwitchSound()
     {
         if (bulletTypeSwitchSound != null && audioSource != null)

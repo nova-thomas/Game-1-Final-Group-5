@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7846210209009404964}
   - component: {fileID: 2526508746945650275}
   - component: {fileID: 96227337541139582}
+  - component: {fileID: -7573446957659524065}
   m_Layer: 0
   m_Name: Blue Door
   m_TagString: Blue Door
@@ -199,3 +200,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.0000001, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-7573446957659524065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219394540468154153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 013605f5cb19eb94e847db28013a80e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

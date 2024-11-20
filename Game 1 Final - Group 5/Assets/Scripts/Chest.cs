@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI; 
 
 public class Chest : MonoBehaviour
 {
@@ -8,8 +9,10 @@ public class Chest : MonoBehaviour
     public GameObject powerup;
     public GameObject key;
     public GameObject chestTop;
-    public AudioClip chestOpenSound; // Sound for opening the chest
+    public AudioClip chestOpenSound; 
     private AudioSource audioSource;
+
+    public GameObject chestIndicator; 
 
     private bool isPlayerInRange = false;
     private bool isChestOpened = false;
@@ -26,13 +29,41 @@ public class Chest : MonoBehaviour
         {
             audioSource = gameObject.AddComponent<AudioSource>();
         }
+
+        if (chestIndicator != null)
+        {
+            chestIndicator.SetActive(false);
+        }
     }
 
     void Update()
     {
-        if (isPlayerInRange && !isChestOpened && Input.GetKeyDown(KeyCode.E))
+        // Billboard the indicator toward the camera
+        if (chestIndicator != null && chestIndicator.activeSelf)
         {
-            StartCoroutine(OpenChest());
+            chestIndicator.transform.LookAt(Camera.main.transform);
+            chestIndicator.transform.Rotate(0, 180, 0); 
+        }
+
+        if (isPlayerInRange && !isChestOpened)
+        {
+
+            if (chestIndicator != null)
+            {
+                chestIndicator.SetActive(true);
+            }
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                StartCoroutine(OpenChest());
+            }
+        }
+        else
+        {
+            if (chestIndicator != null)
+            {
+                chestIndicator.SetActive(false);
+            }
         }
     }
 
@@ -112,3 +143,4 @@ public class Chest : MonoBehaviour
         }
     }
 }
+

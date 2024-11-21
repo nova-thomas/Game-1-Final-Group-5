@@ -21,6 +21,7 @@ TagManager:
   - Poison Power
   - Shop
   - Chest
+  - DeathPlane
   layers:
   - Default
   - TransparentFX

@@ -95,7 +95,7 @@ MonoBehaviour:
   canJump: 0
   canShoot: 0
   lookSpeed: 10
-  jumpForce: 5
+  jumpForce: 10
   bulletPrefab: {fileID: 7896422332571023850, guid: 801bab5d0dff4b2488ae68a73da7aa42, type: 3}
   iceBulletPrefab: {fileID: 7896422332571023850, guid: a73c35d0bb079d7438fed8f89c77461e, type: 3}
   fireBulletPrefab: {fileID: 7896422332571023850, guid: c08805b4031ad6045a5183a5d5589bfc, type: 3}

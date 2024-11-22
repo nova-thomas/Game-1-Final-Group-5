@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.8032951, g: 0.70765287, b: 0.6226886, a: 1}
+  m_IndirectSpecularColor: {r: 0.80100626, g: 0.70762795, b: 0.62308085, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4260,6 +4260,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2424726608699581535, guid: e8e7503f18cd7b54b98519051c38fe06, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2889187705765702892, guid: e8e7503f18cd7b54b98519051c38fe06, type: 3}
       propertyPath: m_Name
       value: FireWall
@@ -4785,6 +4789,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5307142111245009782, guid: 3f631a1076eef1e4a87982865dff355e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8685941046769262038, guid: 3f631a1076eef1e4a87982865dff355e, type: 3}
       propertyPath: m_Name
       value: IceWall
@@ -6346,6 +6354,10 @@ PrefabInstance:
     - target: {fileID: 93666705358106440, guid: 040f44167e0697d43bab9073929b82f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1410567036034545387, guid: 040f44167e0697d43bab9073929b82f3, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1706251514283158694, guid: 040f44167e0697d43bab9073929b82f3, type: 3}
       propertyPath: m_Name

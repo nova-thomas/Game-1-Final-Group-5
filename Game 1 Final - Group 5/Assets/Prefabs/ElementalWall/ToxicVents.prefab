@@ -63,7 +63,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -88,6 +88,7 @@ MonoBehaviour:
   - {fileID: 2988679669267493595}
   - {fileID: 6209677443211109316}
   - {fileID: 5355889711207496864}
+  BoxCollider: {fileID: 0}
 --- !u!1001 &2990334601254310843
 PrefabInstance:
   m_ObjectHideFlags: 0

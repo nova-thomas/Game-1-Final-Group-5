@@ -50,7 +50,9 @@ MonoBehaviour:
   speed: 4
   health: 300
   damage: 0
+  myAnimator: {fileID: 0}
   agent: {fileID: 0}
+  myRig: {fileID: 0}
   player: {fileID: 0}
   whatIsGround:
     serializedVersion: 2
@@ -59,7 +61,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   enemyElementType: 0
-  enemyDamage: 0
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 10
   timeBetweenAttacks: 10
@@ -68,6 +69,17 @@ MonoBehaviour:
   attackRange: 10
   playerInSightRange: 0
   playerInAttackRange: 0
+  a_ambient1: {fileID: 0}
+  a_ambient2: {fileID: 0}
+  a_BreathFire: {fileID: 0}
+  a_ShootIce: {fileID: 0}
+  a_BreathToxin: {fileID: 0}
+  fireAttackPosition: {fileID: 0}
+  iceAttackPosition: {fileID: 0}
+  toxinAttackPosition: {fileID: 0}
+  fireBallPrefab: {fileID: 6031231887847040809, guid: 0f28d1859bfa23a4e893f10f0d7ee129, type: 3}
+  iceProjectilePrefab: {fileID: 3586928419817038236, guid: 5c1140a1ee68c8348be5f9502dff9af0, type: 3}
+  toxinPrefab: {fileID: 8916781337777223090, guid: ff4d8ad8f718939438b6c6bfedbc3074, type: 3}
 --- !u!195 &5645155260263952607
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class Plague : Pack
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private AudioSource audioSource;
+    public AudioClip a_ambient1;
+    public AudioClip a_ambient2;
+    public AudioClip a_EmitToxin;
+
+    public Transform toxinPosition;
+
+    public GameObject toxinPrefab;
 
     // Update is called once per frame
     void Update()
@@ -30,9 +33,7 @@ public class Plague : Pack
 
         if (!alreadyAttacked)
         {
-            // Attack code
-
-            //
+            EmitToxin();
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
@@ -40,6 +41,8 @@ public class Plague : Pack
 
     public void EmitToxin()
     {
+        // Audio
+        audioSource.PlayOneShot(a_EmitToxin);
 
     }
 }

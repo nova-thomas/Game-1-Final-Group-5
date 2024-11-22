@@ -4,6 +4,21 @@ using UnityEngine;
 
 public class Dragon : Solo
 {
+    private AudioSource audioSource;
+    public AudioClip a_ambient1;
+    public AudioClip a_ambient2;
+    public AudioClip a_BreathFire;
+    public AudioClip a_ShootIce;
+    public AudioClip a_BreathToxin;
+
+    public Transform fireAttackPosition;
+    public Transform iceAttackPosition;
+    public Transform toxinAttackPosition;
+
+    public GameObject fireBallPrefab;
+    public GameObject iceProjectilePrefab;
+    public GameObject toxinPrefab;
+
     // Update is called once per frame
     void Update()
     {
@@ -38,11 +53,28 @@ public class Dragon : Solo
 
     public void breathFire()
     {
+        // Audio
+        audioSource.PlayOneShot(a_BreathFire);
+
+    }
+
+    public void shootIce()
+    {
+        // Audio
+        audioSource.PlayOneShot(a_ShootIce);
+
+    }
+
+    public void breathToxin()
+    {
+        // Audio
+        audioSource.PlayOneShot(a_BreathToxin);
 
     }
 
     public void Win()
     {
+        // Win Screen
 
     }
 }

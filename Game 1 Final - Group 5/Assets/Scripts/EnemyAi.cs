@@ -23,7 +23,6 @@ public class EnemyAi : Actor
 
     [Header("Enemy Settings")]
     public ElementType enemyElementType; // Dropdown for element type
-    public double enemyDamage;
     
 
     //Patrolling

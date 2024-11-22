@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class Golem : Solo
 {
+    private AudioSource audioSource;
+    public AudioClip a_ambient1;
+    public AudioClip a_ambient2;
+    public AudioClip a_SwingAttack;
+    public AudioClip a_SlamAttack;
+
     // Update is called once per frame
     void Update()
     {
@@ -43,11 +49,15 @@ public class Golem : Solo
 
     public void SwingAttack()
     {
+        // Audio
+        audioSource.PlayOneShot(a_SwingAttack);
 
     }
 
     public void SlamAttack()
     {
+        // Audio
+        audioSource.PlayOneShot(a_SlamAttack);
 
     }
 }

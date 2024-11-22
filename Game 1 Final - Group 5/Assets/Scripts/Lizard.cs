@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class Lizard : Pack
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private AudioSource audioSource;
+    public AudioClip a_ambient1;
+    public AudioClip a_ambient2;
+    public AudioClip a_FireBallAttack;
+
+    public Transform firePosition;
+    public GameObject fireBallPrefab;
+    public int fireBallSpeed;
 
     // Update is called once per frame
     void Update()
@@ -30,9 +33,7 @@ public class Lizard : Pack
 
         if (!alreadyAttacked)
         {
-            // Attack code
-
-            //
+            FireBallAttack();
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
@@ -40,6 +41,18 @@ public class Lizard : Pack
 
     public void FireBallAttack()
     {
+        // Audio
+        audioSource.PlayOneShot(a_FireBallAttack);
 
+        if (fireBallPrefab != null)
+        {
+            GameObject fireBall = Instantiate(fireBallPrefab, firePosition.position, firePosition.rotation);
+            Rigidbody fireBallRB = fireBall.GetComponent<Rigidbody>();
+
+            if (fireBallRB != null)
+            {
+                fireBallRB.velocity = firePosition.forward * fireBallSpeed;
+            }
+        }
     }
 }

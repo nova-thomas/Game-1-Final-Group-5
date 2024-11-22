@@ -11,8 +11,17 @@ public class Golem : Solo
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
-        if (!playerInSightRange && !playerInAttackRange) Patrolling();
-        if (playerInSightRange && !playerInAttackRange) ChasePlayer();
+        if (!playerInSightRange && !playerInAttackRange)
+        {
+            Patrolling();
+            myAnimator.SetInteger("DIR", 0);
+        }
+
+        if (playerInSightRange && !playerInAttackRange)
+        {
+            ChasePlayer();
+            myAnimator.SetInteger("DIR", 1);
+        }
         if (playerInSightRange && playerInAttackRange) AttackPlayer();
     }
 

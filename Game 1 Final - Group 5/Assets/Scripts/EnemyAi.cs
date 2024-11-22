@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class EnemyAi : Actor
 {
     public NavMeshAgent agent;
+    public Rigidbody myRig;
 
     public GameObject player;
     private Player playerScript;
@@ -43,6 +44,7 @@ public class EnemyAi : Actor
         player = GameObject.FindGameObjectWithTag("Player");
         playerScript = player.GetComponent<Player>();
         agent = GetComponent<NavMeshAgent>();
+        myRig = GetComponent<Rigidbody>();
     }
 
     public void Patrolling()

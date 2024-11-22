@@ -59,7 +59,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Walk
-  m_Speed: 1
+  m_Speed: 0.5
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -218,9 +218,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.3351669
+  m_TransitionDuration: 0.26719195
   m_TransitionOffset: 0
-  m_ExitTime: 0.04911428
+  m_ExitTime: 0.020188738
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0

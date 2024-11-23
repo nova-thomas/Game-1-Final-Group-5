@@ -2200,6 +2200,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playSceneName: Level2
+--- !u!65 &454278233
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454278231}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8, y: 8, z: 8}
+  m_Center: {x: 0.72, y: 3.38, z: 0.37}
 --- !u!1001 &456341335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4163,6 +4184,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2080385152}
     - target: {fileID: 7700809615590514054, guid: 3109c2c695cc9e8409d4c6c055ac9610, type: 3}
+      propertyPath: speed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7700809615590514054, guid: 3109c2c695cc9e8409d4c6c055ac9610, type: 3}
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 2099905364}
@@ -5191,6 +5216,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2915076708691823178, guid: 4ad6fb47309336c40b05f984ba8ec9c5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 454278232}
+    - targetCorrespondingSourceObject: {fileID: 2915076708691823178, guid: 4ad6fb47309336c40b05f984ba8ec9c5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 454278233}
   m_SourcePrefab: {fileID: 100100000, guid: 4ad6fb47309336c40b05f984ba8ec9c5, type: 3}
 --- !u!1 &1346067417
 GameObject:

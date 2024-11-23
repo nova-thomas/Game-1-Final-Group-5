@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.8032951, g: 0.70765287, b: 0.6226886, a: 1}
+  m_IndirectSpecularColor: {r: 0.80100626, g: 0.70762795, b: 0.62308085, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -646,6 +646,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IceElemental (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7699697352551674811, guid: 956cf7512f4b6d34a98200d1aed3a4f7, type: 3}
+      propertyPath: myAnimator
+      value: 
+      objectReference: {fileID: 472244100}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -901,6 +905,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &472244100 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: -1476138634775374575, guid: 956cf7512f4b6d34a98200d1aed3a4f7, type: 3}
+  m_PrefabInstance: {fileID: 215721385}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &496220832 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7127698343813263908, guid: c4665c8316a39e8479a59c5e2287f142, type: 3}
@@ -1204,6 +1213,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &742884459 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2585199422104640880, guid: 3109c2c695cc9e8409d4c6c055ac9610, type: 3}
+  m_PrefabInstance: {fileID: 2224004809301911040}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &769164822
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1880,6 +1894,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c455f98536dc34d45b28994d208fdd2d, type: 3}
+--- !u!54 &1232553019 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 5979236284505147303, guid: 4c39cb62b455be149906ce468b7742f1, type: 3}
+  m_PrefabInstance: {fileID: 2925766412777842556}
+  m_PrefabAsset: {fileID: 0}
+--- !u!195 &1232553020 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: 5750529071418975668, guid: 4c39cb62b455be149906ce468b7742f1, type: 3}
+  m_PrefabInstance: {fileID: 2925766412777842556}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1234367921 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1592705090559325658, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
@@ -3107,7 +3131,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7700809615590514054, guid: 3109c2c695cc9e8409d4c6c055ac9610, type: 3}
   m_PrefabInstance: {fileID: 2224004809301911040}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 742884459}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f29c4477c36d8545a9be2334b64c8ee, type: 3}
@@ -4751,6 +4775,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Golem
       objectReference: {fileID: 0}
+    - target: {fileID: 3991399776539624427, guid: 4c39cb62b455be149906ce468b7742f1, type: 3}
+      propertyPath: agent
+      value: 
+      objectReference: {fileID: 1232553020}
+    - target: {fileID: 3991399776539624427, guid: 4c39cb62b455be149906ce468b7742f1, type: 3}
+      propertyPath: myRig
+      value: 
+      objectReference: {fileID: 1232553019}
+    - target: {fileID: 3991399776539624427, guid: 4c39cb62b455be149906ce468b7742f1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 742884459}
+    - target: {fileID: 3991399776539624427, guid: 4c39cb62b455be149906ce468b7742f1, type: 3}
+      propertyPath: myAnimator
+      value: 
+      objectReference: {fileID: 472244100}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

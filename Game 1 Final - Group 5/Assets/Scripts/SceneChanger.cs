@@ -20,4 +20,12 @@ public class SceneChanger : MonoBehaviour
                     Application.Quit();
         #endif
     }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            SceneManager.LoadScene(playSceneName);
+        }
+    }
 }

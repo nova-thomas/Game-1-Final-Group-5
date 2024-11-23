@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 7734796765753940688}
   - component: {fileID: 8403100086397894605}
   - component: {fileID: 5099923874379890285}
+  - component: {fileID: 3753578626634358286}
   m_Layer: 0
   m_Name: ToxicProjectile
-  m_TagString: Untagged
+  m_TagString: Enemy Toxic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,7 +71,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -98,6 +99,20 @@ CapsuleCollider:
   m_Height: 0.9206524
   m_Direction: 0
   m_Center: {x: -0.039673805, y: 0, z: 0}
+--- !u!114 &3753578626634358286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8916781337777223090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5b576455bd0693438f93d7fcd2e8c95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alive: 3
+  damage: 0
 --- !u!1001 &8903411729758240398
 PrefabInstance:
   m_ObjectHideFlags: 0

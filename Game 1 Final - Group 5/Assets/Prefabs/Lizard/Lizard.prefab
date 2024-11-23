@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   health: 15
-  damage: 3
+  damage: 1
   myAnimator: {fileID: 0}
   agent: {fileID: 0}
   myRig: {fileID: 0}
@@ -122,12 +122,14 @@ MonoBehaviour:
   attackRange: 8
   playerInSightRange: 0
   playerInAttackRange: 0
+  playedAmbient: 0
+  timeBetweenAmbient: 5
   a_ambient1: {fileID: 8300000, guid: bea81f6f9a3742747bb8724c3e672cff, type: 3}
   a_ambient2: {fileID: 8300000, guid: a21e9832319c59d439463ef7c93816b0, type: 3}
   a_FireBallAttack: {fileID: 8300000, guid: 308b67e423d1ee6428243dbd924669ee, type: 3}
   firePosition: {fileID: 4012643005684644137}
   fireBallPrefab: {fileID: 6031231887847040809, guid: 0f28d1859bfa23a4e893f10f0d7ee129, type: 3}
-  fireBallSpeed: 5
+  fireBallSpeed: 4
 --- !u!195 &9153412629902954572
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -270,13 +272,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8900674853060685929}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.003, y: 0.83, z: 0.425}
+  m_LocalRotation: {x: 0.012340746, y: 0.7069991, z: 0.012340746, w: 0.7069991}
+  m_LocalPosition: {x: -0.003, y: 0.74, z: 0.425}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2082759214918368226}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 2}
 --- !u!1001 &8524792672802309642
 PrefabInstance:
   m_ObjectHideFlags: 0

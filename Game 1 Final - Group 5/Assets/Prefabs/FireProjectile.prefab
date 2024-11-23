@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1119426515627548475}
-  - component: {fileID: 7111447559500727408}
   - component: {fileID: 53511767535528090}
   - component: {fileID: 2543160522549270325}
+  - component: {fileID: -269012060412814758}
   m_Layer: 0
   m_Name: FireProjectile
-  m_TagString: Untagged
+  m_TagString: Enemy Fire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,27 +27,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6031231887847040809}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -16.344, y: 1.0777074, z: 25.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 142593679777612879}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7111447559500727408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6031231887847040809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec0d415ca61e8ad459c2b77931f43394, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  alive: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!54 &53511767535528090
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -70,7 +57,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -98,6 +85,20 @@ CapsuleCollider:
   m_Height: 0.9457741
   m_Direction: 0
   m_Center: {x: -0.2892723, y: 0.0030908883, z: 0}
+--- !u!114 &-269012060412814758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6031231887847040809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3d03721cee4fa241be79d2544019f8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alive: 3
+  damage: 0
 --- !u!1001 &463907385893790628
 PrefabInstance:
   m_ObjectHideFlags: 0

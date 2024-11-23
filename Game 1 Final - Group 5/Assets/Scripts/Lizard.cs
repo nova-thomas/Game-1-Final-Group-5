@@ -70,10 +70,18 @@ public class Lizard : Pack
         {
             GameObject fireBall = Instantiate(fireBallPrefab, firePosition.position, firePosition.rotation);
             Rigidbody fireBallRB = fireBall.GetComponent<Rigidbody>();
+            
 
             if (fireBallRB != null)
             {
-                fireBallRB.velocity = firePosition.forward * fireBallSpeed;
+                fireBallRB.velocity = -firePosition.right * fireBallSpeed;
+            }
+
+            // Set the damage value on the FireProjectile component
+            FireProjectile fireProjectile = fireBall.GetComponent<FireProjectile>();
+            if (fireProjectile != null)
+            {
+                fireProjectile.damage = damage; 
             }
         }
     }

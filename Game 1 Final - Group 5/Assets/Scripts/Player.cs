@@ -16,6 +16,7 @@ public class Player : Actor
     private Vector2 lookInput;
     public float lookSpeed = 1f;
     public float jumpForce = 5f;
+
     public GameObject bulletPrefab;
     public GameObject iceBulletPrefab;
     public GameObject fireBulletPrefab;
@@ -52,6 +53,9 @@ public class Player : Actor
 
     public TextMeshProUGUI healthText;
     public TextMeshProUGUI ammoText;
+
+    public float damageInterval;
+    private float damageTimer = 0f;
 
     void Start()
     {
@@ -325,7 +329,6 @@ public class Player : Actor
 
 
         }
-
         else if (other.CompareTag("Fire Power"))
         {
             inventory.AddFirePower();
@@ -348,6 +351,46 @@ public class Player : Actor
         else if (other.CompareTag("Shop"))
         {
             nearbyShop = other.GetComponent<Shop>();
+        }
+        else if (other.CompareTag("Enemy Ice"))
+        {
+            // Attempt to get the IceProjectile component from the triggering object
+            IceProjectile iceProjectile = other.gameObject.GetComponent<IceProjectile>();
+
+            // Check if the component exists to avoid null reference errors
+            if (iceProjectile != null)
+            {
+                TakeDamage(iceProjectile.damage);
+            }
+        }
+        
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        damageTimer += Time.fixedDeltaTime;
+
+        if (other.CompareTag("Enemy Fire"))
+        {
+            FireProjectile fireProjectile = other.gameObject.GetComponent<FireProjectile>();
+
+            if (fireProjectile != null && damageTimer >= damageInterval)
+            {
+                // Damage over time from fireProjectile.damage
+                TakeDamage(fireProjectile.damage);
+                damageTimer = 0f;
+            }
+        }
+        else if (other.CompareTag("Enemy Toxic"))
+        {
+            ToxicProjectile toxicProjectile = other.gameObject.GetComponent<ToxicProjectile>();
+
+            if (toxicProjectile != null && damageTimer >= damageInterval)
+            {
+                // Damage over time from toxicProjectile.damage
+                TakeDamage(toxicProjectile.damage);
+                damageTimer = 0f;
+            }
         }
     }
 
@@ -503,5 +546,16 @@ public class Player : Actor
         canShoot = true;
         canJump = true;
         Time.timeScale = 1; //unfreeze
+    }
+
+    private void TakeDamage(double amount)
+    {
+        Debug.Log(amount);
+        health -= (int)amount;
+
+        if (health <= 0)
+        {
+            Die();
+        }
     }
 }

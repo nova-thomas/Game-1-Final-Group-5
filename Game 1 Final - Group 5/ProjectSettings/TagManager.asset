@@ -22,6 +22,9 @@ TagManager:
   - Shop
   - Chest
   - DeathPlane
+  - Enemy Fire
+  - Enemy Ice
+  - Enemy Toxic
   layers:
   - Default
   - TransparentFX

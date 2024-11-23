@@ -5,10 +5,14 @@ using UnityEngine;
 public class Golem : Solo
 {
     private AudioSource audioSource;
-    public AudioClip a_ambient1;
-    public AudioClip a_ambient2;
+    public AudioClip a_ambient;
     public AudioClip a_SwingAttack;
     public AudioClip a_SlamAttack;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -29,6 +33,14 @@ public class Golem : Solo
             myAnimator.SetInteger("DIR", 1);
         }
         if (playerInSightRange && playerInAttackRange) AttackPlayer();
+
+        if (!playedAmbient)
+        {
+            timeBetweenAmbient = Random.Range(5, 10);
+            audioSource.PlayOneShot(a_ambient);
+            playedAmbient = true;
+            Invoke(nameof(AmbientPlayed), timeBetweenAmbient);
+        }
     }
 
     private void AttackPlayer()

@@ -37,6 +37,8 @@ public class EnemyAi : Actor
     // States
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
+    public bool playedAmbient;
+    public float timeBetweenAmbient = 5f;
 
     public void Awake()
     {
@@ -84,6 +86,11 @@ public class EnemyAi : Actor
     public void ResetAttack()
     {
         alreadyAttacked = false;
+    }
+
+    public void AmbientPlayed()
+    {
+        playedAmbient = false;
     }
 
     public void Die()

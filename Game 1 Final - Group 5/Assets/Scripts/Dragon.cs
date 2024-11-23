@@ -5,11 +5,8 @@ using UnityEngine;
 public class Dragon : Solo
 {
     private AudioSource audioSource;
-    public AudioClip a_ambient1;
-    public AudioClip a_ambient2;
-    public AudioClip a_BreathFire;
-    public AudioClip a_ShootIce;
-    public AudioClip a_BreathToxin;
+    public AudioClip a_ambient;
+    public AudioClip a_attack;
 
     public Transform fireAttackPosition;
     public Transform iceAttackPosition;
@@ -18,6 +15,11 @@ public class Dragon : Solo
     public GameObject fireBallPrefab;
     public GameObject iceProjectilePrefab;
     public GameObject toxinPrefab;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -29,6 +31,16 @@ public class Dragon : Solo
         if (!playerInSightRange && !playerInAttackRange) Patrolling();
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInSightRange && playerInAttackRange) AttackPlayer();
+
+        if (!playedAmbient)
+        {
+            timeBetweenAmbient = Random.Range(5, 10);
+            audioSource.PlayOneShot(a_ambient);
+            playedAmbient = true;
+            Invoke(nameof(AmbientPlayed), timeBetweenAmbient);
+        }
+
+        // Win Condition
         if (health <= 0)
         {
             Win();
@@ -54,21 +66,21 @@ public class Dragon : Solo
     public void breathFire()
     {
         // Audio
-        audioSource.PlayOneShot(a_BreathFire);
+        audioSource.PlayOneShot(a_attack);
 
     }
 
     public void shootIce()
     {
         // Audio
-        audioSource.PlayOneShot(a_ShootIce);
+        audioSource.PlayOneShot(a_attack);
 
     }
 
     public void breathToxin()
     {
         // Audio
-        audioSource.PlayOneShot(a_BreathToxin);
+        audioSource.PlayOneShot(a_attack);
 
     }
 

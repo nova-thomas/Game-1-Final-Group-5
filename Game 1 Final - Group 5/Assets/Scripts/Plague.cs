@@ -13,9 +13,15 @@ public class Plague : Pack
 
     public GameObject toxinPrefab;
 
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     // Update is called once per frame
     void Update()
     {
+        timeBetweenAmbient = Random.Range(5, 10);
         // Check for sight and attack range
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
@@ -23,6 +29,24 @@ public class Plague : Pack
         if (!playerInSightRange && !playerInAttackRange) Patrolling();
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInSightRange && playerInAttackRange) AttackPlayer();
+
+        if (!playedAmbient)
+        {
+            AudioClip choice;
+            int val;
+            val = Random.Range(0, 2);
+            if (val == 0)
+            {
+                choice = a_ambient1;
+            }
+            else
+            {
+                choice = a_ambient2;
+            }
+            audioSource.PlayOneShot(choice);
+            playedAmbient = true;
+            Invoke(nameof(AmbientPlayed), timeBetweenAmbient);
+        }
     }
 
     private void AttackPlayer()

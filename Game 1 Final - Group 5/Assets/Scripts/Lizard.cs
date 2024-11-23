@@ -13,6 +13,11 @@ public class Lizard : Pack
     public GameObject fireBallPrefab;
     public int fireBallSpeed;
 
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -23,6 +28,23 @@ public class Lizard : Pack
         if (!playerInSightRange && !playerInAttackRange) Patrolling();
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInSightRange && playerInAttackRange) AttackPlayer();
+        if (!playedAmbient)
+        {
+            timeBetweenAmbient = Random.Range(5, 10);
+            AudioClip choice;
+            int val;
+            val = Random.Range(0, 2);
+            if (val == 0)
+            {
+                choice = a_ambient1;
+            } else
+            {
+                choice = a_ambient2;
+            }
+            audioSource.PlayOneShot(choice);
+            playedAmbient = true;
+            Invoke(nameof(AmbientPlayed), timeBetweenAmbient);
+        }
     }
 
     private void AttackPlayer()

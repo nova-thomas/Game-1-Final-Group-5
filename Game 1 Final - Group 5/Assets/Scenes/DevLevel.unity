@@ -4405,6 +4405,10 @@ PrefabInstance:
       propertyPath: pauseScreenUI
       value: 
       objectReference: {fileID: 556425353}
+    - target: {fileID: 7700809615590514054, guid: 3109c2c695cc9e8409d4c6c055ac9610, type: 3}
+      propertyPath: damageInterval
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

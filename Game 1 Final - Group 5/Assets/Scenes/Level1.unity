@@ -7130,6 +7130,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeathCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5614735099603414995, guid: 80ff68b9233a00e4c92a05815c0f5ab9, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 740523988}
+    - target: {fileID: 5614735099603414995, guid: 80ff68b9233a00e4c92a05815c0f5ab9, type: 3}
+      propertyPath: respawnPoint
+      value: 
+      objectReference: {fileID: 1375187005}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

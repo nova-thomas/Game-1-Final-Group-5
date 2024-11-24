@@ -3,32 +3,44 @@ using UnityEngine.SceneManagement;
 
 public class DeathMenu : MonoBehaviour
 {
-    public Transform player;
-    public Transform respawnPoint;
+    public Player playerScript;  
+    public GameObject deathScreenUI; 
+    public Transform respawnPoint;   
 
-    public void RespawnPlayer()
+    private bool isDead = false;
+
+    void Update()
     {
-        if (player != null && respawnPoint != null)
+        if (isDead)
         {
-            player.transform.position = respawnPoint.position;
-            player.transform.rotation = respawnPoint.rotation; // Optional: match rotation of respawn point
-            Debug.Log("Player respawned at " + respawnPoint.position);
+            playerScript.DisablePlayerControls();
         }
-
-
-        gameObject.SetActive(false);
     }
 
-    public void LoadMenu()
+    public void ShowDeathMenu()
     {
+        isDead = true;
+        deathScreenUI.SetActive(true);
+        playerScript.UnlockCursor();
+        playerScript.DisablePlayerControls();
+        Time.timeScale = 0f; 
+    }
+
+    public void Respawn()
+    {
+        isDead = false;
+        playerScript.Respawn(respawnPoint.position);
+    }
+
+    public void GoToMainMenu()
+    {
+        Time.timeScale = 1f; 
         SceneManager.LoadScene("Menu");
     }
+
     public void QuitGame()
     {
+        Debug.Log("Quitting the game...");
         Application.Quit();
-
-        #if UNITY_EDITOR
-                UnityEditor.EditorApplication.isPlaying = false;
-        #endif
     }
 }

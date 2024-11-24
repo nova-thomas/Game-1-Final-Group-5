@@ -1430,6 +1430,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2332000433606751482, guid: 05447865c55bbac4ea06b64eb4edcdc6, type: 3}
   m_PrefabInstance: {fileID: 284608332}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &286837467
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 286837469}
+  - component: {fileID: 286837468}
+  m_Layer: 0
+  m_Name: Death Plane
+  m_TagString: DeathPlane
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &286837468
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286837467}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 300, y: 10, z: 400}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &286837469
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286837467}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 41.7539, y: -27.5, z: -26.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &287183880
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1662,6 +1715,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2101766249316829989, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
   m_PrefabInstance: {fileID: 344415986}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &367827193
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 367827194}
+  m_Layer: 0
+  m_Name: Respawn Location
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &367827194
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367827193}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 54.881104, y: 2.27, z: 55.90142}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &379849162
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4469,6 +4553,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1688999828151457833, guid: 3109c2c695cc9e8409d4c6c055ac9610, type: 3}
+      propertyPath: respawnLocation
+      value: 
+      objectReference: {fileID: 367827194}
     - target: {fileID: 1781931893636192236, guid: 3109c2c695cc9e8409d4c6c055ac9610, type: 3}
       propertyPath: m_LocalPosition.x
       value: 54.881104
@@ -5574,6 +5662,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5614735099603414995, guid: 80ff68b9233a00e4c92a05815c0f5ab9, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 1973211233}
+    - target: {fileID: 5614735099603414995, guid: 80ff68b9233a00e4c92a05815c0f5ab9, type: 3}
+      propertyPath: respawnPoint
+      value: 
+      objectReference: {fileID: 367827194}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10355,6 +10451,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 807403334}
   - {fileID: 1533267094}
+  - {fileID: 367827194}
   - {fileID: 872921576}
   - {fileID: 595810059}
   - {fileID: 1402576821}
@@ -10364,3 +10461,4 @@ SceneRoots:
   - {fileID: 9317087}
   - {fileID: 1942934516}
   - {fileID: 1573023832}
+  - {fileID: 286837469}

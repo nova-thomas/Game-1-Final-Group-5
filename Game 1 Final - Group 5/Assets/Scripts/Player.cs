@@ -476,7 +476,7 @@ public class Player : Actor
         Cursor.visible = false;
     }
 
-    private void UnlockCursor()
+    public void UnlockCursor()
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -485,11 +485,38 @@ public class Player : Actor
     public void Die()
     {
         deathScreenUI.SetActive(true);
+        UnlockCursor();
+        DisablePlayerControls();
+        Time.timeScale = 0f; // Pause the game when dead
     }
 
-    public void Respawn()
+    public void Respawn(Vector3 respawnPosition)
     {
         deathScreenUI.SetActive(false);
+        LockCursor();
+        EnablePlayerControls();
+        transform.position = respawnPosition; // Move the player to the respawn position
+        health = healthMax; // Reset health
+        ammo = ammoMax;     // Reset ammo
+        UpdateHealthUI();
+        UpdateAmmoUI();
+        Time.timeScale = 1f; // Resume the game
+    }
+
+    public  void DisablePlayerControls()
+    {
+        canShoot = false;
+        canJump = false;
+        isSprinting = false;
+        moveInput = Vector2.zero; // Stop movement
+        lookInput = Vector2.zero; // Stop camera rotation
+    }
+
+    public void EnablePlayerControls()
+    {
+        canShoot = true;
+        canJump = true;
+        // Other control-related flags can be reset here
     }
     private void UpdateHealthUI()
     {

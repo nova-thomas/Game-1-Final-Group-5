@@ -3,13 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject pauseScreenUI; // Assign in the inspector
-    public Player playerScript;     // Reference to the Player script
+    public GameObject pauseScreenUI; 
+    public Player playerScript;    
     private bool isPaused = false;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) // Example: Toggle with the Escape key
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused)
                 ResumeGame();
@@ -40,8 +40,8 @@ public class PauseMenu : MonoBehaviour
 
     public void GoToMainMenu()
     {
-        Time.timeScale = 1f; // Reset time scale
-        SceneManager.LoadScene("Menu"); // Replace "MainMenu" with your scene name
+        Time.timeScale = 1f; 
+        SceneManager.LoadScene("Menu"); 
     }
 
     private void LockCursor()

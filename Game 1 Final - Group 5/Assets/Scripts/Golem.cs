@@ -12,6 +12,7 @@ public class Golem : Solo
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        myAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -23,14 +24,18 @@ public class Golem : Solo
 
         if (!playerInSightRange && !playerInAttackRange)
         {
-            Patrolling();
             myAnimator.SetInteger("DIR", 0);
+            Patrolling();
         }
 
         if (playerInSightRange && !playerInAttackRange)
         {
-            ChasePlayer();
+            if (myAnimator.GetInteger("DIR") == 0)
+            {
+                myAnimator.CrossFade("Walk", .2f);
+            }
             myAnimator.SetInteger("DIR", 1);
+            ChasePlayer();
         }
         if (playerInSightRange && playerInAttackRange) AttackPlayer();
 
@@ -56,6 +61,8 @@ public class Golem : Solo
             //
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
+            myAnimator.SetBool("SWING", false);
+            myAnimator.SetBool("SLAM", false);
         }
     }
 
@@ -63,13 +70,13 @@ public class Golem : Solo
     {
         // Audio
         audioSource.PlayOneShot(a_SwingAttack);
-
+        myAnimator.SetBool("SWING", true);
     }
 
     public void SlamAttack()
     {
         // Audio
         audioSource.PlayOneShot(a_SlamAttack);
-
+        myAnimator.SetBool("SLAM", true);
     }
 }

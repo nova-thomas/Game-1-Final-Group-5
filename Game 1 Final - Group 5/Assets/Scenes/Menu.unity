@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.8032951, g: 0.70765287, b: 0.6226886, a: 1}
+  m_IndirectSpecularColor: {r: 0.8010147, g: 0.70763886, b: 0.6230901, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -674,11 +674,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1300, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!4 &528677443 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4726082843909686182, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
-  m_PrefabInstance: {fileID: 1417918763}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &528938806
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1030,7 +1025,6 @@ Transform:
   - {fileID: 1711997545}
   - {fileID: 221116591}
   - {fileID: 460771548}
-  - {fileID: 528677443}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1019325054
@@ -1548,63 +1542,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41c6d37c9258dac4f96672eea661e54f, type: 3}
---- !u!1001 &1417918763
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 886792011}
-    m_Modifications:
-    - target: {fileID: 4726082843909686182, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 26.086296
-      objectReference: {fileID: 0}
-    - target: {fileID: 4726082843909686182, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -11.788283
-      objectReference: {fileID: 0}
-    - target: {fileID: 4726082843909686182, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 36.123154
-      objectReference: {fileID: 0}
-    - target: {fileID: 4726082843909686182, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4726082843909686182, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4726082843909686182, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4726082843909686182, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4726082843909686182, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4726082843909686182, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4726082843909686182, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6661499000605066686, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
-      propertyPath: m_Name
-      value: VolcanPit_Diorama
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
 --- !u!1001 &1424386769
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 499554192}
-  m_IndirectSpecularColor: {r: 0.48623192, g: 0.7345135, b: 0.3609253, a: 1}
+  m_IndirectSpecularColor: {r: 0.48481524, g: 0.73448634, b: 0.36114478, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2194,6 +2194,50 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2027024248639595274, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
   m_PrefabInstance: {fileID: 873149502}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &873149504 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1195085245906756321, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
+  m_PrefabInstance: {fileID: 873149502}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &873149505 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6896646216734024088, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
+  m_PrefabInstance: {fileID: 873149502}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &873149506 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7845122566795552951, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
+  m_PrefabInstance: {fileID: 873149502}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &873149507 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9074716404856326542, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
+  m_PrefabInstance: {fileID: 873149502}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &915256401
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2909,9 +2953,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 684421891}
     - target: {fileID: 4942615159741947238, guid: 0ccebd8cfa7d0b640aaa618687ec6598, type: 3}
+      propertyPath: iceButton
+      value: 
+      objectReference: {fileID: 873149504}
+    - target: {fileID: 4942615159741947238, guid: 0ccebd8cfa7d0b640aaa618687ec6598, type: 3}
       propertyPath: backButton
       value: 
       objectReference: {fileID: 1100669872}
+    - target: {fileID: 4942615159741947238, guid: 0ccebd8cfa7d0b640aaa618687ec6598, type: 3}
+      propertyPath: fireButton
+      value: 
+      objectReference: {fileID: 873149505}
+    - target: {fileID: 4942615159741947238, guid: 0ccebd8cfa7d0b640aaa618687ec6598, type: 3}
+      propertyPath: damageButton
+      value: 
+      objectReference: {fileID: 873149507}
+    - target: {fileID: 4942615159741947238, guid: 0ccebd8cfa7d0b640aaa618687ec6598, type: 3}
+      propertyPath: poisonButton
+      value: 
+      objectReference: {fileID: 873149506}
     - target: {fileID: 4942615159741947238, guid: 0ccebd8cfa7d0b640aaa618687ec6598, type: 3}
       propertyPath: coinCountText
       value: 

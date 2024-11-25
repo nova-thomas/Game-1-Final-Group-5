@@ -10,6 +10,10 @@ public class Shop : MonoBehaviour
     public Button healthUpgradeButton;
     public Button damageUpgradeButton;
     public Button speedUpgradeButton;
+    public Button damageButton;
+    public Button iceButton;
+    public Button fireButton;
+    public Button poisonButton;
     public Button backButton;
     public Slider healthProgressBar;
     public Slider damageProgressBar;
@@ -27,7 +31,7 @@ public class Shop : MonoBehaviour
     private int healthUpgradeLevel = 0;
     private int damageUpgradeLevel = 0;
     private int speedUpgradeLevel = 0;
-    private const int maxUpgradeLevel = 6;
+    private const int maxUpgradeLevel = 5;
     private const int upgradeCost = 5;
     private void Start()
     {
@@ -47,9 +51,14 @@ public class Shop : MonoBehaviour
             backButton.onClick.RemoveAllListeners();
 
             healthUpgradeButton.onClick.AddListener(UpgradeHealth);
-            damageUpgradeButton.onClick.AddListener(UpgradeDamage);
+            damageUpgradeButton.onClick.AddListener(UpgradeAmmo);
             speedUpgradeButton.onClick.AddListener(UpgradeSpeed);
-            backButton.onClick.AddListener(CloseShop);
+            damageButton.onClick.AddListener(UpgradeDamage);
+            iceButton.onClick.AddListener(UpgradeIceDamage);
+            fireButton.onClick.AddListener(UpgradeFireDamage);
+            poisonButton.onClick.AddListener(UpgradePoisonDamage);
+        backButton.onClick.AddListener(CloseShop);
+            
 
             Cursor.lockState = CursorLockMode.Locked;
         
@@ -77,6 +86,7 @@ public class Shop : MonoBehaviour
     {
         if (isPlayerNear)
         {
+            Time.timeScale = 0f;
             shopUI.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -87,6 +97,7 @@ public class Shop : MonoBehaviour
 
     public void CloseShop()
     {
+        Time.timeScale = 1f;
         shopUI.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -121,7 +132,7 @@ public class Shop : MonoBehaviour
         }
     }
 
-    private void UpgradeDamage()
+    private void UpgradeAmmo()
     {
         bool canUpgrade = damageUpgradeLevel < maxUpgradeLevel && player.inventory.coins >= upgradeCost;
 
@@ -152,12 +163,97 @@ public class Shop : MonoBehaviour
         if (canUpgrade)
         {
             player.inventory.coins -= upgradeCost;
-            player.speed += 2;
+            player.armor += 2;
             speedUpgradeLevel++;
             speedProgressBar.value = speedUpgradeLevel;
             UpdateCoinCount();
             player.inventory.UpdateCoinUI();
-            Debug.Log("Speed upgraded to level " + speedUpgradeLevel);
+            Debug.Log("Amror upgraded to level " + speedUpgradeLevel);
+        }
+        else
+        {
+            Debug.Log("Not enough coins or max level reached.");
+        }
+    }
+
+    private void UpgradeDamage()
+    {
+        bool canUpgrade = damageUpgradeLevel < maxUpgradeLevel && player.inventory.coins >= upgradeCost;
+
+        PlaySound(canUpgrade);
+
+        if (canUpgrade)
+        {
+            player.inventory.coins -= upgradeCost;
+            player.damage += 3;
+            damageUpgradeLevel++;
+            damageProgressBar.value = damageUpgradeLevel;
+            UpdateCoinCount();
+            player.inventory.UpdateCoinUI();
+            Debug.Log("Damage upgraded to level " + damageUpgradeLevel);
+        }
+        else
+        {
+            Debug.Log("Not enough coins or max level reached.");
+        }
+    }
+    private void UpgradeIceDamage()
+    {
+        bool canUpgrade = damageUpgradeLevel < maxUpgradeLevel && player.inventory.coins >= upgradeCost;
+
+        PlaySound(canUpgrade);
+
+        if (canUpgrade)
+        {
+            player.inventory.coins -= upgradeCost;
+            player.iceUpgrade += 3;
+            damageUpgradeLevel++;
+            damageProgressBar.value = damageUpgradeLevel;
+            UpdateCoinCount();
+            player.inventory.UpdateCoinUI();
+            Debug.Log("Damage upgraded to level " + damageUpgradeLevel);
+        }
+        else
+        {
+            Debug.Log("Not enough coins or max level reached.");
+        }
+    }
+    private void UpgradeFireDamage()
+    {
+        bool canUpgrade = damageUpgradeLevel < maxUpgradeLevel && player.inventory.coins >= upgradeCost;
+
+        PlaySound(canUpgrade);
+
+        if (canUpgrade)
+        {
+            player.inventory.coins -= upgradeCost;
+            player.fireUpgrade += 3;
+            damageUpgradeLevel++;
+            damageProgressBar.value = damageUpgradeLevel;
+            UpdateCoinCount();
+            player.inventory.UpdateCoinUI();
+            Debug.Log("Damage upgraded to level " + damageUpgradeLevel);
+        }
+        else
+        {
+            Debug.Log("Not enough coins or max level reached.");
+        }
+    }
+    private void UpgradePoisonDamage()
+    {
+        bool canUpgrade = damageUpgradeLevel < maxUpgradeLevel && player.inventory.coins >= upgradeCost;
+
+        PlaySound(canUpgrade);
+
+        if (canUpgrade)
+        {
+            player.inventory.coins -= upgradeCost;
+            player.poisonUpgrade += 3;
+            damageUpgradeLevel++;
+            damageProgressBar.value = damageUpgradeLevel;
+            UpdateCoinCount();
+            player.inventory.UpdateCoinUI();
+            Debug.Log("Damage upgraded to level " + damageUpgradeLevel);
         }
         else
         {

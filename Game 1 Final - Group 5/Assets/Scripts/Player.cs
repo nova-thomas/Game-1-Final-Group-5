@@ -9,6 +9,8 @@ public class Player : Actor
     public int ammo = 6;
     public int ammoMax = 6;
     public int healthMax = 20;
+    public int armor = 0;
+    public int armorMax = 5;
     public bool canJump;
     public bool canShoot = true;
     private bool isSprinting = false;
@@ -16,6 +18,10 @@ public class Player : Actor
     private Vector2 lookInput;
     public float lookSpeed = 1f;
     public float jumpForce = 5f;
+
+    public float iceUpgrade = 0;
+    public float fireUpgrade = 0;
+    public float poisonUpgrade = 0; 
 
     public GameObject bulletPrefab;
     public GameObject iceBulletPrefab;

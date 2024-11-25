@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.8032951, g: 0.70765287, b: 0.6226886, a: 1}
+  m_IndirectSpecularColor: {r: 0.80100626, g: 0.70762795, b: 0.62308085, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3037,6 +3037,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1717267753 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1622149741597507604, guid: 4c39cb62b455be149906ce468b7742f1, type: 3}
+  m_PrefabInstance: {fileID: 2925766412777842556}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1717267758
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717267753}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 340bd021929f588429d338c758731ca1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1733111296
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4384,6 +4410,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6021686056928592912}
     - target: {fileID: 5124500754930954522, guid: 3109c2c695cc9e8409d4c6c055ac9610, type: 3}
+      propertyPath: coins
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5124500754930954522, guid: 3109c2c695cc9e8409d4c6c055ac9610, type: 3}
       propertyPath: coinText
       value: 
       objectReference: {fileID: 552348997}
@@ -4403,6 +4433,10 @@ PrefabInstance:
       propertyPath: shop
       value: 
       objectReference: {fileID: 6021686056928592912}
+    - target: {fileID: 7700809615590514054, guid: 3109c2c695cc9e8409d4c6c055ac9610, type: 3}
+      propertyPath: damage
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7700809615590514054, guid: 3109c2c695cc9e8409d4c6c055ac9610, type: 3}
       propertyPath: ammoText
       value: 
@@ -4776,7 +4810,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1622149741597507604, guid: 4c39cb62b455be149906ce468b7742f1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1717267758}
   m_SourcePrefab: {fileID: 100100000, guid: 4c39cb62b455be149906ce468b7742f1, type: 3}
 --- !u!1001 &3117011830668068979
 PrefabInstance:

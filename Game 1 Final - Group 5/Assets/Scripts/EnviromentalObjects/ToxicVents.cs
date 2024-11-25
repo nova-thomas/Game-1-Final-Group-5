@@ -17,14 +17,6 @@ public class ToxicVents: EnviromentalObjects
         BoxCollider = GetComponent<BoxCollider>();
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            //Damage
-        }
-    }
-
     private void OnTriggerEnter(Collider trigger)
     {
         if (trigger.gameObject.tag == "Ice Bullet")

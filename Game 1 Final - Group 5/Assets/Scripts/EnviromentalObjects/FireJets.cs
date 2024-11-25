@@ -16,10 +16,9 @@ public class FireJets: EnviromentalObjects
         active = true;
         BoxCollider = GetComponent<BoxCollider>();
     }
-
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider trigger)
     {
-        if (collision.gameObject.tag == "Poison Bullet")
+        if (trigger.gameObject.tag == "Poison Bullet")
         {
             //Shut off
             for (int i = 0; i < flame.Length; i++)
@@ -29,10 +28,6 @@ public class FireJets: EnviromentalObjects
             active = false;
             BoxCollider.center = new Vector3(0, -.5f, 0);
             BoxCollider.size = Vector3.zero;
-        }
-        else if (collision.gameObject.tag == "Player")
-        {
-            //Damage
         }
     }
 

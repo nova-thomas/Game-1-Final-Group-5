@@ -53,7 +53,9 @@ public class Plague : Pack
     {
         agent.SetDestination(transform.position);
 
-        transform.LookAt(player.transform);
+        Vector3 lookAtVar = new Vector3(player.transform.position.x, gameObject.transform.position.y, player.transform.position.z);
+
+        transform.LookAt(lookAtVar);
 
         if (!alreadyAttacked)
         {
@@ -76,7 +78,7 @@ public class Plague : Pack
 
             if (toxicCloudRB != null)
             {
-                toxicCloudRB.velocity = toxinPosition.right * toxicCloudSpeed;
+                toxicCloudRB.velocity = -toxinPosition.right * toxicCloudSpeed;
             }
 
             // Set the damage value on the FireProjectile component

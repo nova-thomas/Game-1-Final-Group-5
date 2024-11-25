@@ -17,9 +17,9 @@ public class ToxicVents: EnviromentalObjects
         BoxCollider = GetComponent<BoxCollider>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider trigger)
     {
-        if (collision.gameObject.tag == "Ice Bullet")
+        if (trigger.gameObject.tag == "Ice Bullet")
         {
             //Shut off
             for (int i = 0; i < Toxin.Length; i++)
@@ -29,10 +29,6 @@ public class ToxicVents: EnviromentalObjects
             active = false;
             BoxCollider.center = new Vector3(0, -.5f, 0);
             BoxCollider.size = Vector3.zero;
-        }
-        else if (collision.gameObject.tag == "Player")
-        {
-            //Damage
         }
     }
 

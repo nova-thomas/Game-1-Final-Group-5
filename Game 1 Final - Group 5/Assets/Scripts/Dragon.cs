@@ -51,7 +51,9 @@ public class Dragon : Solo
     {
         agent.SetDestination(transform.position);
 
-        transform.LookAt(player.transform);
+        Vector3 lookAtVar = new Vector3(player.transform.position.x, gameObject.transform.position.y, player.transform.position.z);
+
+        transform.LookAt(lookAtVar);
 
         if (!alreadyAttacked)
         {

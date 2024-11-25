@@ -146,6 +146,14 @@ public class Player : Actor
         }
     }
 
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy Toxic") || collision.gameObject.CompareTag("Enemy Fire"))
+        {
+            TakeDamage(1);
+        }
+    }
+
     public void Fire(InputAction.CallbackContext fr)
     {
         if (fr.phase == InputActionPhase.Started && canShoot && ammo > 0)

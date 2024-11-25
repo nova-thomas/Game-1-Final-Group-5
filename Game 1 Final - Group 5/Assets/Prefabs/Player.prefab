@@ -116,6 +116,7 @@ MonoBehaviour:
   powerUpCollectSound: {fileID: 8300000, guid: dca7478d4be26304985f70d539540e4f, type: 3}
   healthText: {fileID: 0}
   ammoText: {fileID: 0}
+  damageInterval: 0
 --- !u!114 &8936095109967415999
 MonoBehaviour:
   m_ObjectHideFlags: 0

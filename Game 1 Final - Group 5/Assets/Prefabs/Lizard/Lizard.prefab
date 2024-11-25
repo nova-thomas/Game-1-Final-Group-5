@@ -116,6 +116,9 @@ MonoBehaviour:
     m_Bits: 128
   maxHealth: 0
   healthbar: {fileID: 6636726269214490944}
+  coins: {fileID: 1950871307682000, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
+  powerup: {fileID: 9054217889672144741, guid: 4607ddbd39960f743a5be6aff43d7c6f, type: 3}
+  monsterDropHeight: 1
   enemyElementType: 1
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 3

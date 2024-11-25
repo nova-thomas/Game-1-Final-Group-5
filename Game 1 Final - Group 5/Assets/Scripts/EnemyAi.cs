@@ -16,6 +16,10 @@ public class EnemyAi : Actor
     public float maxHealth;
     public HealthbarControl healthbar;
 
+    public GameObject coins;
+    public GameObject powerup;
+    public float monsterDropHeight;
+
     public enum ElementType
     {
         None,
@@ -162,6 +166,19 @@ public class EnemyAi : Actor
 
         if (health <= 0)
         {
+            float randomValue = Random.Range(0f, 100f);
+
+            if (randomValue <= 40f) // 40% chance for coins
+            {
+                SpawnItem(coins);
+            }
+
+            if (randomValue <= 10f) // 10% chance for powerup
+            {
+                SpawnItem(powerup);
+            }
+
+
             Die();
         }
     }
@@ -175,5 +192,24 @@ public class EnemyAi : Actor
     public float GetMaxHealth()
     {
         return maxHealth;
+    }
+
+    private void SpawnItem(GameObject item)
+    {
+        float randomX = Random.Range(-0.5f, 0.5f);
+        float randomZ = Random.Range(-0.5f, 0.5f);
+
+        Vector3 itemSpawnPos = new Vector3(
+            transform.position.x + randomX,
+            transform.position.y + monsterDropHeight,
+            transform.position.z + randomZ
+        );
+
+        GameObject spawnedItem = Instantiate(item, itemSpawnPos, Quaternion.identity);
+        Rigidbody rb = spawnedItem.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.AddForce(Vector3.up * 5f, ForceMode.Impulse);
+        }
     }
 }

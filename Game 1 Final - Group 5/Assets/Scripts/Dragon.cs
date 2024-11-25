@@ -44,6 +44,7 @@ public class Dragon : Solo
         if (health <= 0)
         {
             Win();
+            Destroy(gameObject);
         }
     }
 

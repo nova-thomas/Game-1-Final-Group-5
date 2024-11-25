@@ -676,6 +676,8 @@ MonoBehaviour:
     m_Bits: 128
   maxHealth: 0
   healthbar: {fileID: 1419910459984331199}
+  coins: {fileID: 1950871307682000, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
+  powerup: {fileID: 363428222854206274, guid: 2586a75802edaf741ae57ef9cb897096, type: 3}
   enemyElementType: 2
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 3
@@ -690,6 +692,7 @@ MonoBehaviour:
   a_ambient: {fileID: 8300000, guid: bc4527a813af8604abff06ff42b866f5, type: 3}
   a_SwingAttack: {fileID: 8300000, guid: fa051ecee74d09d44abe501822a8647c, type: 3}
   a_SlamAttack: {fileID: 8300000, guid: fa051ecee74d09d44abe501822a8647c, type: 3}
+  lastPosition: {x: 0, y: 0, z: 0}
 --- !u!195 &4787490116415725272
 NavMeshAgent:
   m_ObjectHideFlags: 0

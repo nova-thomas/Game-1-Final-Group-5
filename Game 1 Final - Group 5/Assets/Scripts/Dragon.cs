@@ -34,7 +34,7 @@ public class Dragon : Solo
 
         if (!playedAmbient)
         {
-            timeBetweenAmbient = Random.Range(5, 10);
+            timeBetweenAmbient = Random.Range(10, 15);
             audioSource.PlayOneShot(a_ambient);
             playedAmbient = true;
             Invoke(nameof(AmbientPlayed), timeBetweenAmbient);

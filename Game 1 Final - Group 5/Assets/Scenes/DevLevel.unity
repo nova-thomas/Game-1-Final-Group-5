@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.80100626, g: 0.70762795, b: 0.62308085, a: 1}
+  m_IndirectSpecularColor: {r: 0.8032951, g: 0.70765287, b: 0.6226886, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1894,16 +1894,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c455f98536dc34d45b28994d208fdd2d, type: 3}
---- !u!54 &1232553019 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 5979236284505147303, guid: 4c39cb62b455be149906ce468b7742f1, type: 3}
-  m_PrefabInstance: {fileID: 2925766412777842556}
-  m_PrefabAsset: {fileID: 0}
---- !u!195 &1232553020 stripped
-NavMeshAgent:
-  m_CorrespondingSourceObject: {fileID: 5750529071418975668, guid: 4c39cb62b455be149906ce468b7742f1, type: 3}
-  m_PrefabInstance: {fileID: 2925766412777842556}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1234367921 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1592705090559325658, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
@@ -4775,14 +4765,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Golem
       objectReference: {fileID: 0}
-    - target: {fileID: 3991399776539624427, guid: 4c39cb62b455be149906ce468b7742f1, type: 3}
-      propertyPath: agent
-      value: 
-      objectReference: {fileID: 1232553020}
-    - target: {fileID: 3991399776539624427, guid: 4c39cb62b455be149906ce468b7742f1, type: 3}
-      propertyPath: myRig
-      value: 
-      objectReference: {fileID: 1232553019}
     - target: {fileID: 3991399776539624427, guid: 4c39cb62b455be149906ce468b7742f1, type: 3}
       propertyPath: player
       value: 

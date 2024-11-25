@@ -51,8 +51,8 @@ MonoBehaviour:
   health: 100
   damage: 0
   myAnimator: {fileID: 0}
-  agent: {fileID: 0}
-  myRig: {fileID: 0}
+  agent: {fileID: 5750529071418975668}
+  myRig: {fileID: 5979236284505147303}
   player: {fileID: 0}
   whatIsGround:
     serializedVersion: 2
@@ -60,6 +60,8 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 128
+  maxHealth: 0
+  healthbar: {fileID: 0}
   enemyElementType: 2
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
@@ -69,8 +71,9 @@ MonoBehaviour:
   attackRange: 5
   playerInSightRange: 0
   playerInAttackRange: 0
-  a_ambient1: {fileID: 0}
-  a_ambient2: {fileID: 0}
+  playedAmbient: 0
+  timeBetweenAmbient: 5
+  a_ambient: {fileID: 0}
   a_SwingAttack: {fileID: 0}
   a_SlamAttack: {fileID: 0}
 --- !u!195 &5750529071418975668

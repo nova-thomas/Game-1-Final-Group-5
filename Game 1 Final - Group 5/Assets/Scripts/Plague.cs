@@ -9,9 +9,9 @@ public class Plague : Pack
     public AudioClip a_ambient2;
     public AudioClip a_EmitToxin;
 
-    public Transform toxinPosition;
-
     public GameObject toxinPrefab;
+    public Transform toxinPosition;
+    public int toxicCloudSpeed;
 
     private void Start()
     {
@@ -21,7 +21,7 @@ public class Plague : Pack
     // Update is called once per frame
     void Update()
     {
-        timeBetweenAmbient = Random.Range(5, 10);
+        timeBetweenAmbient = Random.Range(10, 15);
         // Check for sight and attack range
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
@@ -68,5 +68,23 @@ public class Plague : Pack
         // Audio
         audioSource.PlayOneShot(a_EmitToxin);
 
+        if (toxinPrefab != null)
+        {
+            GameObject toxicCloud = Instantiate(toxinPrefab, toxinPosition.position, toxinPosition.rotation);
+            Rigidbody toxicCloudRB = toxicCloud.GetComponent<Rigidbody>();
+
+
+            if (toxicCloudRB != null)
+            {
+                toxicCloudRB.velocity = -toxinPosition.right * toxicCloudSpeed;
+            }
+
+            // Set the damage value on the FireProjectile component
+            ToxicProjectile toxicCloudProjectile = toxicCloud.GetComponent<ToxicProjectile>();
+            if (toxicCloudProjectile != null)
+            {
+                toxicCloudProjectile.damage = damage;
+            }
+        }
     }
 }

@@ -13,6 +13,9 @@ public class EnemyAi : Actor
 
     public LayerMask whatIsGround, whatIsPlayer;
 
+    public float maxHealth;
+    public HealthbarControl healthbar;
+
     public enum ElementType
     {
         None,
@@ -46,6 +49,7 @@ public class EnemyAi : Actor
         playerScript = player.GetComponent<Player>();
         agent = GetComponent<NavMeshAgent>();
         myRig = GetComponent<Rigidbody>();
+        maxHealth = health;
     }
 
     public void Patrolling()
@@ -154,10 +158,22 @@ public class EnemyAi : Actor
     private void TakeDamage(double amount)
     {
         health -= (int)amount;
+        healthbar.UpdateHealthBar();
 
         if (health <= 0)
         {
             Die();
         }
+    }
+
+
+    public float GetCurrentHealth()
+    {
+        return health;
+    }
+
+    public float GetMaxHealth()
+    {
+        return maxHealth;
     }
 }

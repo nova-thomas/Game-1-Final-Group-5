@@ -186,11 +186,8 @@ public class Shop : MonoBehaviour
         {
             player.inventory.coins -= upgradeCost;
             player.damage += 3;
-            damageUpgradeLevel++;
-            damageProgressBar.value = damageUpgradeLevel;
             UpdateCoinCount();
             player.inventory.UpdateCoinUI();
-            Debug.Log("Damage upgraded to level " + damageUpgradeLevel);
         }
         else
         {
@@ -207,11 +204,8 @@ public class Shop : MonoBehaviour
         {
             player.inventory.coins -= upgradeCost;
             player.iceUpgrade += 3;
-            damageUpgradeLevel++;
-            damageProgressBar.value = damageUpgradeLevel;
             UpdateCoinCount();
             player.inventory.UpdateCoinUI();
-            Debug.Log("Damage upgraded to level " + damageUpgradeLevel);
         }
         else
         {
@@ -228,11 +222,8 @@ public class Shop : MonoBehaviour
         {
             player.inventory.coins -= upgradeCost;
             player.fireUpgrade += 3;
-            damageUpgradeLevel++;
-            damageProgressBar.value = damageUpgradeLevel;
             UpdateCoinCount();
             player.inventory.UpdateCoinUI();
-            Debug.Log("Damage upgraded to level " + damageUpgradeLevel);
         }
         else
         {
@@ -249,11 +240,8 @@ public class Shop : MonoBehaviour
         {
             player.inventory.coins -= upgradeCost;
             player.poisonUpgrade += 3;
-            damageUpgradeLevel++;
-            damageProgressBar.value = damageUpgradeLevel;
             UpdateCoinCount();
             player.inventory.UpdateCoinUI();
-            Debug.Log("Damage upgraded to level " + damageUpgradeLevel);
         }
         else
         {

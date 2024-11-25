@@ -9,32 +9,45 @@ public class Golem : Solo
     public AudioClip a_SwingAttack;
     public AudioClip a_SlamAttack;
 
+    public Vector3 lastPosition;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
         myAnimator = GetComponent<Animator>();
+
+        lastPosition = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Check for sight and attack range
-        playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
-        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
-
-        if (!playerInSightRange && !playerInAttackRange)
-        {
-            myAnimator.SetInteger("DIR", 0);
-            Patrolling();
-        }
-
-        if (playerInSightRange && !playerInAttackRange)
+        if (Mathf.Abs(lastPosition.x) > Mathf.Abs(transform.position.x) + .001 || Mathf.Abs(lastPosition.y) > Mathf.Abs(transform.position.y) + .001 || Mathf.Abs(lastPosition.z) > Mathf.Abs(transform.position.z) + .001)
         {
             if (myAnimator.GetInteger("DIR") == 0)
             {
                 myAnimator.CrossFade("Walk", .2f);
             }
             myAnimator.SetInteger("DIR", 1);
+        }
+        else
+        {
+            myAnimator.SetInteger("DIR", 0);
+        }
+
+        lastPosition = transform.position;
+
+        // Check for sight and attack range
+        playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
+        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+
+        if (!playerInSightRange && !playerInAttackRange)
+        {
+            Patrolling();
+        }
+
+        if (playerInSightRange && !playerInAttackRange)
+        {
             ChasePlayer();
         }
         if (playerInSightRange && playerInAttackRange) AttackPlayer();
@@ -61,7 +74,7 @@ public class Golem : Solo
             //
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
-            myAnimator.SetBool("SWING", false);
+            myAnimator.SetBool("SWIPE", false);
             myAnimator.SetBool("SLAM", false);
         }
     }
@@ -70,7 +83,7 @@ public class Golem : Solo
     {
         // Audio
         audioSource.PlayOneShot(a_SwingAttack);
-        myAnimator.SetBool("SWING", true);
+        myAnimator.SetBool("SWIPE", true);
     }
 
     public void SlamAttack()

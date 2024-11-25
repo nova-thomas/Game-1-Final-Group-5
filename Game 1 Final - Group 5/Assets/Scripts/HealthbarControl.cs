@@ -13,7 +13,11 @@ public class HealthbarControl : MonoBehaviour
     {
         enemy = GetComponentInParent<EnemyAi>();
         UpdateHealthBar();
-        Debug.Log(enemy.GetCurrentHealth());
+    }
+
+    private void Update()
+    {
+        transform.LookAt(Camera.main.transform.position, Vector3.up);
     }
 
 

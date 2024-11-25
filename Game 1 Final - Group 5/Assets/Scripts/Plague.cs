@@ -76,7 +76,7 @@ public class Plague : Pack
 
             if (toxicCloudRB != null)
             {
-                toxicCloudRB.velocity = -toxinPosition.right * toxicCloudSpeed;
+                toxicCloudRB.velocity = toxinPosition.right * toxicCloudSpeed;
             }
 
             // Set the damage value on the FireProjectile component

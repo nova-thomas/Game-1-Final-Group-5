@@ -430,7 +430,7 @@ MonoBehaviour:
   a_EmitToxin: {fileID: 8300000, guid: ef0fdc9b98b0fe14e8085cf546866223, type: 3}
   toxinPrefab: {fileID: 8916781337777223090, guid: ff4d8ad8f718939438b6c6bfedbc3074, type: 3}
   toxinPosition: {fileID: 1032130123549534303}
-  toxicCloudSpeed: 0
+  toxicCloudSpeed: 1
 --- !u!195 &4243420440462662432
 NavMeshAgent:
   m_ObjectHideFlags: 0

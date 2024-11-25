@@ -687,7 +687,7 @@ MonoBehaviour:
   playerInAttackRange: 0
   playedAmbient: 0
   timeBetweenAmbient: 5
-  a_ambient: {fileID: 0}
+  a_ambient: {fileID: 8300000, guid: bc4527a813af8604abff06ff42b866f5, type: 3}
   a_SwingAttack: {fileID: 8300000, guid: fa051ecee74d09d44abe501822a8647c, type: 3}
   a_SlamAttack: {fileID: 8300000, guid: fa051ecee74d09d44abe501822a8647c, type: 3}
 --- !u!195 &4787490116415725272

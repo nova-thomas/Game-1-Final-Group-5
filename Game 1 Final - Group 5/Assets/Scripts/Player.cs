@@ -577,7 +577,6 @@ public class Player : Actor
 
     private void TakeDamage(double amount)
     {
-        Debug.Log(amount);
         health -= (int)amount;
 
         if (health <= 0)

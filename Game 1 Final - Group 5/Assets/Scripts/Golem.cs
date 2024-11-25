@@ -9,20 +9,16 @@ public class Golem : Solo
     public AudioClip a_SwingAttack;
     public AudioClip a_SlamAttack;
 
-    public Vector3 lastPosition;
-
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
         myAnimator = GetComponent<Animator>();
-
-        lastPosition = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Mathf.Abs(lastPosition.x) > Mathf.Abs(transform.position.x) + .001 || Mathf.Abs(lastPosition.y) > Mathf.Abs(transform.position.y) + .001 || Mathf.Abs(lastPosition.z) > Mathf.Abs(transform.position.z) + .001)
+        if (agent.velocity.x > .1 || agent.velocity.z > .1) 
         {
             if (myAnimator.GetInteger("DIR") == 0)
             {
@@ -34,8 +30,6 @@ public class Golem : Solo
         {
             myAnimator.SetInteger("DIR", 0);
         }
-
-        lastPosition = transform.position;
 
         // Check for sight and attack range
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);

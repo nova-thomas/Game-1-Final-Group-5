@@ -9,6 +9,10 @@ public class Golem : Solo
     public AudioClip a_SwingAttack;
     public AudioClip a_SlamAttack;
 
+    public GameObject hitboxPrefab;
+    public Transform hitboxTransform;
+    public float attackSpeed;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -66,6 +70,19 @@ public class Golem : Solo
         if (!alreadyAttacked)
         {
             // Attack code
+            int attack = Random.Range(0, 2);
+
+            switch (attack)
+            {
+                case 0:
+                    SwingAttack(); 
+                    break;
+                case 1:
+                    SlamAttack();
+                    break;
+                default:
+                    break;
+            }
 
             //
             alreadyAttacked = true;
@@ -74,18 +91,30 @@ public class Golem : Solo
             myAnimator.SetBool("SLAM", false);
         }
     }
+    private IEnumerator AttackTime(float attackSpeed)
+    {
+        yield return new WaitForSeconds(attackSpeed);
+        GameObject hitbox = Instantiate(hitboxPrefab, hitboxTransform);
+        Destroy(hitbox, 1);
+    }
 
     public void SwingAttack()
     {
         // Audio
         audioSource.PlayOneShot(a_SwingAttack);
-        myAnimator.SetBool("SWIPE", true);
+        myAnimator.CrossFade("Swipe", .2f);
+
+        attackSpeed = 1;
+        StartCoroutine(AttackTime(attackSpeed));
     }
 
     public void SlamAttack()
     {
         // Audio
         audioSource.PlayOneShot(a_SlamAttack);
-        myAnimator.SetBool("SLAM", true);
+        myAnimator.CrossFade("Slam", .2f);
+
+        attackSpeed = 1.5f;
+        StartCoroutine(AttackTime(attackSpeed));
     }
 }

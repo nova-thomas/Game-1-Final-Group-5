@@ -25,6 +25,7 @@ TagManager:
   - Enemy Fire
   - Enemy Ice
   - Enemy Toxic
+  - Hitbox
   layers:
   - Default
   - TransparentFX

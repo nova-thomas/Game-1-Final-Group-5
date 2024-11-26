@@ -377,6 +377,10 @@ public class Player : Actor
                 TakeDamage(iceProjectile.damage);
             }
         }
+        else if (other.CompareTag("Hitbox"))
+        {
+            TakeDamage(7);
+        }
         
     }
 

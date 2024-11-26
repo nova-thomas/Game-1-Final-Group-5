@@ -5,7 +5,7 @@ using UnityEngine;
 public class IceProjectile : MonoBehaviour
 {
     public float alive = 5f;
-    public double damage;
+    public double damage = 3;
 
     void Start()
     {

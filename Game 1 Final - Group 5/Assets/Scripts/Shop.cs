@@ -251,7 +251,7 @@ public class Shop : MonoBehaviour
 
     private void UpdateCoinCount()
     {
-        coinCountText.text = "Coins: " + player.inventory.coins;
+        coinCountText.text = player.inventory.coins.ToString();
     }
 
     public void UpdateCoinDisplay(int coins)

@@ -405,12 +405,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b5813910b7624047a118b2bed15778e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins: {fileID: 1950871307682000, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
-  powerup: {fileID: 4485619552607151745, guid: 3f6d7a09d93b66e4893d3125670a4b3e, type: 3}
-  key: {fileID: 3874798687770068871, guid: 2d678e3e202b1344d999c6e60927f9ab, type: 3}
-  chestTop: {fileID: 593483206251477871}
+  coinPrefab: {fileID: 1950871307682000, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
+  powerUpPrefab: {fileID: 363428222854206274, guid: 2586a75802edaf741ae57ef9cb897096, type: 3}
+  keyPrefab: {fileID: 0}
+  spawnPoint: {fileID: 4127358250979553041}
+  chestTop: {fileID: 4877813555996924592}
+  animationDuration: 0.75
+  openAngle: -60
   chestOpenSound: {fileID: 8300000, guid: 4b04f3615154e4348825ba1bb1b54f1a, type: 3}
-  chestIndicator: {fileID: 1139817497975848010}
+  audioSource: {fileID: 2209630542627063344}
+  chestCanvas: {fileID: 1139817497975848010}
 --- !u!82 &2209630542627063344
 AudioSource:
   m_ObjectHideFlags: 0

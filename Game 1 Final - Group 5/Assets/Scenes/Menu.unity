@@ -37,8 +37,8 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.8032951, g: 0.70765287, b: 0.6226886, a: 1}
+  m_Sun: {fileID: 1898635625}
+  m_IndirectSpecularColor: {r: 0.80100626, g: 0.70762795, b: 0.62308085, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -235,7 +235,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2041977813914062266, guid: 0f58117b184a78e41afdabd397c9b54e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1456515417}
   m_SourcePrefab: {fileID: 100100000, guid: 0f58117b184a78e41afdabd397c9b54e, type: 3}
 --- !u!1 &47853770
 GameObject:
@@ -2395,6 +2398,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227326291}
   m_CullTransparentMesh: 1
+--- !u!1 &1266718882
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1266718884}
+  - component: {fileID: 1266718883}
+  m_Layer: 0
+  m_Name: Game Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1266718883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266718882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d47b37d2387034409e23a26e740b1d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AutoSprintEnabled: 0
+--- !u!4 &1266718884
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266718882}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -43.492798, y: -2.776, z: -121.6314}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1294387810
 GameObject:
   m_ObjectHideFlags: 0
@@ -2620,6 +2668,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1456515416 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2041977813914062266, guid: 0f58117b184a78e41afdabd397c9b54e, type: 3}
+  m_PrefabInstance: {fileID: 18313600}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1456515417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456515416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8674fc43e67f427438091cd748ed5543, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1518240247
 GameObject:
   m_ObjectHideFlags: 0
@@ -3733,7 +3798,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Master Volume:
+  m_text: 'Music Volume:
 
 
 
@@ -3829,6 +3894,7 @@ GameObject:
   - component: {fileID: 1838929351}
   - component: {fileID: 1838929353}
   - component: {fileID: 1838929352}
+  - component: {fileID: 1838929354}
   m_Layer: 5
   m_Name: OptionsBackground
   m_TagString: Untagged
@@ -3896,6 +3962,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1838929350}
   m_CullTransparentMesh: 1
+--- !u!114 &1838929354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838929350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc9cff7a61d389d4ca4b6ada0ad10038, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 405426470}
+  bgmPlayer: {fileID: 1456515416}
+  autoSprintToggle: {fileID: 582795915}
 --- !u!1001 &1890753856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4470,3 +4551,4 @@ SceneRoots:
   - {fileID: 1026147428}
   - {fileID: 886792011}
   - {fileID: 18313600}
+  - {fileID: 1266718884}

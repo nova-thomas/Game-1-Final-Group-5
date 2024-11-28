@@ -80,18 +80,23 @@ public class Player : Actor
         pauseScreenUI = GameObject.Find("PauseCanvas");
         pauseScreenUI.SetActive(false);
 
+        isSprinting = GameManager.Instance.AutoSprintEnabled;
+
     }
 
     void Update()
     {
         Vector3 moveDirection = transform.forward * moveInput.y + transform.right * moveInput.x;
-        float currentSpeed = isSprinting ? speed * 1.25f : speed;
+        float currentSpeed = isSprinting || GameManager.Instance.AutoSprintEnabled ? speed * 1.75f : speed;
         transform.position += moveDirection * currentSpeed * Time.deltaTime;
+
         LookAround();
         UpdateHealthUI();
         UpdateAmmoUI();
+
         if (health <= 0)
         {
+            health = 0; 
             Die();
         }
     }
@@ -209,7 +214,7 @@ public class Player : Actor
         canShoot = false;
         if (reloadSound != null && audioSource != null)
         {
-            audioSource.pitch = reloadSound.length / 2f; // Adjust to make the clip play in 2 seconds
+            audioSource.pitch = reloadSound.length / 2f; 
             audioSource.PlayOneShot(reloadSound);
         }
         yield return new WaitForSeconds(2);
@@ -505,7 +510,7 @@ public class Player : Actor
         deathScreenUI.SetActive(true);
         UnlockCursor();
         DisablePlayerControls();
-        Time.timeScale = 0f; // Pause the game when dead
+        Time.timeScale = 0f; 
     }
 
     public void Respawn(Vector3 respawnPosition)
@@ -513,12 +518,12 @@ public class Player : Actor
         deathScreenUI.SetActive(false);
         LockCursor();
         EnablePlayerControls();
-        transform.position = respawnPosition; // Move the player to the respawn position
-        health = healthMax; // Reset health
-        ammo = ammoMax;     // Reset ammo
+        transform.position = respawnPosition; 
+        health = healthMax;
+        ammo = ammoMax;    
         UpdateHealthUI();
         UpdateAmmoUI();
-        Time.timeScale = 1f; // Resume the game
+        Time.timeScale = 1f; 
     }
 
     public  void DisablePlayerControls()
@@ -526,15 +531,14 @@ public class Player : Actor
         canShoot = false;
         canJump = false;
         isSprinting = false;
-        moveInput = Vector2.zero; // Stop movement
-        lookInput = Vector2.zero; // Stop camera rotation
+        moveInput = Vector2.zero; 
+        lookInput = Vector2.zero;
     }
 
     public void EnablePlayerControls()
     {
         canShoot = true;
         canJump = true;
-        // Other control-related flags can be reset here
     }
     private void UpdateHealthUI()
     {
@@ -601,5 +605,10 @@ public class Player : Actor
         {
             Die();
         }
+    }
+
+    public void ToggleSprintingState(bool isAutoSprintEnabled)
+    {
+        isSprinting = isAutoSprintEnabled;
     }
 }

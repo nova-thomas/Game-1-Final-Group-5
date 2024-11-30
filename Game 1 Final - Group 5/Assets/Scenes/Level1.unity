@@ -3194,7 +3194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 815e7497f28b8e0459d5d3270afbc61a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playSceneName: Level2
+  playSceneName: Cutscene2
 --- !u!65 &454278233
 BoxCollider:
   m_ObjectHideFlags: 0

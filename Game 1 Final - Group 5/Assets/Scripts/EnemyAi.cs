@@ -196,8 +196,8 @@ public class EnemyAi : Actor
 
     private void SpawnItem(GameObject item)
     {
-        float randomX = Random.Range(-0.5f, 0.5f);
-        float randomZ = Random.Range(-0.5f, 0.5f);
+        float randomX = Random.Range(-1f, 1f);
+        float randomZ = Random.Range(-1f, 1f);
 
         Vector3 itemSpawnPos = new Vector3(
             transform.position.x + randomX,

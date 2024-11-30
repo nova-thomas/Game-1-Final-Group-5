@@ -52,7 +52,7 @@ public class Golem : Solo
 
         if (!playedAmbient)
         {
-            timeBetweenAmbient = Random.Range(10, 15);
+            timeBetweenAmbient = Random.Range(5, 20);
             audioSource.PlayOneShot(a_ambient);
             playedAmbient = true;
             Invoke(nameof(AmbientPlayed), timeBetweenAmbient);

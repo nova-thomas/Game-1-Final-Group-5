@@ -21,7 +21,7 @@ public class Plague : Pack
     // Update is called once per frame
     void Update()
     {
-        timeBetweenAmbient = Random.Range(10, 15);
+        timeBetweenAmbient = Random.Range(5, 20);
         // Check for sight and attack range
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);

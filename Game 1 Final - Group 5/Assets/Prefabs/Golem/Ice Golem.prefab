@@ -679,7 +679,7 @@ MonoBehaviour:
   healthbar: {fileID: 1419910459984331199}
   coins: {fileID: 1950871307682000, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
   powerup: {fileID: 363428222854206274, guid: 2586a75802edaf741ae57ef9cb897096, type: 3}
-  monsterDropHeight: 0
+  monsterDropHeight: 1.2
   enemyElementType: 2
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 3
@@ -696,6 +696,7 @@ MonoBehaviour:
   a_SlamAttack: {fileID: 8300000, guid: fa051ecee74d09d44abe501822a8647c, type: 3}
   hitboxPrefab: {fileID: 594947020508639522, guid: de832b10cc7d6034c8452686d65ec6f2, type: 3}
   hitboxTransform: {fileID: 8466074468872195686}
+  attackSpeed: 0
 --- !u!195 &4787490116415725272
 NavMeshAgent:
   m_ObjectHideFlags: 0

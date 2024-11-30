@@ -22,6 +22,6 @@ public class IceProjectile : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //kill kill kill 
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 }

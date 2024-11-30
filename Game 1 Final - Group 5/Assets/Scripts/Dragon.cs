@@ -16,6 +16,10 @@ public class Dragon : Solo
     public GameObject iceProjectilePrefab;
     public GameObject toxinPrefab;
 
+    public int fireBallSpeed;
+    public int iceSpikeSpeed;
+    public int toxicCloudSpeed;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -31,6 +35,21 @@ public class Dragon : Solo
         if (!playerInSightRange && !playerInAttackRange) Patrolling();
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInSightRange && playerInAttackRange) AttackPlayer();
+
+        fireAttackPosition.LookAt(player.transform);
+        iceAttackPosition.LookAt(player.transform);
+        toxinAttackPosition.LookAt(player.transform);
+
+        // Rotate the attack positions
+        fireAttackPosition.rotation *= Quaternion.Euler(0, 90, 0);
+        iceAttackPosition.rotation *= Quaternion.Euler(0, 90, 0);
+        toxinAttackPosition.rotation *= Quaternion.Euler(0, 90, 0);
+
+
+        // Draw debug rays for attack positions
+        Debug.DrawRay(fireAttackPosition.position, fireAttackPosition.right * 10, Color.red);
+        Debug.DrawRay(iceAttackPosition.position, iceAttackPosition.right * 10, Color.cyan);
+        Debug.DrawRay(toxinAttackPosition.position, toxinAttackPosition.right * 10, Color.green);
 
         if (!playedAmbient)
         {
@@ -59,7 +78,20 @@ public class Dragon : Solo
         if (!alreadyAttacked)
         {
             // Attack code
+            int randomAttack = Random.Range(0, 3); // Generates 0, 1, or 2
 
+            switch (randomAttack)
+            {
+                case 0:
+                    breathFire();
+                    break;
+                case 1:
+                    shootIce();
+                    break;
+                case 2:
+                    breathToxin();
+                    break;
+            }
             //
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
@@ -71,6 +103,23 @@ public class Dragon : Solo
         // Audio
         audioSource.PlayOneShot(a_attack);
 
+        if (fireBallPrefab != null)
+        {
+            GameObject fireBall = Instantiate(fireBallPrefab, fireAttackPosition.position, fireAttackPosition.rotation);
+            Rigidbody fireBallRB = fireBall.GetComponent<Rigidbody>();
+
+            if (fireBallRB != null)
+            {
+                fireBallRB.velocity = -fireAttackPosition.right * fireBallSpeed;
+            }
+
+            // Set the damage value on the FireProjectile component
+            FireProjectile fireProjectile = fireBall.GetComponent<FireProjectile>();
+            if (fireProjectile != null)
+            {
+                fireProjectile.damage = damage;
+            }
+        }
     }
 
     public void shootIce()
@@ -78,6 +127,23 @@ public class Dragon : Solo
         // Audio
         audioSource.PlayOneShot(a_attack);
 
+        if (iceProjectilePrefab != null)
+        {
+            GameObject iceSpike = Instantiate(iceProjectilePrefab, iceAttackPosition.position, iceAttackPosition.rotation);
+            Rigidbody iceSpikeRB = iceSpike.GetComponent<Rigidbody>();
+
+            if (iceSpikeRB != null)
+            {
+                iceSpikeRB.velocity = -iceAttackPosition.right * iceSpikeSpeed;
+            }
+
+            // Set the damage value on the FireProjectile component
+            IceProjectile iceProjectile = iceSpike.GetComponent<IceProjectile>();
+            if (iceProjectile != null)
+            {
+                iceProjectile.damage = damage;
+            }
+        }
     }
 
     public void breathToxin()
@@ -85,6 +151,23 @@ public class Dragon : Solo
         // Audio
         audioSource.PlayOneShot(a_attack);
 
+        if (toxinPrefab != null)
+        {
+            GameObject toxicCloud = Instantiate(toxinPrefab, toxinAttackPosition.position, toxinAttackPosition.rotation);
+            Rigidbody toxicCloudRB = toxicCloud.GetComponent<Rigidbody>();
+
+            if (toxicCloudRB != null)
+            {
+                toxicCloudRB.velocity = -toxinAttackPosition.right * toxicCloudSpeed;
+            }
+
+            // Set the damage value on the FireProjectile component
+            ToxicProjectile toxicProjectile = toxicCloud.GetComponent<ToxicProjectile>();
+            if (toxicCloud != null)
+            {
+                toxicProjectile.damage = damage;
+            }
+        }
     }
 
     public void Win()

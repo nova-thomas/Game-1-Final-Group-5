@@ -290,7 +290,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level1
+          m_StringArgument: Menu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &507760935
@@ -505,17 +505,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'After crashing your ship on your way back to headquarters, you have find
-    yourself in an unknown galaxy where the locals don''t take kindly to you being
-    here.
-
-
-    Fight through a volcanic crash-site to find a signal and phone headquarters.
-
-
-    Helper
-    droids from the ship have scattered themselves across the galaxy and will aid
-    you in upgrading your gear. '
+  m_text: "After defeating the hydra blocking your path, you were able to find reception
+    and call headquarters! You explained the situation to them, and they are sending
+    a rescue squad to come and pick you and the droids up. \n\nYou've survived the
+    unknown galaxy! CONGRATULATIONS!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c1f84d36e2eb2474ba0493650923dbbd, type: 2}
   m_sharedMaterial: {fileID: 8029659792322711359, guid: c1f84d36e2eb2474ba0493650923dbbd, type: 2}
@@ -743,7 +736,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Continue
+  m_text: End
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c1f84d36e2eb2474ba0493650923dbbd, type: 2}
   m_sharedMaterial: {fileID: 8029659792322711359, guid: c1f84d36e2eb2474ba0493650923dbbd, type: 2}

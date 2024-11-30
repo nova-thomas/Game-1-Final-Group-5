@@ -63,12 +63,15 @@ public class Player : Actor
     public float damageInterval;
     private float damageTimer = 0f;
 
+    private Animator playerAnimator;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         inventory = GetComponent<Inventory>();
         audioSource = GetComponent<AudioSource>();
-        speed = 5;
+        playerAnimator = GetComponent<Animator>();
+        speed = 8;
         ammo = 6;
         damage = 1;
         canJump = true;
@@ -106,10 +109,12 @@ public class Player : Actor
         if (mv.phase == InputActionPhase.Performed)
         {
             moveInput = mv.ReadValue<Vector2>();
+            playerAnimator.SetBool("isWalking", true);
         }
         else if (mv.phase == InputActionPhase.Canceled)
         {
             moveInput = Vector2.zero;
+            playerAnimator.SetBool("isWalking", false);
         }
     }
 

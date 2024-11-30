@@ -88,7 +88,7 @@ MonoBehaviour:
   speed: 7
   health: 20
   damage: 0
-  myAnimator: {fileID: 0}
+  myAnimator: {fileID: 4449012913961940319}
   ammo: 0
   ammoMax: 6
   healthMax: 20
@@ -121,7 +121,7 @@ MonoBehaviour:
   powerUpCollectSound: {fileID: 8300000, guid: dca7478d4be26304985f70d539540e4f, type: 3}
   healthText: {fileID: 0}
   ammoText: {fileID: 0}
-  damageInterval: 0
+  damageInterval: 0.1
 --- !u!114 &8936095109967415999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,7 +428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76a1bcde13cff9e43b015f2a8f763636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins: 200
+  coins: 50
   firePower: 0
   icePower: 0
   poisonPower: 0
@@ -449,7 +449,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.15
+  m_Volume: 0.497
   m_Pitch: 1
   Loop: 0
   Mute: 0

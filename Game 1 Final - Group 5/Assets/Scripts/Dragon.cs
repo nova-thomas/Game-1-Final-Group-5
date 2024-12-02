@@ -30,7 +30,6 @@ public class Dragon : Solo
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(agent.velocity);
 
         if (agent.velocity.x > .1 || agent.velocity.z > .1)
         {

@@ -12,6 +12,7 @@ public class Dragon : Solo
     public Transform iceAttackPosition;
     public Transform toxinAttackPosition;
 
+    public GameObject dragonFBX;
     public GameObject fireBallPrefab;
     public GameObject iceProjectilePrefab;
     public GameObject toxinPrefab;
@@ -23,11 +24,27 @@ public class Dragon : Solo
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        myAnimator = dragonFBX.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(agent.velocity);
+
+        if (agent.velocity.x > .1 || agent.velocity.z > .1)
+        {
+            if (myAnimator.GetInteger("DIR") == 0)
+            {
+                myAnimator.CrossFade("Walk", .2f);
+            }
+            myAnimator.SetInteger("DIR", 1);
+        }
+        else
+        {
+            myAnimator.SetInteger("DIR", 0);
+        }
+
         // Check for sight and attack range
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
@@ -86,10 +103,10 @@ public class Dragon : Solo
                     breathFire();
                     break;
                 case 1:
-                    shootIce();
+                    StartCoroutine(shootIce());
                     break;
                 case 2:
-                    breathToxin();
+                    StartCoroutine(breathToxin());
                     break;
             }
             //
@@ -102,6 +119,7 @@ public class Dragon : Solo
     {
         // Audio
         audioSource.PlayOneShot(a_attack);
+        myAnimator.CrossFade("FireAttack",.2f);
 
         if (fireBallPrefab != null)
         {
@@ -122,10 +140,13 @@ public class Dragon : Solo
         }
     }
 
-    public void shootIce()
+    public IEnumerator shootIce()
     {
         // Audio
         audioSource.PlayOneShot(a_attack);
+        myAnimator.CrossFade("IceAttack", .2f);
+
+        yield return new WaitForSeconds(.5f);
 
         if (iceProjectilePrefab != null)
         {
@@ -146,10 +167,13 @@ public class Dragon : Solo
         }
     }
 
-    public void breathToxin()
+    public IEnumerator breathToxin()
     {
         // Audio
         audioSource.PlayOneShot(a_attack);
+        myAnimator.CrossFade("AcidAttack", .2f);
+
+        yield return new WaitForSeconds(.8f);
 
         if (toxinPrefab != null)
         {

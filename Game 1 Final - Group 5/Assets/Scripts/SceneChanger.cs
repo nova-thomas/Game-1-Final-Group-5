@@ -26,6 +26,8 @@ public class SceneChanger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             SceneManager.LoadScene(playSceneName);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true; 
         }
     }
 }

@@ -122,6 +122,7 @@ public class Shop : MonoBehaviour
             player.healthMax += 3;
             healthUpgradeLevel++;
             healthProgressBar.value = healthUpgradeLevel;
+            player.health = player.healthMax; 
             UpdateCoinCount();
             player.inventory.UpdateCoinUI();
             Debug.Log("Health upgraded to level " + healthUpgradeLevel);

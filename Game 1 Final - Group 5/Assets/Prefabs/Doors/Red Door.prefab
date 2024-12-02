@@ -205,12 +205,14 @@ GameObject:
   - component: {fileID: 5355406555950148267}
   - component: {fileID: 5933785633240651494}
   - component: {fileID: 8442735549713389394}
+  - component: {fileID: 8772909938609490085}
+  - component: {fileID: 5501430778897817606}
   m_Layer: 0
   m_Name: Red Door
   m_TagString: Red Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6611361428720797758
 Transform:
@@ -222,8 +224,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -11.34, y: 2.23, z: -16.109238}
-  m_LocalScale: {x: 3, y: 4.5, z: 0.34}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 21.91, y: 32.865, z: 2.4831333}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3324970516547222969}
   m_Father: {fileID: 0}
@@ -297,7 +299,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 9, y: 1.72, z: 21.66}
+  m_Size: {x: 2.64, y: -1.6, z: 15.24}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &5933785633240651494
 Rigidbody:
@@ -322,7 +324,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 0
@@ -339,3 +341,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorIndicator: {fileID: 3037133615578615899}
+--- !u!65 &8772909938609490085
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6459877195455876153}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.5, y: 1, z: 1.28}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5501430778897817606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6459877195455876153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d47b37d2387034409e23a26e740b1d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AutoSprintEnabled: 0

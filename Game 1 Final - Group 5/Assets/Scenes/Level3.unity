@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.80100626, g: 0.70762795, b: 0.62308085, a: 1}
+  m_IndirectSpecularColor: {r: 0.8010147, g: 0.70763886, b: 0.6230901, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -173,6 +173,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: VolcanPit_Tree_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1329213660163628881, guid: 41c6d37c9258dac4f96672eea661e54f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1329213660163628881, guid: 41c6d37c9258dac4f96672eea661e54f, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 1817625094123816427, guid: 41c6d37c9258dac4f96672eea661e54f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 106.11531
@@ -234,6 +242,14 @@ PrefabInstance:
     - target: {fileID: 1612616218955420063, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
       propertyPath: m_Name
       value: WinterFell_Tree_01 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612616218955420063, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612616218955420063, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 2101766249316829989, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
       propertyPath: m_LocalScale.x
@@ -354,6 +370,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plant_Desert_Small_0_1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4566859094612419601, guid: 3f472480692e2ff42b5ecf014bb72038, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566859094612419601, guid: 3f472480692e2ff42b5ecf014bb72038, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -418,7 +442,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8883844058166687996, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
       propertyPath: maxMembers
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -537,15 +561,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8146410141022648651, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.953697
+      value: -13.54
       objectReference: {fileID: 0}
     - target: {fileID: 8146410141022648651, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 18.620447
+      value: 18.85
       objectReference: {fileID: 0}
     - target: {fileID: 8146410141022648651, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -41.055603
+      value: -34.16
       objectReference: {fileID: 0}
     - target: {fileID: 8146410141022648651, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
       propertyPath: m_LocalRotation.w
@@ -601,6 +625,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1533267094}
     m_Modifications:
+    - target: {fileID: 135881980683749265, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282226050167343858, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2839624031272590541, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_LocalScale.x
       value: 10
@@ -656,6 +688,18 @@ PrefabInstance:
     - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_Name
       value: WinterFell_Stones_01 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399987873770859725, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -871,6 +915,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Tree_02 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5519633081608928944, guid: 77727086d09b83043a9322bed5214236, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5519633081608928944, guid: 77727086d09b83043a9322bed5214236, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -889,9 +941,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1533267094}
     m_Modifications:
+    - target: {fileID: 98910036509148809, guid: b5e4835c7932b7246b33cf5e7bbe0489, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 496023631242840061, guid: b5e4835c7932b7246b33cf5e7bbe0489, type: 3}
       propertyPath: m_Name
       value: Floating_Island_Bioma2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 496023631242840061, guid: b5e4835c7932b7246b33cf5e7bbe0489, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 496023631242840061, guid: b5e4835c7932b7246b33cf5e7bbe0489, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 984575768079998279, guid: b5e4835c7932b7246b33cf5e7bbe0489, type: 3}
       propertyPath: m_LocalPosition.x
@@ -932,6 +996,10 @@ PrefabInstance:
     - target: {fileID: 984575768079998279, guid: b5e4835c7932b7246b33cf5e7bbe0489, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2142038145655427771, guid: b5e4835c7932b7246b33cf5e7bbe0489, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1007,6 +1075,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Floating_Isle_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1904398658481981892, guid: 3e29fa335ab82a9409a67b6c3be65f5a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904398658481981892, guid: 3e29fa335ab82a9409a67b6c3be65f5a, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1016,68 +1092,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1235702437834969982, guid: 3e29fa335ab82a9409a67b6c3be65f5a, type: 3}
   m_PrefabInstance: {fileID: 148784302}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &153284043
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 595810059}
-    m_Modifications:
-    - target: {fileID: 8043930658224969688, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
-      propertyPath: m_Name
-      value: EnemySpawner (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8146410141022648651, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 34.46388
-      objectReference: {fileID: 0}
-    - target: {fileID: 8146410141022648651, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 20.273212
-      objectReference: {fileID: 0}
-    - target: {fileID: 8146410141022648651, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -48.29299
-      objectReference: {fileID: 0}
-    - target: {fileID: 8146410141022648651, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8146410141022648651, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8146410141022648651, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8146410141022648651, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8146410141022648651, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8146410141022648651, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8146410141022648651, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
---- !u!4 &153284044 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8146410141022648651, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
-  m_PrefabInstance: {fileID: 153284043}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &158747248
 PrefabInstance:
@@ -1130,6 +1144,14 @@ PrefabInstance:
     - target: {fileID: 9031210707047396285, guid: 3a77ec10722edab40946a27d27d7c28b, type: 3}
       propertyPath: m_Name
       value: WinterFell_Grass_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 9031210707047396285, guid: 3a77ec10722edab40946a27d27d7c28b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9031210707047396285, guid: 3a77ec10722edab40946a27d27d7c28b, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1280,6 +1302,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Floating_Isle_01 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1904398658481981892, guid: 3e29fa335ab82a9409a67b6c3be65f5a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904398658481981892, guid: 3e29fa335ab82a9409a67b6c3be65f5a, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1298,9 +1328,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1533267094}
     m_Modifications:
+    - target: {fileID: 98910036509148809, guid: b5e4835c7932b7246b33cf5e7bbe0489, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 496023631242840061, guid: b5e4835c7932b7246b33cf5e7bbe0489, type: 3}
       propertyPath: m_Name
       value: Floating_Island_Bioma2
+      objectReference: {fileID: 0}
+    - target: {fileID: 496023631242840061, guid: b5e4835c7932b7246b33cf5e7bbe0489, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 496023631242840061, guid: b5e4835c7932b7246b33cf5e7bbe0489, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 984575768079998279, guid: b5e4835c7932b7246b33cf5e7bbe0489, type: 3}
       propertyPath: m_LocalScale.x
@@ -1353,6 +1395,10 @@ PrefabInstance:
     - target: {fileID: 984575768079998279, guid: b5e4835c7932b7246b33cf5e7bbe0489, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2142038145655427771, guid: b5e4835c7932b7246b33cf5e7bbe0489, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1427,6 +1473,14 @@ PrefabInstance:
     - target: {fileID: 3105019348358508096, guid: 05447865c55bbac4ea06b64eb4edcdc6, type: 3}
       propertyPath: m_Name
       value: WinterFell_Trunk_0_1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3105019348358508096, guid: 05447865c55bbac4ea06b64eb4edcdc6, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3105019348358508096, guid: 05447865c55bbac4ea06b64eb4edcdc6, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1543,6 +1597,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Tree_Cut_0_1
       objectReference: {fileID: 0}
+    - target: {fileID: 1942193220902433390, guid: 4c25b5593000af745ae4267185e7ce5f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942193220902433390, guid: 4c25b5593000af745ae4267185e7ce5f, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1639,6 +1701,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Grass_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9031210707047396285, guid: 3a77ec10722edab40946a27d27d7c28b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9031210707047396285, guid: 3a77ec10722edab40946a27d27d7c28b, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1660,6 +1730,14 @@ PrefabInstance:
     - target: {fileID: 1612616218955420063, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
       propertyPath: m_Name
       value: WinterFell_Tree_01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612616218955420063, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612616218955420063, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2101766249316829989, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
       propertyPath: m_LocalScale.x
@@ -1810,6 +1888,10 @@ PrefabInstance:
       propertyPath: maxMembers
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8883844058166687996, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
+      propertyPath: respawnDelay
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1890,6 +1972,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1533267094}
     m_Modifications:
+    - target: {fileID: 135881980683749265, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282226050167343858, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2839624031272590541, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_LocalScale.x
       value: 6
@@ -1946,6 +2036,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Stones_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399987873770859725, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1975,6 +2077,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1533267094}
     m_Modifications:
+    - target: {fileID: 135881980683749265, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282226050167343858, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2839624031272590541, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_LocalScale.x
       value: 15
@@ -2030,6 +2140,18 @@ PrefabInstance:
     - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_Name
       value: WinterFell_Stones_01 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399987873770859725, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2104,6 +2226,14 @@ PrefabInstance:
     - target: {fileID: 1904398658481981892, guid: 3e29fa335ab82a9409a67b6c3be65f5a, type: 3}
       propertyPath: m_Name
       value: WinterFell_Floating_Isle_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904398658481981892, guid: 3e29fa335ab82a9409a67b6c3be65f5a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904398658481981892, guid: 3e29fa335ab82a9409a67b6c3be65f5a, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2242,6 +2372,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1533267094}
     m_Modifications:
+    - target: {fileID: 135881980683749265, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282226050167343858, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2839624031272590541, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_LocalScale.x
       value: 15
@@ -2297,6 +2435,18 @@ PrefabInstance:
     - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_Name
       value: WinterFell_Stones_01 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399987873770859725, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2459,6 +2609,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Tree_01 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1612616218955420063, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612616218955420063, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 2101766249316829989, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
       propertyPath: m_LocalScale.y
       value: 2
@@ -2524,6 +2682,14 @@ PrefabInstance:
     - target: {fileID: 1612616218955420063, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
       propertyPath: m_Name
       value: WinterFell_Tree_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612616218955420063, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612616218955420063, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2101766249316829989, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2597,6 +2763,14 @@ PrefabInstance:
     - target: {fileID: 3604206504073228549, guid: f3ed6c1b464eed04dae00af40864289d, type: 3}
       propertyPath: m_Name
       value: WinterFell_Snow_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3604206504073228549, guid: f3ed6c1b464eed04dae00af40864289d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3604206504073228549, guid: f3ed6c1b464eed04dae00af40864289d, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4129631622341307327, guid: f3ed6c1b464eed04dae00af40864289d, type: 3}
       propertyPath: m_LocalScale.x
@@ -2717,6 +2891,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plant_Desert_Small_0_1
       objectReference: {fileID: 0}
+    - target: {fileID: 4566859094612419601, guid: 3f472480692e2ff42b5ecf014bb72038, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566859094612419601, guid: 3f472480692e2ff42b5ecf014bb72038, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2797,6 +2979,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1533267094}
     m_Modifications:
+    - target: {fileID: 135881980683749265, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282226050167343858, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2839624031272590541, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_LocalScale.x
       value: 10
@@ -2852,6 +3042,18 @@ PrefabInstance:
     - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_Name
       value: WinterFell_Stones_01 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399987873770859725, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2966,7 +3168,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1313814195}
-  - {fileID: 153284044}
   - {fileID: 1065245112}
   - {fileID: 1658002488}
   - {fileID: 1064241342}
@@ -3043,6 +3244,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: VolcanPit_Floating_Rock_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6505272504804391193, guid: c455f98536dc34d45b28994d208fdd2d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505272504804391193, guid: c455f98536dc34d45b28994d208fdd2d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3105,6 +3314,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: VolcanPit_Rock_Platform_01
       objectReference: {fileID: 0}
+    - target: {fileID: 2915076708691823178, guid: 4ad6fb47309336c40b05f984ba8ec9c5, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915076708691823178, guid: 4ad6fb47309336c40b05f984ba8ec9c5, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3126,6 +3343,14 @@ PrefabInstance:
     - target: {fileID: 4813203688606517205, guid: 065a71d8039be744db6a7798ea7cc358, type: 3}
       propertyPath: m_Name
       value: Rock_Desert_01_Small_0_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4813203688606517205, guid: 065a71d8039be744db6a7798ea7cc358, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4813203688606517205, guid: 065a71d8039be744db6a7798ea7cc358, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 5296303445711363439, guid: 065a71d8039be744db6a7798ea7cc358, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3254,6 +3479,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1533267094}
     m_Modifications:
+    - target: {fileID: 135881980683749265, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282226050167343858, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2839624031272590541, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_LocalScale.x
       value: 20
@@ -3310,6 +3543,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Stones_01 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399987873770859725, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3341,6 +3586,14 @@ PrefabInstance:
     - target: {fileID: 8212571448112691764, guid: 2974c37684310a8488a711f4f8228db6, type: 3}
       propertyPath: m_Name
       value: Desert_Rock_02_Small_0_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8212571448112691764, guid: 2974c37684310a8488a711f4f8228db6, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8212571448112691764, guid: 2974c37684310a8488a711f4f8228db6, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 8841474904209875086, guid: 2974c37684310a8488a711f4f8228db6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3467,6 +3720,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: VolcanPit_Floating_Rock_02
       objectReference: {fileID: 0}
+    - target: {fileID: 6505272504804391193, guid: c455f98536dc34d45b28994d208fdd2d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505272504804391193, guid: c455f98536dc34d45b28994d208fdd2d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3488,6 +3749,14 @@ PrefabInstance:
     - target: {fileID: 3604206504073228549, guid: f3ed6c1b464eed04dae00af40864289d, type: 3}
       propertyPath: m_Name
       value: WinterFell_Snow_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3604206504073228549, guid: f3ed6c1b464eed04dae00af40864289d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3604206504073228549, guid: f3ed6c1b464eed04dae00af40864289d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 4129631622341307327, guid: f3ed6c1b464eed04dae00af40864289d, type: 3}
       propertyPath: m_LocalScale.x
@@ -3609,11 +3878,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8883844058166687996, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
       propertyPath: maxMembers
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8883844058166687996, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
       propertyPath: enemyToSpawn
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8883844058166687996, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
+      propertyPath: respawnDelay
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3633,6 +3906,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1533267094}
     m_Modifications:
+    - target: {fileID: 135881980683749265, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282226050167343858, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2839624031272590541, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_LocalScale.x
       value: 15
@@ -3688,6 +3969,18 @@ PrefabInstance:
     - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_Name
       value: WinterFell_Stones_01 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399987873770859725, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3914,6 +4207,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Plant_12_Small_0_1
       objectReference: {fileID: 0}
+    - target: {fileID: 1767468339231327418, guid: fb373651c34135d4b812efaca0863f02, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1767468339231327418, guid: fb373651c34135d4b812efaca0863f02, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3976,6 +4277,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Tree_Cut_0_1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1942193220902433390, guid: 4c25b5593000af745ae4267185e7ce5f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942193220902433390, guid: 4c25b5593000af745ae4267185e7ce5f, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3997,6 +4306,14 @@ PrefabInstance:
     - target: {fileID: 3604206504073228549, guid: f3ed6c1b464eed04dae00af40864289d, type: 3}
       propertyPath: m_Name
       value: WinterFell_Snow_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3604206504073228549, guid: f3ed6c1b464eed04dae00af40864289d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3604206504073228549, guid: f3ed6c1b464eed04dae00af40864289d, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4129631622341307327, guid: f3ed6c1b464eed04dae00af40864289d, type: 3}
       propertyPath: m_LocalScale.x
@@ -4260,6 +4577,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monuntain_Desert_03_Big_0_1
       objectReference: {fileID: 0}
+    - target: {fileID: 1700064822801904374, guid: b685e67a075aff545b7c5993a1766927, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700064822801904374, guid: b685e67a075aff545b7c5993a1766927, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 2079545230000842828, guid: b685e67a075aff545b7c5993a1766927, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4999998
@@ -4334,6 +4659,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_Desert_01_Small_0_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4813203688606517205, guid: 065a71d8039be744db6a7798ea7cc358, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4813203688606517205, guid: 065a71d8039be744db6a7798ea7cc358, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 5296303445711363439, guid: 065a71d8039be744db6a7798ea7cc358, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -4407,6 +4740,14 @@ PrefabInstance:
     - target: {fileID: 1612616218955420063, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
       propertyPath: m_Name
       value: WinterFell_Tree_01 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612616218955420063, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612616218955420063, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2101766249316829989, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4604,6 +4945,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: VolcanPit_Volcan_02
       objectReference: {fileID: 0}
+    - target: {fileID: 449980750136797163, guid: 9f7a59fee39e54b458d62176773b978a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 449980750136797163, guid: 9f7a59fee39e54b458d62176773b978a, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 969812923521875281, guid: 9f7a59fee39e54b458d62176773b978a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 93.573044
@@ -4767,6 +5116,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Tree_01 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1612616218955420063, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612616218955420063, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 2101766249316829989, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
       propertyPath: m_LocalPosition.x
       value: -23.231092
@@ -4869,6 +5226,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plant_Desert_Small_0_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4566859094612419601, guid: 3f472480692e2ff42b5ecf014bb72038, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566859094612419601, guid: 3f472480692e2ff42b5ecf014bb72038, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4887,6 +5252,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1533267094}
     m_Modifications:
+    - target: {fileID: 3075567340934262970, guid: c4caaf31fa0abca4ba9c7694d1680d0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7229532264802176522, guid: c4caaf31fa0abca4ba9c7694d1680d0e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.71492624
@@ -4931,6 +5300,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floating_Island_3_Bioma2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8007301070243108016, guid: c4caaf31fa0abca4ba9c7694d1680d0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8007301070243108016, guid: c4caaf31fa0abca4ba9c7694d1680d0e, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 9197465738750024201, guid: c4caaf31fa0abca4ba9c7694d1680d0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4952,6 +5333,14 @@ PrefabInstance:
     - target: {fileID: 2734639353421643932, guid: a83af1e8a95ed9045b1ac07153c69af2, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Crystal_Formation_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2734639353421643932, guid: a83af1e8a95ed9045b1ac07153c69af2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2734639353421643932, guid: a83af1e8a95ed9045b1ac07153c69af2, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 3366639373548263974, guid: a83af1e8a95ed9045b1ac07153c69af2, type: 3}
       propertyPath: m_LocalScale.x
@@ -5079,6 +5468,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Tree_02
       objectReference: {fileID: 0}
+    - target: {fileID: 5519633081608928944, guid: 77727086d09b83043a9322bed5214236, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5519633081608928944, guid: 77727086d09b83043a9322bed5214236, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5100,6 +5497,14 @@ PrefabInstance:
     - target: {fileID: 2682996157617771838, guid: add798f5f63f5c14b8b43655af6582c3, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Crystal_Formation_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2682996157617771838, guid: add798f5f63f5c14b8b43655af6582c3, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2682996157617771838, guid: add798f5f63f5c14b8b43655af6582c3, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 3346238736491597700, guid: add798f5f63f5c14b8b43655af6582c3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5211,6 +5616,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: VolcanPit_Rock_01
       objectReference: {fileID: 0}
+    - target: {fileID: 3154404243025301047, guid: c65da298bc01dba4697af415ae90eb26, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3154404243025301047, guid: c65da298bc01dba4697af415ae90eb26, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5276,6 +5689,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Floating_Isle_01 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1904398658481981892, guid: 3e29fa335ab82a9409a67b6c3be65f5a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904398658481981892, guid: 3e29fa335ab82a9409a67b6c3be65f5a, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5297,6 +5718,14 @@ PrefabInstance:
     - target: {fileID: 1466026162820130657, guid: cab52856ff248904a9f7fb72f93fa33d, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Rock_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1466026162820130657, guid: cab52856ff248904a9f7fb72f93fa33d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1466026162820130657, guid: cab52856ff248904a9f7fb72f93fa33d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 2239291406497807835, guid: cab52856ff248904a9f7fb72f93fa33d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5399,6 +5828,14 @@ PrefabInstance:
     - target: {fileID: 5758163143117938016, guid: 5f48ec13b7d24ca4d900816dd3270c27, type: 3}
       propertyPath: m_Name
       value: Monuntain_Desert_01_Big_0_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758163143117938016, guid: 5f48ec13b7d24ca4d900816dd3270c27, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758163143117938016, guid: 5f48ec13b7d24ca4d900816dd3270c27, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5599,6 +6036,10 @@ PrefabInstance:
       propertyPath: enemyToSpawn
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8883844058166687996, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
+      propertyPath: respawnDelay
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5664,6 +6105,10 @@ PrefabInstance:
     - target: {fileID: 8883844058166687996, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
       propertyPath: maxMembers
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8883844058166687996, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
+      propertyPath: respawnDelay
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5841,6 +6286,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Tree_Cut_0_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1942193220902433390, guid: 4c25b5593000af745ae4267185e7ce5f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942193220902433390, guid: 4c25b5593000af745ae4267185e7ce5f, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5932,6 +6385,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1533267094}
     m_Modifications:
+    - target: {fileID: 135881980683749265, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282226050167343858, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2839624031272590541, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -5987,6 +6448,18 @@ PrefabInstance:
     - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_Name
       value: WinterFell_Stones_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399987873770859725, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6058,6 +6531,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Floating_Isle_01 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1904398658481981892, guid: 3e29fa335ab82a9409a67b6c3be65f5a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904398658481981892, guid: 3e29fa335ab82a9409a67b6c3be65f5a, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6125,6 +6606,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Tree_02 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5519633081608928944, guid: 77727086d09b83043a9322bed5214236, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5519633081608928944, guid: 77727086d09b83043a9322bed5214236, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6187,6 +6676,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Rock_01_Small_0_1
       objectReference: {fileID: 0}
+    - target: {fileID: 2295440690133877058, guid: ef743d487a10df445b6df3e2e0ccc3e6, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2295440690133877058, guid: ef743d487a10df445b6df3e2e0ccc3e6, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6205,6 +6702,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1533267094}
     m_Modifications:
+    - target: {fileID: 135881980683749265, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282226050167343858, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2839624031272590541, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -6260,6 +6765,18 @@ PrefabInstance:
     - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_Name
       value: WinterFell_Stones_01 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399987873770859725, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6426,6 +6943,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1533267094}
     m_Modifications:
+    - target: {fileID: 3075567340934262970, guid: c4caaf31fa0abca4ba9c7694d1680d0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7229532264802176522, guid: c4caaf31fa0abca4ba9c7694d1680d0e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.1
@@ -6470,6 +6991,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floating_Island_3_Bioma2
       objectReference: {fileID: 0}
+    - target: {fileID: 8007301070243108016, guid: c4caaf31fa0abca4ba9c7694d1680d0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8007301070243108016, guid: c4caaf31fa0abca4ba9c7694d1680d0e, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 9197465738750024201, guid: c4caaf31fa0abca4ba9c7694d1680d0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6488,6 +7021,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1533267094}
     m_Modifications:
+    - target: {fileID: 135881980683749265, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282226050167343858, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2839624031272590541, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -6543,6 +7084,18 @@ PrefabInstance:
     - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_Name
       value: WinterFell_Stones_01 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399987873770859725, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6614,6 +7167,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Floating_Isle_01 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1904398658481981892, guid: 3e29fa335ab82a9409a67b6c3be65f5a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904398658481981892, guid: 3e29fa335ab82a9409a67b6c3be65f5a, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6681,6 +7242,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Plant_03_Small_0_1
       objectReference: {fileID: 0}
+    - target: {fileID: 5208238005132830958, guid: 663636f673b6d5c44824a6f303e46a2c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5208238005132830958, guid: 663636f673b6d5c44824a6f303e46a2c, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6709,7 +7278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8146410141022648651, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 44.72729
+      value: 59.5
       objectReference: {fileID: 0}
     - target: {fileID: 8146410141022648651, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6750,6 +7319,10 @@ PrefabInstance:
     - target: {fileID: 8883844058166687996, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
       propertyPath: enemyToSpawn
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8883844058166687996, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
+      propertyPath: respawnDelay
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6824,6 +7397,10 @@ PrefabInstance:
     - target: {fileID: 8883844058166687996, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
       propertyPath: enemyToSpawn
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8883844058166687996, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
+      propertyPath: respawnDelay
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6951,6 +7528,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1533267094}
     m_Modifications:
+    - target: {fileID: 135881980683749265, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282226050167343858, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2839624031272590541, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_LocalScale.x
       value: 10
@@ -7007,6 +7592,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Stones_01 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399987873770859725, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7025,6 +7622,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1533267094}
     m_Modifications:
+    - target: {fileID: 135881980683749265, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282226050167343858, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2839624031272590541, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -7080,6 +7685,18 @@ PrefabInstance:
     - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_Name
       value: WinterFell_Stones_01 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399987873770859725, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7160,6 +7777,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Floating_Isle_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1904398658481981892, guid: 3e29fa335ab82a9409a67b6c3be65f5a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904398658481981892, guid: 3e29fa335ab82a9409a67b6c3be65f5a, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7229,6 +7854,14 @@ PrefabInstance:
     - target: {fileID: 1904398658481981892, guid: 3e29fa335ab82a9409a67b6c3be65f5a, type: 3}
       propertyPath: m_Name
       value: WinterFell_Floating_Isle_01 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904398658481981892, guid: 3e29fa335ab82a9409a67b6c3be65f5a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904398658481981892, guid: 3e29fa335ab82a9409a67b6c3be65f5a, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7315,6 +7948,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Tree_02 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5519633081608928944, guid: 77727086d09b83043a9322bed5214236, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5519633081608928944, guid: 77727086d09b83043a9322bed5214236, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7333,6 +7974,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1533267094}
     m_Modifications:
+    - target: {fileID: 135881980683749265, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282226050167343858, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2839624031272590541, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -7388,6 +8037,18 @@ PrefabInstance:
     - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_Name
       value: WinterFell_Stones_01 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399987873770859725, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7562,6 +8223,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Tree_Cut_0_1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1942193220902433390, guid: 4c25b5593000af745ae4267185e7ce5f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942193220902433390, guid: 4c25b5593000af745ae4267185e7ce5f, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7636,6 +8305,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Tree_Cut_0_1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1942193220902433390, guid: 4c25b5593000af745ae4267185e7ce5f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942193220902433390, guid: 4c25b5593000af745ae4267185e7ce5f, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7654,6 +8331,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1533267094}
     m_Modifications:
+    - target: {fileID: 135881980683749265, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282226050167343858, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2839624031272590541, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_LocalScale.x
       value: 15
@@ -7710,6 +8395,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Stones_01 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399987873770859725, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7742,6 +8439,14 @@ PrefabInstance:
     - target: {fileID: 5784519186775220847, guid: 7ffd5dd6f9ed13c4fb290c60bcf00d1b, type: 3}
       propertyPath: m_Name
       value: Desert_Plant_04_Small_0_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5784519186775220847, guid: 7ffd5dd6f9ed13c4fb290c60bcf00d1b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5784519186775220847, guid: 7ffd5dd6f9ed13c4fb290c60bcf00d1b, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6561020224518977749, guid: 7ffd5dd6f9ed13c4fb290c60bcf00d1b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7805,6 +8510,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: VolcanPit_DragonHead
       objectReference: {fileID: 0}
+    - target: {fileID: 6918554125255623833, guid: c0a0bff2e9fda4649bb21ee6d531f67c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6918554125255623833, guid: c0a0bff2e9fda4649bb21ee6d531f67c, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 7730557397766020643, guid: c0a0bff2e9fda4649bb21ee6d531f67c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 45.62
@@ -7866,6 +8579,14 @@ PrefabInstance:
     - target: {fileID: 2682996157617771838, guid: add798f5f63f5c14b8b43655af6582c3, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Crystal_Formation_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2682996157617771838, guid: add798f5f63f5c14b8b43655af6582c3, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2682996157617771838, guid: add798f5f63f5c14b8b43655af6582c3, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 3346238736491597700, guid: add798f5f63f5c14b8b43655af6582c3, type: 3}
       propertyPath: m_LocalScale.x
@@ -7933,6 +8654,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1533267094}
     m_Modifications:
+    - target: {fileID: 135881980683749265, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282226050167343858, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2839624031272590541, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -31
@@ -7976,6 +8705,18 @@ PrefabInstance:
     - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_Name
       value: WinterFell_Stones_01 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399987873770859725, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8062,6 +8803,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Tree_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5519633081608928944, guid: 77727086d09b83043a9322bed5214236, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5519633081608928944, guid: 77727086d09b83043a9322bed5214236, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8135,6 +8884,22 @@ PrefabInstance:
     - target: {fileID: 6736526113466592710, guid: 8506be5d5ca450748b7f329afa4181a1, type: 3}
       propertyPath: m_Name
       value: Floating_Island_4_Bioma2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6736526113466592710, guid: 8506be5d5ca450748b7f329afa4181a1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6736526113466592710, guid: 8506be5d5ca450748b7f329afa4181a1, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469151748832209916, guid: 8506be5d5ca450748b7f329afa4181a1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7782820872625234566, guid: 8506be5d5ca450748b7f329afa4181a1, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8311,6 +9076,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Floating_Isle_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1904398658481981892, guid: 3e29fa335ab82a9409a67b6c3be65f5a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904398658481981892, guid: 3e29fa335ab82a9409a67b6c3be65f5a, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8331,9 +9104,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1533267094}
   - component: {fileID: 1533267095}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Environment
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8489,6 +9262,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1533267094}
     m_Modifications:
+    - target: {fileID: 135881980683749265, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282226050167343858, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2839624031272590541, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -33.396908
@@ -8532,6 +9313,18 @@ PrefabInstance:
     - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_Name
       value: WinterFell_Stones_01 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399987873770859725, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8608,6 +9401,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1533267094}
     m_Modifications:
+    - target: {fileID: 135881980683749265, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282226050167343858, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2839624031272590541, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_LocalScale.x
       value: 20
@@ -8664,6 +9465,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Stones_01 (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399987873770859725, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8682,6 +9495,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1533267094}
     m_Modifications:
+    - target: {fileID: 135881980683749265, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282226050167343858, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2839624031272590541, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_LocalScale.x
       value: 10
@@ -8738,6 +9559,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Stones_01 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399987873770859725, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8759,6 +9592,14 @@ PrefabInstance:
     - target: {fileID: 2409877762142852136, guid: 4d52ef251cd257d439ab848af00cc803, type: 3}
       propertyPath: m_Name
       value: Desert_Skull_Small_0_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2409877762142852136, guid: 4d52ef251cd257d439ab848af00cc803, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2409877762142852136, guid: 4d52ef251cd257d439ab848af00cc803, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 3042827661258985106, guid: 4d52ef251cd257d439ab848af00cc803, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8874,6 +9715,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Floating_Isle_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1904398658481981892, guid: 3e29fa335ab82a9409a67b6c3be65f5a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904398658481981892, guid: 3e29fa335ab82a9409a67b6c3be65f5a, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8895,6 +9744,14 @@ PrefabInstance:
     - target: {fileID: 1612616218955420063, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
       propertyPath: m_Name
       value: WinterFell_Tree_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612616218955420063, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612616218955420063, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2101766249316829989, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
       propertyPath: m_LocalScale.x
@@ -8966,6 +9823,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1533267094}
     m_Modifications:
+    - target: {fileID: 135881980683749265, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282226050167343858, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2839624031272590541, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_LocalScale.x
       value: 6
@@ -9021,6 +9886,18 @@ PrefabInstance:
     - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_Name
       value: WinterFell_Stones_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399987873770859725, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9162,6 +10039,10 @@ PrefabInstance:
       propertyPath: enemyToSpawn
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8883844058166687996, guid: 7006f649d22781a4f96744a05df62d01, type: 3}
+      propertyPath: respawnDelay
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9229,6 +10110,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plant_Desert_Small_0_1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4566859094612419601, guid: 3f472480692e2ff42b5ecf014bb72038, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566859094612419601, guid: 3f472480692e2ff42b5ecf014bb72038, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9250,6 +10139,14 @@ PrefabInstance:
     - target: {fileID: 1329213660163628881, guid: 41c6d37c9258dac4f96672eea661e54f, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Tree_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1329213660163628881, guid: 41c6d37c9258dac4f96672eea661e54f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1329213660163628881, guid: 41c6d37c9258dac4f96672eea661e54f, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 1817625094123816427, guid: 41c6d37c9258dac4f96672eea661e54f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9393,6 +10290,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gate_Desert_Big_0_1
       objectReference: {fileID: 0}
+    - target: {fileID: 8369507615923430875, guid: a479c2008a3c82e4db238fbf83caf0af, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369507615923430875, guid: a479c2008a3c82e4db238fbf83caf0af, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 9182178257435017057, guid: a479c2008a3c82e4db238fbf83caf0af, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -9463,6 +10368,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1533267094}
     m_Modifications:
+    - target: {fileID: 135881980683749265, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282226050167343858, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2839624031272590541, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -9515,6 +10428,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Stones_01 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399987873770859725, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9541,6 +10466,14 @@ PrefabInstance:
     - target: {fileID: 1612616218955420063, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
       propertyPath: m_Name
       value: WinterFell_Tree_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612616218955420063, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612616218955420063, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2101766249316829989, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
       propertyPath: m_LocalScale.x
@@ -9617,6 +10550,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1533267094}
     m_Modifications:
+    - target: {fileID: 135881980683749265, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282226050167343858, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2839624031272590541, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_LocalScale.x
       value: 15
@@ -9673,6 +10614,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Stones_01 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399987873770859725, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9702,6 +10655,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1533267094}
     m_Modifications:
+    - target: {fileID: 135881980683749265, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282226050167343858, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2839624031272590541, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_LocalScale.x
       value: 12
@@ -9757,6 +10718,18 @@ PrefabInstance:
     - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
       propertyPath: m_Name
       value: WinterFell_Stones_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180543741305423479, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399987873770859725, guid: c1fc1975678f205408cde228ec6ec1c4, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9832,6 +10805,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Trunk_0_1
       objectReference: {fileID: 0}
+    - target: {fileID: 3105019348358508096, guid: 05447865c55bbac4ea06b64eb4edcdc6, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3105019348358508096, guid: 05447865c55bbac4ea06b64eb4edcdc6, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9894,6 +10875,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Plant_11_Small_0_1
       objectReference: {fileID: 0}
+    - target: {fileID: 7695708783472860568, guid: 55b408962aa3b984ab6f3cf9a4ec6464, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7695708783472860568, guid: 55b408962aa3b984ab6f3cf9a4ec6464, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9955,6 +10944,14 @@ PrefabInstance:
     - target: {fileID: 5519633081608928944, guid: 77727086d09b83043a9322bed5214236, type: 3}
       propertyPath: m_Name
       value: WinterFell_Tree_02 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5519633081608928944, guid: 77727086d09b83043a9322bed5214236, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5519633081608928944, guid: 77727086d09b83043a9322bed5214236, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10023,6 +11020,14 @@ PrefabInstance:
     - target: {fileID: 1612616218955420063, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
       propertyPath: m_Name
       value: WinterFell_Tree_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612616218955420063, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612616218955420063, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2101766249316829989, guid: c80c3b2452c9fcb46aac2e1cf4a56e30, type: 3}
       propertyPath: m_LocalScale.x
@@ -10182,6 +11187,14 @@ PrefabInstance:
     - target: {fileID: 1757186708007157467, guid: 9e5bff829cdf74647825a3cd720bbf9e, type: 3}
       propertyPath: m_Name
       value: WinterFell_Snowman_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1757186708007157467, guid: 9e5bff829cdf74647825a3cd720bbf9e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1757186708007157467, guid: 9e5bff829cdf74647825a3cd720bbf9e, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10353,6 +11366,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterFell_Trunk_0_1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3105019348358508096, guid: 05447865c55bbac4ea06b64eb4edcdc6, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3105019348358508096, guid: 05447865c55bbac4ea06b64eb4edcdc6, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10371,6 +11392,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1533267094}
     m_Modifications:
+    - target: {fileID: 3075567340934262970, guid: c4caaf31fa0abca4ba9c7694d1680d0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7229532264802176522, guid: c4caaf31fa0abca4ba9c7694d1680d0e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -31.1
@@ -10414,6 +11439,18 @@ PrefabInstance:
     - target: {fileID: 8007301070243108016, guid: c4caaf31fa0abca4ba9c7694d1680d0e, type: 3}
       propertyPath: m_Name
       value: Floating_Island_3_Bioma2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8007301070243108016, guid: c4caaf31fa0abca4ba9c7694d1680d0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8007301070243108016, guid: c4caaf31fa0abca4ba9c7694d1680d0e, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 9197465738750024201, guid: c4caaf31fa0abca4ba9c7694d1680d0e, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10477,6 +11514,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Rock_03_Small_0_1
       objectReference: {fileID: 0}
+    - target: {fileID: 8873705372364436760, guid: 3810b77eacbd60b419715c00fcd3635d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8873705372364436760, guid: 3810b77eacbd60b419715c00fcd3635d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10538,6 +11583,14 @@ PrefabInstance:
     - target: {fileID: 3154404243025301047, guid: c65da298bc01dba4697af415ae90eb26, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Rock_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3154404243025301047, guid: c65da298bc01dba4697af415ae90eb26, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3154404243025301047, guid: c65da298bc01dba4697af415ae90eb26, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -45,7 +45,7 @@ public class EnemyAi : Actor
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
     public bool playedAmbient;
-    public float timeBetweenAmbient = 5f;
+    public float timeBetweenAmbient;
 
     public void Awake()
     {
@@ -168,12 +168,12 @@ public class EnemyAi : Actor
         {
             float randomValue = Random.Range(0f, 100f);
 
-            if (randomValue <= 40f) // 40% chance for coins
+            if (randomValue <= 50f) // 50% chance for coins
             {
                 SpawnItem(coins);
             }
 
-            if (randomValue <= 10f) // 10% chance for powerup
+            if (randomValue <= 30f) // 30% chance for powerup
             {
                 SpawnItem(powerup);
             }

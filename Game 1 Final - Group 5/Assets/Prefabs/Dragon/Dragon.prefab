@@ -203,7 +203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   health: 300
-  damage: 10
+  damage: 15
   myAnimator: {fileID: 0}
   agent: {fileID: 0}
   myRig: {fileID: 0}
@@ -222,7 +222,7 @@ MonoBehaviour:
   enemyElementType: 0
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
-  timeBetweenAttacks: 5
+  timeBetweenAttacks: 3
   alreadyAttacked: 0
   sightRange: 15
   attackRange: 10

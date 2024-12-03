@@ -30,7 +30,7 @@ public class Lizard : Pack
         if (playerInSightRange && playerInAttackRange) AttackPlayer();
         if (!playedAmbient)
         {
-            timeBetweenAmbient = Random.Range(5, 30);
+            timeBetweenAmbient = Random.Range(15, 50);
             AudioClip choice;
             int val;
             val = Random.Range(0, 2);

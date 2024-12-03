@@ -186,7 +186,7 @@ public class Shop : MonoBehaviour
         if (canUpgrade)
         {
             player.inventory.coins -= upgradeCost;
-            player.damage += 3;
+            player.damage += 1;
             UpdateCoinCount();
             player.inventory.UpdateCoinUI();
         }
@@ -204,7 +204,7 @@ public class Shop : MonoBehaviour
         if (canUpgrade)
         {
             player.inventory.coins -= upgradeCost;
-            player.iceUpgrade += 3;
+            player.iceUpgrade += 1;
             UpdateCoinCount();
             player.inventory.UpdateCoinUI();
         }
@@ -222,7 +222,7 @@ public class Shop : MonoBehaviour
         if (canUpgrade)
         {
             player.inventory.coins -= upgradeCost;
-            player.fireUpgrade += 3;
+            player.fireUpgrade += 1;
             UpdateCoinCount();
             player.inventory.UpdateCoinUI();
         }
@@ -240,7 +240,7 @@ public class Shop : MonoBehaviour
         if (canUpgrade)
         {
             player.inventory.coins -= upgradeCost;
-            player.poisonUpgrade += 3;
+            player.poisonUpgrade += 1;
             UpdateCoinCount();
             player.inventory.UpdateCoinUI();
         }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 499554192}
-  m_IndirectSpecularColor: {r: 0.48623192, g: 0.7345135, b: 0.3609253, a: 1}
+  m_IndirectSpecularColor: {r: 0.48481524, g: 0.73448634, b: 0.36114478, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3344,12 +3344,24 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4049543593975387439, guid: 061370e456836be488482f6c65cdc7db, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5883306337760246636, guid: 061370e456836be488482f6c65cdc7db, type: 3}
       propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5883306337760246636, guid: 061370e456836be488482f6c65cdc7db, type: 3}
+      propertyPath: m_ProvidesContacts
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6592010377624934384, guid: 061370e456836be488482f6c65cdc7db, type: 3}
       propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8637480489714501480, guid: 061370e456836be488482f6c65cdc7db, type: 3}
+      propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

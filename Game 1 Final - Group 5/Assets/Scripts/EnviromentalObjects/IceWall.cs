@@ -13,9 +13,9 @@ public class IceWall : EnviromentalObjects
         active = true;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider Trigger)
     {
-        if (collision.gameObject.tag == "Fire Bullet")
+        if (Trigger.gameObject.tag == "Fire Bullet")
         {
             //Melt
             active = false;

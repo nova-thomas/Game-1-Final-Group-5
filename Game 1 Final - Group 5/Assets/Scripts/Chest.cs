@@ -26,7 +26,9 @@ public class ChestInteraction : MonoBehaviour
     private void Start()
     {
         if (spawnPoint == null)
+        {
             spawnPoint = transform;
+        }  
     }
 
     private void OnTriggerEnter(Collider other)
@@ -55,6 +57,7 @@ public class ChestInteraction : MonoBehaviour
 
     private void OpenChest()
     {
+        Vector3 pos = spawnPoint.position;
         chestOpened = true; 
 
         if (audioSource != null && chestOpenSound != null)
@@ -72,15 +75,18 @@ public class ChestInteraction : MonoBehaviour
 
         if (coinPrefab != null)
         {
-            Instantiate(coinPrefab, spawnPoint.position, Quaternion.identity);
+            pos += new Vector3(Random.Range(-0.3f, 0.3f), 0.5f, Random.Range(-0.3f, 0.3f));
+            Instantiate(coinPrefab, pos, Quaternion.identity);
         }
          if (powerUpPrefab != null)
         {
-            Instantiate(powerUpPrefab, spawnPoint.position, Quaternion.identity);
+            pos += new Vector3(Random.Range(-0.3f, 0.3f), 0.5f, Random.Range(-0.3f, 0.3f));
+            Instantiate(powerUpPrefab, pos, Quaternion.identity);
         }
         if (keyPrefab != null)
         {
-            Instantiate(keyPrefab, spawnPoint.position, Quaternion.identity);
+            pos += new Vector3(Random.Range(-0.3f, 0.3f), 0.5f, Random.Range(-0.3f, 0.3f));
+            Instantiate(keyPrefab, pos, Quaternion.identity);
         }
 
     }

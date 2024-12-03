@@ -19,9 +19,9 @@ public class Player : Actor
     public float lookSpeed = 1f;
     public float jumpForce = 5f;
 
-    public float iceUpgrade = 0;
-    public float fireUpgrade = 0;
-    public float poisonUpgrade = 0; 
+    public double iceUpgrade = 1;
+    public double fireUpgrade = 1;
+    public double poisonUpgrade = 1; 
 
     public GameObject bulletPrefab;
     public GameObject iceBulletPrefab;

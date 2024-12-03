@@ -119,41 +119,41 @@ public class EnemyAi : Actor
             case "Fire Bullet":
                 if (enemyElementType == ElementType.Poison)
                 { // Weakness
-                    TakeDamage(playerScript.damage * 1.3);
+                    TakeDamage(playerScript.damage * 1.3 * playerScript.fireUpgrade);
                 } else if (enemyElementType == ElementType.Fire) 
                 { // Resistance
-                    TakeDamage(playerScript.damage * 0.8);
+                    TakeDamage(playerScript.damage * 0.8 * playerScript.fireUpgrade);
                 } else 
                 {
-                    TakeDamage(playerScript.damage);
+                    TakeDamage(playerScript.damage * playerScript.fireUpgrade);
                 }
                 break;
             case "Ice Bullet":
                 if (enemyElementType == ElementType.Fire)
                 { // Weakness
-                    TakeDamage(playerScript.damage * 1.3);
+                    TakeDamage(playerScript.damage * 1.3 * playerScript.iceUpgrade);
                 }
                 else if (enemyElementType == ElementType.Ice)
                 { // Resistance
-                    TakeDamage(playerScript.damage * 0.8);
+                    TakeDamage(playerScript.damage * 0.8 * playerScript.iceUpgrade);
                 }
                 else
                 {
-                    TakeDamage(playerScript.damage);
+                    TakeDamage(playerScript.damage * playerScript.iceUpgrade);
                 }
                 break;
             case "Poison Bullet":
                 if (enemyElementType == ElementType.Ice)
                 { // Weakness
-                    TakeDamage(playerScript.damage * 1.3);
+                    TakeDamage(playerScript.damage * 1.3 * playerScript.poisonUpgrade);
                 }
                 else if (enemyElementType == ElementType.Poison)
                 { // Resistance
-                    TakeDamage(playerScript.damage * 0.8);
+                    TakeDamage(playerScript.damage * 0.8 * playerScript.poisonUpgrade);
                 }
                 else
                 {
-                    TakeDamage(playerScript.damage);
+                    TakeDamage(playerScript.damage * playerScript.poisonUpgrade);
                 }
                 break;
         }

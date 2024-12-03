@@ -2305,7 +2305,7 @@ Transform:
   m_GameObject: {fileID: 290944431}
   serializedVersion: 2
   m_LocalRotation: {x: -0.0014408139, y: 0.75744486, z: -0.044808213, w: -0.6513582}
-  m_LocalPosition: {x: 3.12, y: -3.91, z: 32.48}
+  m_LocalPosition: {x: 3.12, y: -7.83, z: 32.48}
   m_LocalScale: {x: 0.68218225, y: 0.6821824, z: 0.68218243}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5258,15 +5258,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7015572585487303, guid: 75af1461b9451e745b9ece1fd20e0073, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -416.7585
+      value: -434.3
       objectReference: {fileID: 0}
     - target: {fileID: 7015572585487303, guid: 75af1461b9451e745b9ece1fd20e0073, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -22.145048
+      value: -29.1
       objectReference: {fileID: 0}
     - target: {fileID: 7015572585487303, guid: 75af1461b9451e745b9ece1fd20e0073, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -855.80505
+      value: -867.6
       objectReference: {fileID: 0}
     - target: {fileID: 7015572585487303, guid: 75af1461b9451e745b9ece1fd20e0073, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8630,6 +8630,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 197648802}
     m_Modifications:
+    - target: {fileID: 859745719654544347, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 859745719654544347, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 13.53
+      objectReference: {fileID: 0}
     - target: {fileID: 4726082843909686182, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.045174
@@ -8675,7 +8683,8 @@ PrefabInstance:
       value: VolcanPit_Diorama
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 46652836506761938, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6661499000605066686, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
@@ -8789,9 +8798,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 46652835270795012, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2014387960}
-    - targetCorrespondingSourceObject: {fileID: 46652836506761938, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1509396016}
     - targetCorrespondingSourceObject: {fileID: 46652835146498486, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1092048171}
@@ -9163,33 +9169,6 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1507065049}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 5613674822000333965, guid: 6a4690964d25e644a8b76486f693c4cc, type: 3}
---- !u!1 &1509396012 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 46652836506761938, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
-  m_PrefabInstance: {fileID: 1444073535}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &1509396016
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1509396012}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -10620,6 +10599,10 @@ PrefabInstance:
       propertyPath: key
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5117833209645981217, guid: a4e34a86eb69d034aa2fe30ec63d10d5, type: 3}
+      propertyPath: powerUpPrefab
+      value: 
+      objectReference: {fileID: 4485619552607151745, guid: 3f6d7a09d93b66e4893d3125670a4b3e, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

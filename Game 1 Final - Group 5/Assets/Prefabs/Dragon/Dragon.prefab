@@ -228,7 +228,7 @@ MonoBehaviour:
   attackRange: 10
   playerInSightRange: 0
   playerInAttackRange: 0
-  playedAmbient: 0
+  playedAmbient: 1
   timeBetweenAmbient: 10
   a_ambient: {fileID: 8300000, guid: 6960bbe3715fc03448bc29a24242a6d3, type: 3}
   a_attack: {fileID: 8300000, guid: a7fa872a797d0184d8422ccba5780866, type: 3}

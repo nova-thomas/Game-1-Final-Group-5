@@ -4032,6 +4032,22 @@ PrefabInstance:
       propertyPath: healthUpgradeButton
       value: 
       objectReference: {fileID: 479487829}
+    - target: {fileID: 4942615159741947238, guid: 0ccebd8cfa7d0b640aaa618687ec6598, type: 3}
+      propertyPath: iceDamageProgressBar
+      value: 
+      objectReference: {fileID: 2023104873}
+    - target: {fileID: 4942615159741947238, guid: 0ccebd8cfa7d0b640aaa618687ec6598, type: 3}
+      propertyPath: fireDamageProgressBar
+      value: 
+      objectReference: {fileID: 2023104872}
+    - target: {fileID: 4942615159741947238, guid: 0ccebd8cfa7d0b640aaa618687ec6598, type: 3}
+      propertyPath: mainDamageProgressBar
+      value: 
+      objectReference: {fileID: 2023104874}
+    - target: {fileID: 4942615159741947238, guid: 0ccebd8cfa7d0b640aaa618687ec6598, type: 3}
+      propertyPath: poisonDamageProgressBar
+      value: 
+      objectReference: {fileID: 2023104871}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12330,6 +12346,50 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5613674822000333965, guid: 6a4690964d25e644a8b76486f693c4cc, type: 3}
+--- !u!114 &2023104871 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2070718516526950151, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
+  m_PrefabInstance: {fileID: 1102249784}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2023104872 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5887174129079422689, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
+  m_PrefabInstance: {fileID: 1102249784}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2023104873 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4305559966343432159, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
+  m_PrefabInstance: {fileID: 1102249784}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2023104874 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5408554834240902114, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
+  m_PrefabInstance: {fileID: 1102249784}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2028119568 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 46652834671821358, guid: 7441dbea1dcca2045a177259277797c9, type: 3}

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Dragon : Solo
 {
@@ -195,7 +196,9 @@ public class Dragon : Solo
 
     public void Win()
     {
-        // Win Screen
+        SceneManager.LoadScene("CutsceneEnd");
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
 
     }
 }

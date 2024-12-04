@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.8032951, g: 0.70765287, b: 0.6226886, a: 1}
+  m_IndirectSpecularColor: {r: 0.80100626, g: 0.70762795, b: 0.62308085, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2416,6 +2416,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShopUI
       objectReference: {fileID: 0}
+    - target: {fileID: 1366604562727751826, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1525485828486995025, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2500,11 +2504,39 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2565092871928638543, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2633464189120699467, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3829996705024647898, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133830197508058504, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4349884552823801513, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6197299524197215729, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301878206380563158, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7041796241552644323, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7451808839678133219, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
@@ -2570,6 +2602,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c81b162a1af44348b8994f7040514d4, type: 3}
+--- !u!114 &1512796261 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5408554834240902114, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
+  m_PrefabInstance: {fileID: 1447683532}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1514915163
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3008,6 +3051,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec78ebca7517fb745a45a931cb06d2bd, type: 3}
+--- !u!114 &1660189721 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5887174129079422689, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
+  m_PrefabInstance: {fileID: 1447683532}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1694729523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3199,6 +3253,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1764415639 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2070718516526950151, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
+  m_PrefabInstance: {fileID: 1447683532}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1782416582 stripped
@@ -3394,6 +3459,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d678e3e202b1344d999c6e60927f9ab, type: 3}
+--- !u!114 &1895902119 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4305559966343432159, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
+  m_PrefabInstance: {fileID: 1447683532}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1899561028
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5718,6 +5794,22 @@ PrefabInstance:
       propertyPath: healthUpgradeButton
       value: 
       objectReference: {fileID: 1234367921}
+    - target: {fileID: 4942615159741947238, guid: 0ccebd8cfa7d0b640aaa618687ec6598, type: 3}
+      propertyPath: iceDamageProgressBar
+      value: 
+      objectReference: {fileID: 1895902119}
+    - target: {fileID: 4942615159741947238, guid: 0ccebd8cfa7d0b640aaa618687ec6598, type: 3}
+      propertyPath: fireDamageProgressBar
+      value: 
+      objectReference: {fileID: 1660189721}
+    - target: {fileID: 4942615159741947238, guid: 0ccebd8cfa7d0b640aaa618687ec6598, type: 3}
+      propertyPath: mainDamageProgressBar
+      value: 
+      objectReference: {fileID: 1512796261}
+    - target: {fileID: 4942615159741947238, guid: 0ccebd8cfa7d0b640aaa618687ec6598, type: 3}
+      propertyPath: poisonDamageProgressBar
+      value: 
+      objectReference: {fileID: 1764415639}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.8032951, g: 0.70765287, b: 0.6226886, a: 1}
+  m_IndirectSpecularColor: {r: 0.80100626, g: 0.70762795, b: 0.62308085, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4166,6 +4166,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &728230315 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2070718516526950151, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
+  m_PrefabInstance: {fileID: 728230310}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &728230316 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5887174129079422689, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
+  m_PrefabInstance: {fileID: 728230310}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &728230317 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4305559966343432159, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
+  m_PrefabInstance: {fileID: 728230310}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &728230318 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5408554834240902114, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
+  m_PrefabInstance: {fileID: 728230310}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &738839291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6941,6 +6985,22 @@ PrefabInstance:
       propertyPath: healthUpgradeButton
       value: 
       objectReference: {fileID: 501485727}
+    - target: {fileID: 4942615159741947238, guid: 0ccebd8cfa7d0b640aaa618687ec6598, type: 3}
+      propertyPath: iceDamageProgressBar
+      value: 
+      objectReference: {fileID: 728230317}
+    - target: {fileID: 4942615159741947238, guid: 0ccebd8cfa7d0b640aaa618687ec6598, type: 3}
+      propertyPath: fireDamageProgressBar
+      value: 
+      objectReference: {fileID: 728230316}
+    - target: {fileID: 4942615159741947238, guid: 0ccebd8cfa7d0b640aaa618687ec6598, type: 3}
+      propertyPath: mainDamageProgressBar
+      value: 
+      objectReference: {fileID: 728230318}
+    - target: {fileID: 4942615159741947238, guid: 0ccebd8cfa7d0b640aaa618687ec6598, type: 3}
+      propertyPath: poisonDamageProgressBar
+      value: 
+      objectReference: {fileID: 728230315}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

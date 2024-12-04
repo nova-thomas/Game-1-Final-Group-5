@@ -32,6 +32,7 @@ public class Player : Actor
     public Inventory inventory;
     public GameObject deathScreenUI;
     public GameObject pauseScreenUI;
+    public GameObject keyButtonUI;
     public Transform playerCamera;
     public Shop shop;
 
@@ -84,6 +85,7 @@ public class Player : Actor
         pauseScreenUI.SetActive(false);
 
         isSprinting = GameManager.Instance.AutoSprintEnabled;
+        keyButtonUI.SetActive(false);
 
     }
 
@@ -327,18 +329,21 @@ public class Player : Actor
             inventory.AddKey("Blue");
             Destroy(other.gameObject);
             PlayKeyCollectSound();
+            ShowKeyButton();
         }
         else if (other.CompareTag("Red Key"))
         {
             inventory.AddKey("Red");
             Destroy(other.gameObject);
             PlayKeyCollectSound();
+            ShowKeyButton();
         }
         else if (other.CompareTag("Green Key"))
         {
             inventory.AddKey("Green");
             Destroy(other.gameObject);
             PlayKeyCollectSound();
+            ShowKeyButton();
         }
         else if (other.CompareTag("Coin"))
         {
@@ -474,6 +479,8 @@ public class Player : Actor
                 {
                     audioSource.PlayOneShot(doorOpenSound);
                 }
+
+                HideKeyButton();
             }
             else if (nearbyShop != null)
             {
@@ -616,4 +623,20 @@ public class Player : Actor
     {
         isSprinting = isAutoSprintEnabled;
     }
+    private void ShowKeyButton()
+    {
+        if (keyButtonUI != null)
+        {
+            keyButtonUI.SetActive(true); 
+        }
+    }
+
+    private void HideKeyButton()
+    {
+        if (keyButtonUI != null)
+        {
+            keyButtonUI.SetActive(false); 
+        }
+    }
+
 }

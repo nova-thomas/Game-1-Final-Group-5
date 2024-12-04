@@ -426,7 +426,7 @@ MonoBehaviour:
   attackRange: 4
   playerInSightRange: 0
   playerInAttackRange: 0
-  playedAmbient: 0
+  playedAmbient: 1
   timeBetweenAmbient: 5
   a_ambient1: {fileID: 8300000, guid: 72d88e54b4346b54e922909331fbaf14, type: 3}
   a_ambient2: {fileID: 8300000, guid: e5112ee9a1cd3f94bbd24858ca3c549f, type: 3}

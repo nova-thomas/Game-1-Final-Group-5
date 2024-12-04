@@ -689,7 +689,7 @@ MonoBehaviour:
   attackRange: 4
   playerInSightRange: 0
   playerInAttackRange: 0
-  playedAmbient: 0
+  playedAmbient: 1
   timeBetweenAmbient: 5
   a_ambient: {fileID: 8300000, guid: bc4527a813af8604abff06ff42b866f5, type: 3}
   a_SwingAttack: {fileID: 8300000, guid: fa051ecee74d09d44abe501822a8647c, type: 3}

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 499554192}
-  m_IndirectSpecularColor: {r: 0.48623192, g: 0.7345135, b: 0.3609253, a: 1}
+  m_IndirectSpecularColor: {r: 0.48481524, g: 0.73448634, b: 0.36114478, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4212,6 +4212,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6322799594645387439, guid: c4665c8316a39e8479a59c5e2287f142, type: 3}
   m_PrefabInstance: {fileID: 1202518700}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1202518702 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6010425643031756168, guid: c4665c8316a39e8479a59c5e2287f142, type: 3}
+  m_PrefabInstance: {fileID: 1202518700}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1242286132 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5884064802798182195, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
@@ -7292,6 +7297,10 @@ PrefabInstance:
       propertyPath: healthText
       value: 
       objectReference: {fileID: 1064250574}
+    - target: {fileID: 7700809615590514054, guid: 3109c2c695cc9e8409d4c6c055ac9610, type: 3}
+      propertyPath: keyButtonUI
+      value: 
+      objectReference: {fileID: 1202518702}
     - target: {fileID: 7700809615590514054, guid: 3109c2c695cc9e8409d4c6c055ac9610, type: 3}
       propertyPath: bulletPrefab
       value: 

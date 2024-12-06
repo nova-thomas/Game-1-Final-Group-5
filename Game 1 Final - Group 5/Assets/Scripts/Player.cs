@@ -60,13 +60,14 @@ public class Player : Actor
     private float damageTimer = 0f;
 
     private Animator playerAnimator;
+    public GameObject playerModel;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         inventory = GetComponent<Inventory>();
         audioSource = GetComponent<AudioSource>();
-        playerAnimator = GetComponent<Animator>();
+        playerAnimator = playerModel.GetComponent<Animator>();
         speed = 8;
         canJump = true;
         canShoot = true;

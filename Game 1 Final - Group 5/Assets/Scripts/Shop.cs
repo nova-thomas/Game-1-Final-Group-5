@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Shop : MonoBehaviour
 {
     public GameObject shopUI;
+    public Inventory player;
 
     public Button healthUpgradeButton;
     public Button damageUpgradeButton;
@@ -145,6 +146,7 @@ public class Shop : MonoBehaviour
             healthProgressBar.value = healthUpgradeLevel;
             GameManager.Instance.health = GameManager.Instance.healthMax;
             UpdateCoinCount();
+            player.UpdateCoinUI();
             Debug.Log("Health upgraded to level " + healthUpgradeLevel);
         }
         else
@@ -166,6 +168,7 @@ public class Shop : MonoBehaviour
             damageUpgradeLevel++;
             damageProgressBar.value = damageUpgradeLevel;
             UpdateCoinCount();
+            player.UpdateCoinUI();
             Debug.Log("Ammo upgraded to level " + damageUpgradeLevel);
         }
         else
@@ -187,6 +190,7 @@ public class Shop : MonoBehaviour
             speedUpgradeLevel++;
             speedProgressBar.value = speedUpgradeLevel;
             UpdateCoinCount();
+            player.UpdateCoinUI();
             Debug.Log("Speed upgraded to level " + speedUpgradeLevel);
         }
         else
@@ -208,6 +212,7 @@ public class Shop : MonoBehaviour
             mainDamageUpgradeLevel++;
             mainDamageProgressBar.value = mainDamageUpgradeLevel;
             UpdateCoinCount();
+            player.UpdateCoinUI();
             Debug.Log("Damage upgraded to level " + mainDamageUpgradeLevel);
         }
         else
@@ -229,6 +234,7 @@ public class Shop : MonoBehaviour
             iceDamageUpgradeLevel++;
             iceDamageProgressBar.value = iceDamageUpgradeLevel;
             UpdateCoinCount();
+            player.UpdateCoinUI();
             Debug.Log("Ice damage upgraded to level " + iceDamageUpgradeLevel);
         }
         else
@@ -250,6 +256,7 @@ public class Shop : MonoBehaviour
             fireDamageUpgradeLevel++;
             fireDamageProgressBar.value = fireDamageUpgradeLevel;
             UpdateCoinCount();
+            player.UpdateCoinUI();
             Debug.Log("Fire damage upgraded to level " + fireDamageUpgradeLevel);
         }
         else
@@ -270,7 +277,8 @@ public class Shop : MonoBehaviour
             GameManager.Instance.poisonUpgrade += 0.2f;
             poisonDamageUpgradeLevel++;
             poisonDamageProgressBar.value = poisonDamageUpgradeLevel;
-            UpdateCoinCount();
+            UpdateCoinCount(); 
+            player.UpdateCoinUI();
             Debug.Log("Poison damage upgraded to level " + poisonDamageUpgradeLevel);
         }
         else

@@ -36,7 +36,8 @@ public class Dragon : Solo
     // Update is called once per frame
     void Update()
     {
-
+        if (!IsGrounded())
+            return; // Skip AI behavior until grounded
         if (agent.velocity.x > .1 || agent.velocity.z > .1)
         {
             if (myAnimator.GetInteger("DIR") == 0)

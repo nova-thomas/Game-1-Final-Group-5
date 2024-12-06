@@ -21,6 +21,8 @@ public class Lizard : Pack
     // Update is called once per frame
     void Update()
     {
+        if (!IsGrounded())
+            return; // Skip AI behavior until grounded
         // Check for sight and attack range
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class EnemySpawner : MonoBehaviour
 
     private List<GameObject> spawnedEnemies = new List<GameObject>();
 
+    private bool respawning = false; // Ensure coroutine isn't called multiple times
+
     void Start()
     {
         SpawnEnemy();
@@ -34,34 +37,54 @@ public class EnemySpawner : MonoBehaviour
 
     void Update()
     {
-        if (AllEnemiesDead())
+        if (AllEnemiesDead() && !respawning)
         {
+            respawning = true;
             StartCoroutine(RespawnAfterDelay());
         }
     }
 
+    private IEnumerator RespawnAfterDelay()
+    {
+        yield return new WaitForSeconds(respawnDelay);
+        ClearSpawnedEnemies();
+        SpawnEnemy();
+        respawning = false; // Allow future respawns
+    }
+
     private void SpawnEnemy()
     {
-        ClearSpawnedEnemies();
         GameObject prefab = GetPrefabForEnemyType();
+        if (prefab == null) return;
 
-        if (prefab != null)
+        if (enemyToSpawn == EnemyType.Lizard || enemyToSpawn == EnemyType.Plague)
         {
-            if (enemyToSpawn == EnemyType.Lizard || enemyToSpawn == EnemyType.Plague)
+            for (int i = 0; i < maxMembers; i++)
             {
-                
-                for (int i = 0; i < maxMembers; i++)
-                {
-                    Vector3 spawnPosition = transform.position + new Vector3(Random.Range(-4f, 4f), 0, Random.Range(-4f, 4f));
-                    GameObject member = Instantiate(prefab, spawnPosition, transform.rotation);
-                    spawnedEnemies.Add(member);
-                }
+                Vector3 spawnPosition = GetValidSpawnPosition(transform.position, 4f);
+                GameObject member = Instantiate(prefab, spawnPosition, transform.rotation);
+                spawnedEnemies.Add(member);
+                InitializeAgent(member);
             }
-            else
-            {
-                GameObject enemy = Instantiate(prefab, transform.position, transform.rotation);
-                spawnedEnemies.Add(enemy);
-            }
+        }
+        else
+        {
+            Vector3 spawnPosition = GetValidSpawnPosition(transform.position, 0f);
+            GameObject enemy = Instantiate(prefab, spawnPosition, transform.rotation);
+            spawnedEnemies.Add(enemy);
+            InitializeAgent(enemy);
+        }
+    }
+
+    private void InitializeAgent(GameObject enemy)
+    {
+        NavMeshAgent agent = enemy.GetComponent<NavMeshAgent>();
+        if (agent != null)
+        {
+            agent.enabled = false; // Temporarily disable the agent until initialization
+            agent.Warp(enemy.transform.position);
+            agent.enabled = true;
+            agent.SetDestination(enemy.transform.position);
         }
     }
 
@@ -69,16 +92,11 @@ public class EnemySpawner : MonoBehaviour
     {
         switch (enemyToSpawn)
         {
-            case EnemyType.Lizard:
-                return lizardPrefab;
-            case EnemyType.Plague:
-                return plaguePrefab;
-            case EnemyType.Golem:
-                return golemPrefab;
-            case EnemyType.Dragon:
-                return dragonPrefab;
-            default:
-                return null;
+            case EnemyType.Lizard: return lizardPrefab;
+            case EnemyType.Plague: return plaguePrefab;
+            case EnemyType.Golem: return golemPrefab;
+            case EnemyType.Dragon: return dragonPrefab;
+            default: return null;
         }
     }
 
@@ -86,12 +104,6 @@ public class EnemySpawner : MonoBehaviour
     {
         spawnedEnemies.RemoveAll(enemy => enemy == null);
         return spawnedEnemies.Count == 0;
-    }
-
-    private IEnumerator RespawnAfterDelay()
-    {
-        yield return new WaitForSeconds(respawnDelay);
-        SpawnEnemy();
     }
 
     private void ClearSpawnedEnemies()
@@ -104,5 +116,18 @@ public class EnemySpawner : MonoBehaviour
             }
         }
         spawnedEnemies.Clear();
+    }
+
+    private Vector3 GetValidSpawnPosition(Vector3 origin, float range)
+    {
+        Vector3 randomOffset = new Vector3(Random.Range(-range, range), -3, Random.Range(-range, range));
+        Vector3 tentativePosition = origin + randomOffset;
+
+        if (NavMesh.SamplePosition(tentativePosition, out NavMeshHit hit, 2f, NavMesh.AllAreas))
+        {
+            return hit.position;
+        }
+
+        return origin;
     }
 }

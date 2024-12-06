@@ -21,6 +21,8 @@ public class Plague : Pack
     // Update is called once per frame
     void Update()
     {
+        if (!IsGrounded())
+            return; // Skip AI behavior until grounded
         timeBetweenAmbient = Random.Range(5, 20);
         // Check for sight and attack range
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);

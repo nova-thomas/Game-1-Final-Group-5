@@ -400,7 +400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
-  health: 20
+  health: 30
   damage: 2
   myAnimator: {fileID: 0}
   agent: {fileID: 0}

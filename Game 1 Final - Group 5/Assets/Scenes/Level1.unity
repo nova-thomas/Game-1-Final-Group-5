@@ -218,6 +218,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: F3_Red
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 8220d65260758dc4e8e264a8b326363f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -335,6 +339,10 @@ PrefabInstance:
     - target: {fileID: 4041647198609026871, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Floating_Rock_01 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041647198609026871, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -471,7 +479,7 @@ GameObject:
   - component: {fileID: 76726636}
   - component: {fileID: 76726635}
   - component: {fileID: 76726637}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Volcan_02 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -643,6 +651,10 @@ PrefabInstance:
     - target: {fileID: 4041647198609026871, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Floating_Rock_01 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041647198609026871, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -871,6 +883,186 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 197648802}
     m_Modifications:
+    - target: {fileID: 46652834595429013, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652834671821358, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652834757143130, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652834932927474, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652834937251623, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652834969902609, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835062689084, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835103519698, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835114404645, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835126856887, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835146498486, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835178991503, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835226757402, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835262484740, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835270795012, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835305055232, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835357294234, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835435380819, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835470829013, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835506298524, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835543908613, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835549322118, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835585852912, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835594405688, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835666801804, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835708830271, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835822172069, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835921146935, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835961400687, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835967510881, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836000107442, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836075985461, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836091815133, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836133013013, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836147215754, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836182296763, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836200437035, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836210061380, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836316693747, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836360770504, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836400949549, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836421992072, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836486466033, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836499387590, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836506761938, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 859745718470247595, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.04
@@ -1094,6 +1286,10 @@ PrefabInstance:
     - target: {fileID: 6661499000605066686, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Diorama (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6661499000605066686, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6661499000605066686, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
       propertyPath: m_TagString
@@ -1471,7 +1667,7 @@ GameObject:
   - component: {fileID: 197648802}
   - component: {fileID: 197648803}
   - component: {fileID: 197648804}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Environment
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1602,6 +1798,182 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 197648802}
     m_Modifications:
+    - target: {fileID: 46652834595429013, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652834671821358, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652834757143130, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652834932927474, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652834937251623, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652834969902609, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835062689084, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835114404645, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835126856887, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835146498486, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835178991503, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835226757402, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835262484740, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835270795012, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835305055232, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835357294234, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835435380819, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835470829013, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835506298524, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835543908613, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835549322118, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835585852912, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835594405688, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835666801804, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835708830271, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835822172069, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835921146935, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835961400687, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835967510881, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836000107442, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836075985461, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836091815133, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836133013013, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836147215754, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836182296763, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836200437035, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836210061380, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836316693747, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836360770504, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836400949549, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836421992072, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836486466033, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836499387590, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836506761938, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 859745718470247595, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.61
@@ -1838,6 +2210,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VolcanPit_Diorama (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6661499000605066686, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 46652834735489521, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
@@ -1994,6 +2370,10 @@ PrefabInstance:
     - target: {fileID: 1329213660163628881, guid: 41c6d37c9258dac4f96672eea661e54f, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Tree_01 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1329213660163628881, guid: 41c6d37c9258dac4f96672eea661e54f, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1817625094123816427, guid: 41c6d37c9258dac4f96672eea661e54f, type: 3}
       propertyPath: m_LocalScale.x
@@ -2191,6 +2571,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VolcanPit_Floating_Rock_01 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 4041647198609026871, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2294,7 +2678,7 @@ GameObject:
   - component: {fileID: 290944434}
   - component: {fileID: 290944433}
   - component: {fileID: 290944435}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree_01 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2647,6 +3031,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VolcanPit_Floating_Rock_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4041647198609026871, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2844,6 +3232,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VolcanPit_Rock_03
       objectReference: {fileID: 0}
+    - target: {fileID: 1466026162820130657, guid: cab52856ff248904a9f7fb72f93fa33d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2239291406497807835, guid: cab52856ff248904a9f7fb72f93fa33d, type: 3}
       propertyPath: m_LocalScale.x
       value: 10
@@ -2980,6 +3372,10 @@ PrefabInstance:
     - target: {fileID: 4041647198609026871, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Floating_Rock_01 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041647198609026871, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3252,6 +3648,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VolcanPit_Floating_Rock_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4041647198609026871, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3330,6 +3730,10 @@ PrefabInstance:
     - target: {fileID: 1329213660163628881, guid: 41c6d37c9258dac4f96672eea661e54f, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Tree_01 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1329213660163628881, guid: 41c6d37c9258dac4f96672eea661e54f, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1817625094123816427, guid: 41c6d37c9258dac4f96672eea661e54f, type: 3}
       propertyPath: m_LocalScale.x
@@ -3801,7 +4205,7 @@ GameObject:
   - component: {fileID: 550252363}
   - component: {fileID: 550252362}
   - component: {fileID: 550252364}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Volcan_02 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3962,6 +4366,10 @@ PrefabInstance:
     - target: {fileID: 2915076708691823178, guid: 4ad6fb47309336c40b05f984ba8ec9c5, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Rock_Platform_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915076708691823178, guid: 4ad6fb47309336c40b05f984ba8ec9c5, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4368,6 +4776,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VolcanPit_Floating_Rock_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4041647198609026871, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4532,6 +4944,10 @@ PrefabInstance:
     - target: {fileID: 1329213660163628881, guid: 41c6d37c9258dac4f96672eea661e54f, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Tree_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1329213660163628881, guid: 41c6d37c9258dac4f96672eea661e54f, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1817625094123816427, guid: 41c6d37c9258dac4f96672eea661e54f, type: 3}
       propertyPath: m_LocalScale.x
@@ -4748,6 +5164,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VolcanPit_Crystal_Formation_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2734639353421643932, guid: a83af1e8a95ed9045b1ac07153c69af2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3366639373548263974, guid: a83af1e8a95ed9045b1ac07153c69af2, type: 3}
       propertyPath: m_LocalScale.x
       value: 6
@@ -4861,6 +5281,10 @@ PrefabInstance:
     - target: {fileID: 2682996157617771838, guid: add798f5f63f5c14b8b43655af6582c3, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Crystal_Formation_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2682996157617771838, guid: add798f5f63f5c14b8b43655af6582c3, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3346238736491597700, guid: add798f5f63f5c14b8b43655af6582c3, type: 3}
       propertyPath: m_LocalScale.x
@@ -5115,6 +5539,10 @@ PrefabInstance:
     - target: {fileID: 1329213660163628881, guid: 41c6d37c9258dac4f96672eea661e54f, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Tree_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1329213660163628881, guid: 41c6d37c9258dac4f96672eea661e54f, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1817625094123816427, guid: 41c6d37c9258dac4f96672eea661e54f, type: 3}
       propertyPath: m_LocalScale.x
@@ -5510,6 +5938,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VolcanPit_Rock_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 816061983436226941, guid: 75af1461b9451e745b9ece1fd20e0073, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5590,6 +6022,10 @@ PrefabInstance:
     - target: {fileID: 4041647198609026871, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Floating_Rock_01 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041647198609026871, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5758,6 +6194,10 @@ PrefabInstance:
     - target: {fileID: 1466026162820130657, guid: cab52856ff248904a9f7fb72f93fa33d, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Rock_03 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1466026162820130657, guid: cab52856ff248904a9f7fb72f93fa33d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2239291406497807835, guid: cab52856ff248904a9f7fb72f93fa33d, type: 3}
       propertyPath: m_LocalScale.x
@@ -6047,6 +6487,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VolcanPit_Floating_Rock_01 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 4041647198609026871, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6269,10 +6713,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2080385152}
     - target: {fileID: 7700809615590514054, guid: 3109c2c695cc9e8409d4c6c055ac9610, type: 3}
-      propertyPath: speed
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 7700809615590514054, guid: 3109c2c695cc9e8409d4c6c055ac9610, type: 3}
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 2099905364}
@@ -6380,6 +6820,10 @@ PrefabInstance:
     - target: {fileID: 4041647198609026871, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Floating_Rock_01 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041647198609026871, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6515,6 +6959,10 @@ PrefabInstance:
     - target: {fileID: 4041647198609026871, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Floating_Rock_01 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041647198609026871, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6831,6 +7279,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 15275386ff8940044b102eec2aa2a281, type: 3}
       propertyPath: m_Name
       value: Rock_Desert_01_Small_0_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 15275386ff8940044b102eec2aa2a281, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7258,6 +7710,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VolcanPit_Floating_Rock_01 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 4041647198609026871, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7483,6 +7939,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VolcanPit_Crystal_Stone_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 459136841664966747, guid: 7f0ef07957ed7a34b8574253da8a5b00, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 942657681658505953, guid: 7f0ef07957ed7a34b8574253da8a5b00, type: 3}
       propertyPath: m_LocalScale.x
       value: 11.73
@@ -7642,6 +8102,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VolcanPit_Rock_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3154404243025301047, guid: c65da298bc01dba4697af415ae90eb26, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7709,6 +8173,10 @@ PrefabInstance:
     - target: {fileID: 2734639353421643932, guid: a83af1e8a95ed9045b1ac07153c69af2, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Crystal_Formation_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2734639353421643932, guid: a83af1e8a95ed9045b1ac07153c69af2, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3366639373548263974, guid: a83af1e8a95ed9045b1ac07153c69af2, type: 3}
       propertyPath: m_LocalScale.x
@@ -8323,7 +8791,7 @@ GameObject:
   - component: {fileID: 1346758293}
   - component: {fileID: 1346758292}
   - component: {fileID: 1346758294}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree_01 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8428,6 +8896,10 @@ PrefabInstance:
     - target: {fileID: 2682996157617771838, guid: add798f5f63f5c14b8b43655af6582c3, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Crystal_Formation_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2682996157617771838, guid: add798f5f63f5c14b8b43655af6582c3, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3346238736491597700, guid: add798f5f63f5c14b8b43655af6582c3, type: 3}
       propertyPath: m_LocalScale.x
@@ -8655,6 +9127,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VolcanPit_Tree_01 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1329213660163628881, guid: 41c6d37c9258dac4f96672eea661e54f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1817625094123816427, guid: 41c6d37c9258dac4f96672eea661e54f, type: 3}
       propertyPath: m_LocalScale.x
       value: 10
@@ -8815,6 +9291,10 @@ PrefabInstance:
       value: VolcanPit_Floating_Rock_01
       objectReference: {fileID: 0}
     - target: {fileID: 4041647198609026871, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041647198609026871, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
@@ -8888,6 +9368,186 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 197648802}
     m_Modifications:
+    - target: {fileID: 46652834595429013, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652834671821358, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652834735489521, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652834757143130, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652834932927474, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652834937251623, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652834969902609, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835062689084, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835114404645, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835126856887, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835146498486, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835178991503, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835226757402, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835262484740, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835270795012, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835305055232, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835357294234, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835435380819, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835470829013, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835506298524, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835543908613, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835549322118, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835585852912, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835594405688, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835666801804, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835677034183, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835708830271, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835822172069, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835921146935, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835961400687, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652835967510881, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836000107442, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836075985461, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836091815133, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836133013013, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836147215754, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836182296763, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836200437035, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836210061380, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836316693747, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836360770504, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836400949549, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836421992072, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836486466033, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 46652836499387590, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 859745719407481247, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.52
@@ -8975,6 +9635,10 @@ PrefabInstance:
     - target: {fileID: 6661499000605066686, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Diorama
+      objectReference: {fileID: 0}
+    - target: {fileID: 6661499000605066686, guid: 7441dbea1dcca2045a177259277797c9, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -9279,6 +9943,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VolcanPit_Rock_02
       objectReference: {fileID: 0}
+    - target: {fileID: 816061983436226941, guid: 75af1461b9451e745b9ece1fd20e0073, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9386,6 +10054,10 @@ PrefabInstance:
     - target: {fileID: 4041647198609026871, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Floating_Rock_01 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041647198609026871, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9544,6 +10216,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VolcanPit_Floating_Rock_01 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 4041647198609026871, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9650,6 +10326,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9452ace81bbfd944ba9b66e69681de13, type: 3}
       propertyPath: m_Name
       value: Gate_Desert_Big_0_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9452ace81bbfd944ba9b66e69681de13, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9888,6 +10568,10 @@ PrefabInstance:
     - target: {fileID: 4041647198609026871, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Floating_Rock_01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041647198609026871, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10188,6 +10872,10 @@ PrefabInstance:
     - target: {fileID: 4041647198609026871, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Floating_Rock_01 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041647198609026871, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10639,7 +11327,7 @@ GameObject:
   - component: {fileID: 1687147106}
   - component: {fileID: 1687147105}
   - component: {fileID: 1687147107}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree_01 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10800,6 +11488,10 @@ PrefabInstance:
     - target: {fileID: 4041647198609026871, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Floating_Rock_01 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041647198609026871, guid: b21d2f10c2da41640beec4cc13096e5d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11324,6 +12016,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VolcanPit_Tree_01 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1329213660163628881, guid: 41c6d37c9258dac4f96672eea661e54f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1817625094123816427, guid: 41c6d37c9258dac4f96672eea661e54f, type: 3}
       propertyPath: m_LocalScale.x
       value: 10
@@ -11804,6 +12500,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VolcanPit_Crystal_Formation_01
       objectReference: {fileID: 0}
+    - target: {fileID: 2734639353421643932, guid: a83af1e8a95ed9045b1ac07153c69af2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3366639373548263974, guid: a83af1e8a95ed9045b1ac07153c69af2, type: 3}
       propertyPath: m_LocalScale.x
       value: 15
@@ -12081,6 +12781,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VolcanPit_Rock_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3154404243025301047, guid: c65da298bc01dba4697af415ae90eb26, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12199,6 +12903,10 @@ PrefabInstance:
     - target: {fileID: 4752062766663816148, guid: 21a8e9dcb82a361458029253aa23a754, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Crystal_Stone_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4752062766663816148, guid: 21a8e9dcb82a361458029253aa23a754, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5384448372325943662, guid: 21a8e9dcb82a361458029253aa23a754, type: 3}
       propertyPath: m_LocalScale.x
@@ -12357,6 +13065,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VolcanPit_DragonHead
       objectReference: {fileID: 0}
+    - target: {fileID: 6918554125255623833, guid: c0a0bff2e9fda4649bb21ee6d531f67c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7730557397766020643, guid: c0a0bff2e9fda4649bb21ee6d531f67c, type: 3}
       propertyPath: m_LocalScale.x
       value: 18.38
@@ -12459,6 +13171,10 @@ PrefabInstance:
     - target: {fileID: 2734639353421643932, guid: a83af1e8a95ed9045b1ac07153c69af2, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Crystal_Formation_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2734639353421643932, guid: a83af1e8a95ed9045b1ac07153c69af2, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3366639373548263974, guid: a83af1e8a95ed9045b1ac07153c69af2, type: 3}
       propertyPath: m_LocalScale.x
@@ -12643,6 +13359,10 @@ PrefabInstance:
     - target: {fileID: 1329213660163628881, guid: 41c6d37c9258dac4f96672eea661e54f, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Tree_01 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1329213660163628881, guid: 41c6d37c9258dac4f96672eea661e54f, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1817625094123816427, guid: 41c6d37c9258dac4f96672eea661e54f, type: 3}
       propertyPath: m_LocalScale.x
@@ -13301,6 +14021,10 @@ PrefabInstance:
     - target: {fileID: 6037384056315862346, guid: df6453833daa1dc429b40d848ba209bd, type: 3}
       propertyPath: m_Name
       value: VolcanPit_Volcan_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6037384056315862346, guid: df6453833daa1dc429b40d848ba209bd, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6377880351110334448, guid: df6453833daa1dc429b40d848ba209bd, type: 3}
       propertyPath: m_LocalScale.x

@@ -54,6 +54,38 @@ public class EnemyAi : Actor
         agent = GetComponent<NavMeshAgent>();
         myRig = GetComponent<Rigidbody>();
         maxHealth = health;
+
+        if (agent != null)
+        {
+            agent.enabled = false; // Disable agent temporarily
+            Invoke(nameof(EnableAgent), 0.2f); // Enable after a short delay
+        }
+
+        if (myRig != null)
+        {
+            myRig.isKinematic = true; // Temporarily disable physics
+            Invoke(nameof(EnablePhysics), 0.2f); // Enable after stabilization
+        }
+
+        StartBehavior();
+    }
+
+
+    private void EnablePhysics()
+    {
+        if (myRig != null)
+        {
+            myRig.isKinematic = false;
+        }
+    }
+
+    private void EnableAgent()
+    {
+        if (agent != null)
+        {
+            agent.enabled = true;
+            agent.ResetPath(); // Clear any residual paths
+        }
     }
 
     public void Patrolling()
@@ -78,10 +110,11 @@ public class EnemyAi : Actor
         float randomZ = Random.Range(-walkPointRange, walkPointRange);
         float randomX = Random.Range(-walkPointRange, walkPointRange);
 
-        walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
+        Vector3 tentativePoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
 
-        if (Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround))
+        if (NavMesh.SamplePosition(tentativePoint, out NavMeshHit hit, 2f, NavMesh.AllAreas))
         {
+            walkPoint = hit.position; // Valid walk point
             walkPointSet = true;
         }
     }
@@ -220,5 +253,19 @@ public class EnemyAi : Actor
         {
             rb.AddForce(Vector3.up * 5f, ForceMode.Impulse);
         }
+    }
+
+    public void StartBehavior()
+    {
+        Invoke(nameof(StartPatrolling), 0.2f); // Start patrolling after a short delay
+    }
+
+    private void StartPatrolling()
+    {
+        Patrolling();
+    }
+    public bool IsGrounded()
+    {
+        return Physics.Raycast(transform.position, Vector3.down, 1f, whatIsGround);
     }
 }

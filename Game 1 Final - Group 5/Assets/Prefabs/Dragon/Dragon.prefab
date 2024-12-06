@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  health: 10
+  health: 300
   damage: 15
   myAnimator: {fileID: 0}
   agent: {fileID: 0}
@@ -224,7 +224,7 @@ MonoBehaviour:
   walkPointRange: 5
   timeBetweenAttacks: 3
   alreadyAttacked: 0
-  sightRange: 15
+  sightRange: 30
   attackRange: 10
   playerInSightRange: 0
   playerInAttackRange: 0

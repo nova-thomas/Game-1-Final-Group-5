@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  health: 10
+  health: 15
   damage: 1
   myAnimator: {fileID: 0}
   agent: {fileID: 0}

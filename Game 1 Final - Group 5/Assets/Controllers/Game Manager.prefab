@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8944261708979444416}
-  - component: {fileID: 7803325628375040552}
   - component: {fileID: 5662563788908886987}
   m_Layer: 0
   m_Name: Game Manager
@@ -33,19 +32,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7803325628375040552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7576758363188098157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d47b37d2387034409e23a26e740b1d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AutoSprintEnabled: 0
 --- !u!114 &5662563788908886987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,3 +45,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AutoSprintEnabled: 0
+  coins: 0
+  redKey: 0
+  greenKey: 0
+  blueKey: 0
+  firePower: 0
+  icePower: 0
+  poisonPower: 0
+  health: 20
+  damage: 1
+  iceUpgrade: 1
+  fireUpgrade: 1
+  poisonUpgrade: 1
+  ammo: 6
+  ammoMax: 6
+  healthMax: 20
+  armor: 0
+  armorMax: 5

@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
-    public Player player;
     public GameObject shopUI;
 
     public Button healthUpgradeButton;
@@ -20,7 +19,7 @@ public class Shop : MonoBehaviour
     public Slider healthProgressBar;
     public Slider damageProgressBar;
     public Slider speedProgressBar;
-    public Slider mainDamageProgressBar; 
+    public Slider mainDamageProgressBar;
     public Slider iceDamageProgressBar;
     public Slider fireDamageProgressBar;
     public Slider poisonDamageProgressBar;
@@ -83,7 +82,7 @@ public class Shop : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
 
-        UpdateCoinDisplay(player.inventory.coins);
+        UpdateCoinDisplay(GameManager.Instance.coins);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -112,7 +111,7 @@ public class Shop : MonoBehaviour
             shopUI.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-            UpdateCoinDisplay(player.inventory.coins);
+            UpdateCoinDisplay(GameManager.Instance.coins);
             Debug.Log("Shop opened.");
         }
     }
@@ -134,19 +133,18 @@ public class Shop : MonoBehaviour
 
     private void UpgradeHealth()
     {
-        bool canUpgrade = healthUpgradeLevel < maxUpgradeLevel && player.inventory.coins >= upgradeCost;
+        bool canUpgrade = healthUpgradeLevel < maxUpgradeLevel && GameManager.Instance.coins >= upgradeCost;
 
         PlaySound(canUpgrade);
 
         if (canUpgrade)
         {
-            player.inventory.coins -= upgradeCost;
-            player.healthMax += 3;
+            GameManager.Instance.coins -= upgradeCost;
+            GameManager.Instance.healthMax += 3;
             healthUpgradeLevel++;
             healthProgressBar.value = healthUpgradeLevel;
-            player.health = player.healthMax;
+            GameManager.Instance.health = GameManager.Instance.healthMax;
             UpdateCoinCount();
-            player.inventory.UpdateCoinUI();
             Debug.Log("Health upgraded to level " + healthUpgradeLevel);
         }
         else
@@ -157,18 +155,17 @@ public class Shop : MonoBehaviour
 
     private void UpgradeAmmo()
     {
-        bool canUpgrade = damageUpgradeLevel < maxUpgradeLevel && player.inventory.coins >= upgradeCost;
+        bool canUpgrade = damageUpgradeLevel < maxUpgradeLevel && GameManager.Instance.coins >= upgradeCost;
 
         PlaySound(canUpgrade);
 
         if (canUpgrade)
         {
-            player.inventory.coins -= upgradeCost;
-            player.ammoMax += 3;
+            GameManager.Instance.coins -= upgradeCost;
+            GameManager.Instance.ammoMax += 3;
             damageUpgradeLevel++;
             damageProgressBar.value = damageUpgradeLevel;
             UpdateCoinCount();
-            player.inventory.UpdateCoinUI();
             Debug.Log("Ammo upgraded to level " + damageUpgradeLevel);
         }
         else
@@ -179,18 +176,17 @@ public class Shop : MonoBehaviour
 
     private void UpgradeSpeed()
     {
-        bool canUpgrade = speedUpgradeLevel < maxUpgradeLevel && player.inventory.coins >= upgradeCost;
+        bool canUpgrade = speedUpgradeLevel < maxUpgradeLevel && GameManager.Instance.coins >= upgradeCost;
 
         PlaySound(canUpgrade);
 
         if (canUpgrade)
         {
-            player.inventory.coins -= upgradeCost;
-            player.armor += 2;
+            GameManager.Instance.coins -= upgradeCost;
+            GameManager.Instance.armor += 2;
             speedUpgradeLevel++;
             speedProgressBar.value = speedUpgradeLevel;
             UpdateCoinCount();
-            player.inventory.UpdateCoinUI();
             Debug.Log("Speed upgraded to level " + speedUpgradeLevel);
         }
         else
@@ -201,18 +197,17 @@ public class Shop : MonoBehaviour
 
     private void UpgradeDamage()
     {
-        bool canUpgrade = mainDamageUpgradeLevel < maxUpgradeLevel && player.inventory.coins >= upgradeCost;
+        bool canUpgrade = mainDamageUpgradeLevel < maxUpgradeLevel && GameManager.Instance.coins >= upgradeCost;
 
         PlaySound(canUpgrade);
 
         if (canUpgrade)
         {
-            player.inventory.coins -= upgradeCost;
-            player.damage += 0.4f;
+            GameManager.Instance.coins -= upgradeCost;
+            GameManager.Instance.damage += 0.5f;
             mainDamageUpgradeLevel++;
             mainDamageProgressBar.value = mainDamageUpgradeLevel;
             UpdateCoinCount();
-            player.inventory.UpdateCoinUI();
             Debug.Log("Damage upgraded to level " + mainDamageUpgradeLevel);
         }
         else
@@ -223,18 +218,17 @@ public class Shop : MonoBehaviour
 
     private void UpgradeIceDamage()
     {
-        bool canUpgrade = iceDamageUpgradeLevel < maxUpgradeLevel && player.inventory.coins >= upgradeCost;
+        bool canUpgrade = iceDamageUpgradeLevel < maxUpgradeLevel && GameManager.Instance.coins >= upgradeCost;
 
         PlaySound(canUpgrade);
 
         if (canUpgrade)
         {
-            player.inventory.coins -= upgradeCost;
-            player.iceUpgrade += 0.2f;
+            GameManager.Instance.coins -= upgradeCost;
+            GameManager.Instance.iceUpgrade += 0.2f;
             iceDamageUpgradeLevel++;
             iceDamageProgressBar.value = iceDamageUpgradeLevel;
             UpdateCoinCount();
-            player.inventory.UpdateCoinUI();
             Debug.Log("Ice damage upgraded to level " + iceDamageUpgradeLevel);
         }
         else
@@ -245,18 +239,17 @@ public class Shop : MonoBehaviour
 
     private void UpgradeFireDamage()
     {
-        bool canUpgrade = fireDamageUpgradeLevel < maxUpgradeLevel && player.inventory.coins >= upgradeCost;
+        bool canUpgrade = fireDamageUpgradeLevel < maxUpgradeLevel && GameManager.Instance.coins >= upgradeCost;
 
         PlaySound(canUpgrade);
 
         if (canUpgrade)
         {
-            player.inventory.coins -= upgradeCost;
-            player.fireUpgrade += 0.2f;
+            GameManager.Instance.coins -= upgradeCost;
+            GameManager.Instance.fireUpgrade += 0.2f;
             fireDamageUpgradeLevel++;
             fireDamageProgressBar.value = fireDamageUpgradeLevel;
             UpdateCoinCount();
-            player.inventory.UpdateCoinUI();
             Debug.Log("Fire damage upgraded to level " + fireDamageUpgradeLevel);
         }
         else
@@ -267,18 +260,17 @@ public class Shop : MonoBehaviour
 
     private void UpgradePoisonDamage()
     {
-        bool canUpgrade = poisonDamageUpgradeLevel < maxUpgradeLevel && player.inventory.coins >= upgradeCost;
+        bool canUpgrade = poisonDamageUpgradeLevel < maxUpgradeLevel && GameManager.Instance.coins >= upgradeCost;
 
         PlaySound(canUpgrade);
 
         if (canUpgrade)
         {
-            player.inventory.coins -= upgradeCost;
-            player.poisonUpgrade += 0.2f;
+            GameManager.Instance.coins -= upgradeCost;
+            GameManager.Instance.poisonUpgrade += 0.2f;
             poisonDamageUpgradeLevel++;
             poisonDamageProgressBar.value = poisonDamageUpgradeLevel;
             UpdateCoinCount();
-            player.inventory.UpdateCoinUI();
             Debug.Log("Poison damage upgraded to level " + poisonDamageUpgradeLevel);
         }
         else
@@ -289,11 +281,11 @@ public class Shop : MonoBehaviour
 
     private void UpdateCoinCount()
     {
-        coinCountText.text = player.inventory.coins.ToString();
+        coinCountText.text = GameManager.Instance.coins.ToString();
     }
 
     public void UpdateCoinDisplay(int coins)
     {
-        coinCountText.text = "" + coins;
+        coinCountText.text = coins.ToString();
     }
 }

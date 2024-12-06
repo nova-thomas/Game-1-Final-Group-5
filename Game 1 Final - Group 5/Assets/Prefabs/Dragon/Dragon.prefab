@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 3330409879313012477}
   m_Layer: 10
   m_Name: Dragon
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  health: 300
+  health: 10
   damage: 15
   myAnimator: {fileID: 0}
   agent: {fileID: 0}
@@ -214,7 +214,7 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 128
-  maxHealth: 0
+  maxHealth: 10
   healthbar: {fileID: 4974476398528921821}
   coins: {fileID: 0}
   powerup: {fileID: 0}

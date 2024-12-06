@@ -26,6 +26,7 @@ TagManager:
   - Enemy Ice
   - Enemy Toxic
   - Hitbox
+  - Dragon
   layers:
   - Default
   - TransparentFX

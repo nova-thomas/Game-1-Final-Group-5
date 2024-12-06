@@ -103,8 +103,10 @@ public class EnemyAi : Actor
 
     public void Die()
     {
-        // Play death animation
-
+        if (gameObject.CompareTag("Dragon"))
+        {
+            return;
+        }
         Destroy(gameObject);
     }
     private void OnTriggerEnter(Collider other)
@@ -199,6 +201,10 @@ public class EnemyAi : Actor
 
     private void SpawnItem(GameObject item)
     {
+       if (gameObject.CompareTag("Dragon"))
+       {
+            return; // Exit the function if it's tagged as Dragon
+        }
         float randomX = Random.Range(-1f, 1f);
         float randomZ = Random.Range(-1f, 1f);
 

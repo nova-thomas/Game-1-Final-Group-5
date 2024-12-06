@@ -1016,7 +1016,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6768582170556000911, guid: c4665c8316a39e8479a59c5e2287f142, type: 3}
   m_PrefabInstance: {fileID: 3117011830668068979}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1723945082}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -1421,6 +1421,11 @@ PrefabInstance:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 352659972635576273, guid: dc9f19b336fc0a54992dd4bc412e193f, type: 3}
   m_PrefabInstance: {fileID: 1447683532}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &903029072 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 363428222854206274, guid: 2586a75802edaf741ae57ef9cb897096, type: 3}
+  m_PrefabInstance: {fileID: 1855558728503188834}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &919045518 stripped
 MonoBehaviour:
@@ -3209,6 +3214,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1723945082 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2941646657470040974, guid: c4665c8316a39e8479a59c5e2287f142, type: 3}
+  m_PrefabInstance: {fileID: 3117011830668068979}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1733111296
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3848,6 +3858,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5662563788908886987, guid: aa7015a204dd5554188a9b6fb248836b, type: 3}
+      propertyPath: coins
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 7576758363188098157, guid: aa7015a204dd5554188a9b6fb248836b, type: 3}
       propertyPath: m_Name
       value: Game Manager
@@ -5161,9 +5175,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3922715101392547106, guid: 30af7282a62518244ac9a457fd0d5c94, type: 3}
-      propertyPath: health
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: coins
+      value: 
+      objectReference: {fileID: 1723945082}
+    - target: {fileID: 3922715101392547106, guid: 30af7282a62518244ac9a457fd0d5c94, type: 3}
+      propertyPath: powerup
+      value: 
+      objectReference: {fileID: 903029072}
     - target: {fileID: 4386270827649839149, guid: 30af7282a62518244ac9a457fd0d5c94, type: 3}
       propertyPath: m_Name
       value: Dragon

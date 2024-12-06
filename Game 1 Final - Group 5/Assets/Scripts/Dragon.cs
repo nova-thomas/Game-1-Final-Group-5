@@ -22,10 +22,15 @@ public class Dragon : Solo
     public int iceSpikeSpeed;
     public int toxicCloudSpeed;
 
+    public new int coins { get; set; } = 0;
+    public new int powerup { get; set; } = 0;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
         myAnimator = dragonFBX.GetComponent<Animator>();
+        coins = 0; 
+        powerup = 0; 
     }
 
     // Update is called once per frame
@@ -80,7 +85,7 @@ public class Dragon : Solo
         if (health <= 0)
         {
             Win();
-            Destroy(gameObject);
+           
         }
     }
 
@@ -196,6 +201,7 @@ public class Dragon : Solo
 
     public void Win()
     {
+        Time.timeScale = 0f;
         SceneManager.LoadScene("CutsceneEnd");
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;

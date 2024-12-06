@@ -222,7 +222,7 @@ MonoBehaviour:
   enemyElementType: 0
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
-  timeBetweenAttacks: 3
+  timeBetweenAttacks: 2
   alreadyAttacked: 0
   sightRange: 30
   attackRange: 10

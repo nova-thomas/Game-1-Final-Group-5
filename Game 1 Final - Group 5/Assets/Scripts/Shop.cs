@@ -61,9 +61,9 @@ public class Shop : MonoBehaviour
         fireDamageProgressBar.maxValue = maxUpgradeLevel;
         poisonDamageProgressBar.maxValue = maxUpgradeLevel;
 
-        healthCostText.text = "10 Coins";
-        damageCostText.text = "10 Coins";
-        speedCostText.text = "10 Coins";
+        healthCostText.text = "5 Coins";
+        damageCostText.text = "5 Coins";
+        speedCostText.text = "5 Coins";
 
         // Remove old listeners
         healthUpgradeButton.onClick.RemoveAllListeners();

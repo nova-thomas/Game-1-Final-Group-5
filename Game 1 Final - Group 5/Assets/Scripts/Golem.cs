@@ -35,27 +35,30 @@ public class Golem : Solo
             myAnimator.SetInteger("DIR", 0);
         }
 
-        // Check for sight and attack range
-        playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
-        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
-
-        if (!playerInSightRange && !playerInAttackRange)
+        if (!myAnimator.GetBool("SLAM") && !myAnimator.GetBool("SWIPE"))
         {
-            Patrolling();
-        }
+            // Check for sight and attack range
+            playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
+            playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
-        if (playerInSightRange && !playerInAttackRange)
-        {
-            ChasePlayer();
-        }
-        if (playerInSightRange && playerInAttackRange) AttackPlayer();
+            if (!playerInSightRange && !playerInAttackRange)
+            {
+                Patrolling();
+            }
 
-        if (!playedAmbient)
-        {
-            timeBetweenAmbient = Random.Range(5, 20);
-            audioSource.PlayOneShot(a_ambient);
-            playedAmbient = true;
-            Invoke(nameof(AmbientPlayed), timeBetweenAmbient);
+            if (playerInSightRange && !playerInAttackRange)
+            {
+                ChasePlayer();
+            }
+            if (playerInSightRange && playerInAttackRange) AttackPlayer();
+
+            if (!playedAmbient)
+            {
+                timeBetweenAmbient = Random.Range(5, 20);
+                audioSource.PlayOneShot(a_ambient);
+                playedAmbient = true;
+                Invoke(nameof(AmbientPlayed), timeBetweenAmbient);
+            }
         }
     }
 
@@ -87,8 +90,6 @@ public class Golem : Solo
             //
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
-            myAnimator.SetBool("SWIPE", false);
-            myAnimator.SetBool("SLAM", false);
         }
     }
     private IEnumerator AttackTime(float attackSpeed)
@@ -96,6 +97,8 @@ public class Golem : Solo
         yield return new WaitForSeconds(attackSpeed);
         GameObject hitbox = Instantiate(hitboxPrefab, hitboxTransform);
         Destroy(hitbox, 1);
+        myAnimator.SetBool("SWIPE", false);
+        myAnimator.SetBool("SLAM", false);
     }
 
     public void SwingAttack()
@@ -103,6 +106,7 @@ public class Golem : Solo
         // Audio
         audioSource.PlayOneShot(a_SwingAttack);
         myAnimator.CrossFade("Swipe", .2f);
+        myAnimator.SetBool("SWIPE", true);
 
         attackSpeed = 1;
         StartCoroutine(AttackTime(attackSpeed));
@@ -113,6 +117,7 @@ public class Golem : Solo
         // Audio
         audioSource.PlayOneShot(a_SlamAttack);
         myAnimator.CrossFade("Slam", .2f);
+        myAnimator.SetBool("SLAM", true);
 
         attackSpeed = 1.5f;
         StartCoroutine(AttackTime(attackSpeed));

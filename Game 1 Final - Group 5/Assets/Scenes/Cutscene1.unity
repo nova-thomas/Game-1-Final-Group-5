@@ -614,9 +614,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'After crashing your ship on your way back to headquarters, you have find
+  m_text: 'After crashing your ship on your way back to headquarters, you have found
     yourself in an unknown galaxy where the locals don''t take kindly to you being
-    here.
+    there.
 
 
     Fight through a volcanic crash-site to find a signal and phone headquarters.

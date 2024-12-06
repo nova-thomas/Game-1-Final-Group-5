@@ -614,10 +614,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Fighting your through the volcanic crash-site to find a signal and phone
-    headquarters, you do not find any reception. You are unable to make contact with
-    headquarters. \n\nExploring the unknown galaxy some more, you find yourself in
-    a toxic wasteland. Maybe here you can find a signal despite the plague monsters
+  m_text: "Fighting your way through the volcanic crash-site to find a signal and
+    phone headquarters, you do not find any reception. You are unable to make contact
+    with headquarters. \n\nExploring the unknown galaxy some more, you find yourself
+    in a toxic wasteland. Maybe here you can find a signal despite the plague monsters
     trying to stop you. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c1f84d36e2eb2474ba0493650923dbbd, type: 2}

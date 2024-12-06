@@ -614,10 +614,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Fighting your through the toxic wasteland to find a signal and phone headquarters,
-    you do not find any reception. You are unable to make contact with headquarters.
-    \n\nExploring the unknown galaxy some more, you find yourself in a frozen tundra.
-    Hopefully you can find reception before the ice golems stomp you first. "
+  m_text: "Fighting your way through the toxic wasteland to find a signal and phone
+    headquarters, you do not find any reception. You are unable to make contact with
+    headquarters. \n\nExploring the unknown galaxy some more, you find yourself in
+    a frozen tundra. Hopefully you can find reception before the ice golems stomp
+    you first. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c1f84d36e2eb2474ba0493650923dbbd, type: 2}
   m_sharedMaterial: {fileID: 8029659792322711359, guid: c1f84d36e2eb2474ba0493650923dbbd, type: 2}

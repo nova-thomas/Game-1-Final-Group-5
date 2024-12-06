@@ -62,6 +62,12 @@ public class Player : Actor
     private Animator playerAnimator;
     public GameObject playerModel;
 
+    public Material targetMaterial;
+    public Texture emissionNormal; 
+    public Texture emissionFire;
+    public Texture emissionPoison;
+    public Texture emissionIce;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -81,6 +87,7 @@ public class Player : Actor
         isSprinting = GameManager.Instance.AutoSprintEnabled;
         keyButtonUI.SetActive(false);
 
+        ChangeEmissionTexture(emissionNormal);
     }
 
     void Update()
@@ -92,6 +99,7 @@ public class Player : Actor
         LookAround();
         UpdateHealthUI();
         UpdateAmmoUI();
+
 
         if (GameManager.Instance.health <= 0)
         {
@@ -279,33 +287,39 @@ public class Player : Actor
     private IEnumerator SwitchToIceBullet()
     {
         isUsingIceBullet = true;
+        ChangeEmissionTexture(emissionIce);
         GameManager.Instance.icePower--;
         UpdatePowerUpUI();
         PlayBulletTypeSwitchSound();
         yield return new WaitForSeconds(5);
         isUsingIceBullet = false;
+        ChangeEmissionTexture(emissionNormal);
         PlayBulletTypeSwitchSound();
     }
 
     private IEnumerator SwitchToFireBullet()
     {
         isUsingFireBullet = true;
+        ChangeEmissionTexture(emissionFire);
         GameManager.Instance.firePower--;
         UpdatePowerUpUI();
         PlayBulletTypeSwitchSound();
         yield return new WaitForSeconds(5);
         isUsingFireBullet = false;
+        ChangeEmissionTexture(emissionNormal);
         PlayBulletTypeSwitchSound();
     }
 
     private IEnumerator SwitchToPoisonBullet()
     {
         isUsingPoisonBullet = true;
+        ChangeEmissionTexture(emissionPoison);
         GameManager.Instance.poisonPower--;
         UpdatePowerUpUI();
         PlayBulletTypeSwitchSound();
         yield return new WaitForSeconds(5);
         isUsingPoisonBullet = false;
+        ChangeEmissionTexture(emissionNormal);
         PlayBulletTypeSwitchSound();
     }
 
@@ -643,4 +657,15 @@ public class Player : Actor
         }
     }
 
+    void ChangeEmissionTexture(Texture newTexture)
+    {
+        if (newTexture != null)
+        {
+            targetMaterial.SetTexture("_EmissionMap", newTexture);
+        }
+        else
+        {
+            Debug.LogWarning("New texture is null!");
+        }
+    }
 }

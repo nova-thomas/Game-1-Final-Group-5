@@ -119,6 +119,11 @@ MonoBehaviour:
   ammoText: {fileID: 0}
   damageInterval: 0.1
   playerModel: {fileID: 4333694651543794776}
+  targetMaterial: {fileID: 2100000, guid: 5c7176cef124e1a4793b448ed91b74e1, type: 2}
+  emissionNormal: {fileID: 2800000, guid: c5055e4915b1d07468b4cfeba580faca, type: 3}
+  emissionFire: {fileID: 2800000, guid: b199bdf781c163b469823a86f9204ac9, type: 3}
+  emissionPoison: {fileID: 2800000, guid: 63070849123aa7a4dbaaff05b91954de, type: 3}
+  emissionIce: {fileID: 2800000, guid: 64860141afa10c84780f3416e43c23e4, type: 3}
 --- !u!114 &8936095109967415999
 MonoBehaviour:
   m_ObjectHideFlags: 0

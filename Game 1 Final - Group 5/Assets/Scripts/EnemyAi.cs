@@ -103,57 +103,62 @@ public class EnemyAi : Actor
 
     public void Die()
     {
-        // Play death animation
-
+        if (gameObject.CompareTag("Dragon"))
+        {
+            return;
+        }
         Destroy(gameObject);
     }
     private void OnTriggerEnter(Collider other)
     {
         string tag = other.gameObject.tag;
+        float baseDamage = GameManager.Instance.damage; // Get damage from GameManager
 
         switch (tag)
         {
             case "Regular Bullet":
-                TakeDamage(playerScript.damage);
+                TakeDamage(baseDamage);
                 break;
             case "Fire Bullet":
                 if (enemyElementType == ElementType.Poison)
                 { // Weakness
-                    TakeDamage(playerScript.damage * 1.3 * playerScript.fireUpgrade);
-                } else if (enemyElementType == ElementType.Fire) 
+                    TakeDamage(baseDamage * 1.3 * GameManager.Instance.fireUpgrade);
+                }
+                else if (enemyElementType == ElementType.Fire)
                 { // Resistance
-                    TakeDamage(playerScript.damage * 0.8 * playerScript.fireUpgrade);
-                } else 
+                    TakeDamage(baseDamage * 0.8 * GameManager.Instance.fireUpgrade);
+                }
+                else
                 {
-                    TakeDamage(playerScript.damage * playerScript.fireUpgrade);
+                    TakeDamage(baseDamage * GameManager.Instance.fireUpgrade);
                 }
                 break;
             case "Ice Bullet":
                 if (enemyElementType == ElementType.Fire)
                 { // Weakness
-                    TakeDamage(playerScript.damage * 1.3 * playerScript.iceUpgrade);
+                    TakeDamage(baseDamage * 1.3 * GameManager.Instance.iceUpgrade);
                 }
                 else if (enemyElementType == ElementType.Ice)
                 { // Resistance
-                    TakeDamage(playerScript.damage * 0.8 * playerScript.iceUpgrade);
+                    TakeDamage(baseDamage * 0.8 * GameManager.Instance.iceUpgrade);
                 }
                 else
                 {
-                    TakeDamage(playerScript.damage * playerScript.iceUpgrade);
+                    TakeDamage(baseDamage * GameManager.Instance.iceUpgrade);
                 }
                 break;
             case "Poison Bullet":
                 if (enemyElementType == ElementType.Ice)
                 { // Weakness
-                    TakeDamage(playerScript.damage * 1.3 * playerScript.poisonUpgrade);
+                    TakeDamage(baseDamage * 1.3 * GameManager.Instance.poisonUpgrade);
                 }
                 else if (enemyElementType == ElementType.Poison)
                 { // Resistance
-                    TakeDamage(playerScript.damage * 0.8 * playerScript.poisonUpgrade);
+                    TakeDamage(baseDamage * 0.8 * GameManager.Instance.poisonUpgrade);
                 }
                 else
                 {
-                    TakeDamage(playerScript.damage * playerScript.poisonUpgrade);
+                    TakeDamage(baseDamage * GameManager.Instance.poisonUpgrade);
                 }
                 break;
         }
@@ -196,6 +201,10 @@ public class EnemyAi : Actor
 
     private void SpawnItem(GameObject item)
     {
+       if (gameObject.CompareTag("Dragon"))
+       {
+            return; // Exit the function if it's tagged as Dragon
+        }
         float randomX = Random.Range(-1f, 1f);
         float randomZ = Random.Range(-1f, 1f);
 

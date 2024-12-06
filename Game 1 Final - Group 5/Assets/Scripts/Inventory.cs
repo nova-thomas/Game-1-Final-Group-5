@@ -1,18 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
 public class Inventory : MonoBehaviour
 {
-    public int coins = 0;
-    private bool redKey = false;
-    private bool greenKey = false;
-    private bool blueKey = false;
-    public int firePower = 0;
-    public int icePower = 0;
-    public int poisonPower = 0;
-
     public Shop shop;
     public TextMeshProUGUI coinText;
     public TextMeshProUGUI firePowerText;
@@ -21,84 +11,51 @@ public class Inventory : MonoBehaviour
 
     private void Start()
     {
-        UpdateCoinUI(); 
+        UpdateCoinUI();
+        UpdatePowerUpUI();
     }
 
     public void AddCoin(int amount)
     {
-        coins += amount;
+        GameManager.Instance.AddCoin(amount);
         UpdateCoinUI();
-        Debug.Log("Picked up " + amount + " coins. Total coins: " + coins);
+
         if (shop != null && shop.isPlayerNear)
         {
-            shop.UpdateCoinDisplay(coins);
+            shop.UpdateCoinDisplay(GameManager.Instance.coins);
         }
     }
 
     public void AddKey(string keyColor)
     {
-        switch (keyColor)
-        {
-            case "Blue":
-                blueKey = true;
-                Debug.Log("Blue key collected!");
-                break;
-            case "Red":
-                redKey = true;
-                Debug.Log("Red key collected!");
-                break;
-            case "Green":
-                greenKey = true;
-                Debug.Log("Green key collected!");
-                break;
-        }
+        GameManager.Instance.AddKey(keyColor);
     }
 
     public bool HasKey(string keyColor)
     {
-        return keyColor switch
-        {
-            "Blue" => blueKey,
-            "Red" => redKey,
-            "Green" => greenKey,
-            _ => false,
-        };
+        return GameManager.Instance.HasKey(keyColor);
     }
 
     public void RemoveKey(string keyColor)
     {
-        switch (keyColor)
-        {
-            case "Blue":
-                blueKey = false;
-                break;
-            case "Red":
-                redKey = false;
-                break;
-            case "Green":
-                greenKey = false;
-                break;
-        }
+        GameManager.Instance.RemoveKey(keyColor);
     }
 
     public void AddFirePower()
     {
-        firePower++;
-        Debug.Log("Fire power-up collected! Total Fire Power: " + firePower);
+        GameManager.Instance.AddFirePower();
         UpdatePowerUpUI();
     }
 
     public void AddIcePower()
     {
-        icePower++;
-        Debug.Log("Ice power-up collected! Total Ice Power: " + icePower);
+        GameManager.Instance.AddIcePower();
         UpdatePowerUpUI();
     }
 
     public void AddPoisonPower()
     {
-        poisonPower++;
-        Debug.Log("Poison power-up collected! Total Poison Power: " + poisonPower);
+        GameManager.Instance.AddPoisonPower();
         UpdatePowerUpUI();
     }
 
@@ -106,7 +63,7 @@ public class Inventory : MonoBehaviour
     {
         if (coinText != null)
         {
-            coinText.text = coins.ToString(); 
+            coinText.text = GameManager.Instance.coins.ToString();
         }
     }
 
@@ -114,15 +71,15 @@ public class Inventory : MonoBehaviour
     {
         if (firePowerText != null)
         {
-            firePowerText.text = firePower.ToString();
+            firePowerText.text = GameManager.Instance.firePower.ToString();
         }
         if (icePowerText != null)
         {
-            icePowerText.text = icePower.ToString();
+            icePowerText.text = GameManager.Instance.icePower.ToString();
         }
         if (poisonPowerText != null)
         {
-            poisonPowerText.text = poisonPower.ToString();
+            poisonPowerText.text = GameManager.Instance.poisonPower.ToString();
         }
     }
 }

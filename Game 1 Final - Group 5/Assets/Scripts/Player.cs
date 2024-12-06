@@ -6,11 +6,6 @@ using TMPro;
 
 public class Player : Actor
 {
-    public int ammo = 6;
-    public int ammoMax = 6;
-    public int healthMax = 20;
-    public int armor = 0;
-    public int armorMax = 5;
     public bool canJump;
     public bool canShoot = true;
     private bool isSprinting = false;
@@ -73,8 +68,6 @@ public class Player : Actor
         audioSource = GetComponent<AudioSource>();
         playerAnimator = GetComponent<Animator>();
         speed = 8;
-        ammo = 6;
-        damage = 1;
         canJump = true;
         canShoot = true;
         LockCursor();
@@ -99,9 +92,9 @@ public class Player : Actor
         UpdateHealthUI();
         UpdateAmmoUI();
 
-        if (health <= 0)
+        if (GameManager.Instance.health <= 0)
         {
-            health = 0; 
+            GameManager.Instance.health = 0; 
             Die();
         }
     }
@@ -168,7 +161,7 @@ public class Player : Actor
 
     public void Fire(InputAction.CallbackContext fr)
     {
-        if (fr.phase == InputActionPhase.Started && canShoot && ammo > 0)
+        if (fr.phase == InputActionPhase.Started && canShoot && GameManager.Instance.ammo > 0)
         {
             if (shop.shopUI.activeSelf) 
             {
@@ -181,11 +174,11 @@ public class Player : Actor
             {
                 audioSource.PlayOneShot(bulletFireSound);
             }
-            ammo--;
+            GameManager.Instance.ammo--;
             UpdateAmmoUI();
-            Debug.Log("Ammo left: " + ammo);
+            Debug.Log("Ammo left: " + GameManager.Instance.ammo);
 
-            if (ammo <= 0)
+            if (GameManager.Instance.ammo <= 0)
             {
                 Debug.Log("Out of ammo. Reloading...");
                 StartCoroutine(Reload());
@@ -226,14 +219,14 @@ public class Player : Actor
         }
         yield return new WaitForSeconds(2);
         // Adjust reload time as needed
-        ammo = ammoMax;
+        GameManager.Instance.ammo = GameManager.Instance.ammoMax;
         UpdateAmmoUI();
         canShoot = true;
         audioSource.pitch = 1f;
     }
     public void ReloadManual(InputAction.CallbackContext ctx)
     {
-        if (ctx.phase == InputActionPhase.Started && ammo < ammoMax)
+        if (ctx.phase == InputActionPhase.Started && GameManager.Instance.ammo < GameManager.Instance.ammoMax)
         {
             StartCoroutine(Reload());
         }
@@ -260,7 +253,7 @@ public class Player : Actor
 
     public void ActivateIceBullet(InputAction.CallbackContext ctx)
     {
-        if (ctx.phase == InputActionPhase.Started && inventory.icePower > 0)
+        if (ctx.phase == InputActionPhase.Started && GameManager.Instance.icePower > 0)
         {
             StartCoroutine(SwitchToIceBullet());
         }
@@ -268,7 +261,7 @@ public class Player : Actor
 
     public void ActivateFireBullet(InputAction.CallbackContext ctx)
     {
-        if (ctx.phase == InputActionPhase.Started && inventory.firePower > 0)
+        if (ctx.phase == InputActionPhase.Started && GameManager.Instance.firePower > 0)
         {
             StartCoroutine(SwitchToFireBullet());
         }
@@ -276,7 +269,7 @@ public class Player : Actor
 
     public void ActivatePoisonBullet(InputAction.CallbackContext ctx)
     {
-        if (ctx.phase == InputActionPhase.Started && inventory.poisonPower > 0)
+        if (ctx.phase == InputActionPhase.Started && GameManager.Instance.poisonPower > 0)
         {
             StartCoroutine(SwitchToPoisonBullet());
         }
@@ -285,20 +278,19 @@ public class Player : Actor
     private IEnumerator SwitchToIceBullet()
     {
         isUsingIceBullet = true;
-        inventory.icePower--;
-        inventory.UpdatePowerUpUI();
+        GameManager.Instance.icePower--;
+        UpdatePowerUpUI();
         PlayBulletTypeSwitchSound();
         yield return new WaitForSeconds(5);
         isUsingIceBullet = false;
         PlayBulletTypeSwitchSound();
-        
     }
 
     private IEnumerator SwitchToFireBullet()
     {
         isUsingFireBullet = true;
-        inventory.firePower--;
-        inventory.UpdatePowerUpUI();
+        GameManager.Instance.firePower--;
+        UpdatePowerUpUI();
         PlayBulletTypeSwitchSound();
         yield return new WaitForSeconds(5);
         isUsingFireBullet = false;
@@ -308,13 +300,24 @@ public class Player : Actor
     private IEnumerator SwitchToPoisonBullet()
     {
         isUsingPoisonBullet = true;
-        inventory.poisonPower--;
-        inventory.UpdatePowerUpUI();
+        GameManager.Instance.poisonPower--;
+        UpdatePowerUpUI();
         PlayBulletTypeSwitchSound();
         yield return new WaitForSeconds(5);
         isUsingPoisonBullet = false;
         PlayBulletTypeSwitchSound();
     }
+
+    private void UpdatePowerUpUI()
+    {
+        // Delegate the UI update to the Inventory script since it controls the visuals
+        var inventory = FindObjectOfType<Inventory>();
+        if (inventory != null)
+        {
+            inventory.UpdatePowerUpUI();
+        }
+    }
+
 
     void OnTriggerEnter(Collider other)
     {
@@ -531,8 +534,8 @@ public class Player : Actor
         LockCursor();
         EnablePlayerControls();
         transform.position = respawnPosition; 
-        health = healthMax;
-        ammo = ammoMax;    
+        GameManager.Instance.health = GameManager.Instance.healthMax;
+        GameManager.Instance.ammo = GameManager.Instance.ammoMax;    
         UpdateHealthUI();
         UpdateAmmoUI();
         Time.timeScale = 1f; 
@@ -556,14 +559,14 @@ public class Player : Actor
     {
         if (healthText != null)
         {
-            healthText.text = health.ToString() + "/" + healthMax.ToString();
+            healthText.text = GameManager.Instance.health.ToString() + "/" + GameManager.Instance.healthMax.ToString();
         }
     }
     private void UpdateAmmoUI()
     {
         if (ammoText != null)
         {
-            ammoText.text = ammo.ToString() + "/" + ammoMax.ToString();
+            ammoText.text = GameManager.Instance.ammo.ToString() + "/" + GameManager.Instance.ammoMax.ToString();
         }
     }
 
@@ -611,9 +614,9 @@ public class Player : Actor
 
     private void TakeDamage(double amount)
     {
-        health -= (int)amount;
+        GameManager.Instance.health -= (int)amount;
 
-        if (health <= 0)
+        if (GameManager.Instance.health <= 0)
         {
             Die();
         }

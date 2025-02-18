@@ -68,6 +68,7 @@ public class Player : Actor
     public Texture emissionPoison;
     public Texture emissionIce;
 
+    public GameObject damageCanvas;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -630,11 +631,21 @@ public class Player : Actor
     private void TakeDamage(double amount)
     {
         GameManager.Instance.health -= (int)amount;
-
+        if (damageCanvas != null)
+        {
+            StartCoroutine(FlashDamageCanvas());
+        }
         if (GameManager.Instance.health <= 0)
         {
             Die();
         }
+    }
+
+    private IEnumerator FlashDamageCanvas()
+    {
+        damageCanvas.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        damageCanvas.SetActive(false);
     }
 
     public void ToggleSprintingState(bool isAutoSprintEnabled)

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -39,6 +40,47 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void Start()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "Menu")
+        {
+            ResetGameState();
+        }
+    }
+
+    private void ResetGameState()
+    {
+        AutoSprintEnabled = false;
+        coins = 0;
+        redKey = false;
+        greenKey = false;
+        blueKey = false;
+        firePower = 0;
+        icePower = 0;
+        poisonPower = 0;
+        damage = 1;
+        iceUpgrade = 1;
+        fireUpgrade = 1;
+        poisonUpgrade = 1;
+        ammo = 6;
+        ammoMax = 6;
+        health = 20;
+        healthMax = 20;
+        armor = 0;
+        armorMax = 5;
+    }
+
     public void AddCoin(int amount)
     {
         coins += amount;
